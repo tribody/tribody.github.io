@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.riverhe.cn/about/index.html</loc>
+    
+    <lastmod>2016-11-06T11:43:06.644Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.riverhe.cn/tags/index.html</loc>
+    
+    <lastmod>2016-11-06T11:37:14.397Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://blog.riverhe.cn/categories/index.html</loc>
+    
+    <lastmod>2016-11-06T11:36:39.661Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.riverhe.cn/2016/11/06/hello-world/</loc>
     
     <lastmod>2016-11-06T08:11:26.601Z</lastmod>
