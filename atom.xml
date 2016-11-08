@@ -4,9 +4,9 @@
   <subtitle>hack sjtu</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://blog.riverhe.cn/"/>
+  <link href="http://blog.sjtunix.cn/"/>
   <updated>2016-11-06T13:17:14.997Z</updated>
-  <id>http://blog.riverhe.cn/</id>
+  <id>http://blog.sjtunix.cn/</id>
   
   <author>
     <name>River He</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>VPN</title>
-    <link href="http://blog.riverhe.cn/2016/11/06/VPN/"/>
-    <id>http://blog.riverhe.cn/2016/11/06/VPN/</id>
+    <link href="http://blog.sjtunix.cn/2016/11/06/VPN/"/>
+    <id>http://blog.sjtunix.cn/2016/11/06/VPN/</id>
     <published>2016-11-06T13:06:51.000Z</published>
     <updated>2016-11-06T13:17:14.997Z</updated>
     
@@ -34,14 +34,14 @@
     </summary>
     
     
-      <category term="VPN" scheme="http://blog.riverhe.cn/tags/VPN/"/>
+      <category term="VPN" scheme="http://blog.sjtunix.cn/tags/VPN/"/>
     
   </entry>
   
   <entry>
     <title>Hexo入门</title>
-    <link href="http://blog.riverhe.cn/2016/11/06/hello-world/"/>
-    <id>http://blog.riverhe.cn/2016/11/06/hello-world/</id>
+    <link href="http://blog.sjtunix.cn/2016/11/06/hello-world/"/>
+    <id>http://blog.sjtunix.cn/2016/11/06/hello-world/</id>
     <published>2016-11-06T08:11:26.598Z</published>
     <updated>2016-11-06T12:45:24.384Z</updated>
     
