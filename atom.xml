@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sjtunix.cn/"/>
-  <updated>2016-11-06T13:17:14.997Z</updated>
+  <updated>2016-11-08T13:57:48.616Z</updated>
   <id>http://blog.sjtunix.cn/</id>
   
   <author>
@@ -14,6 +14,69 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>tools</title>
+    <link href="http://blog.sjtunix.cn/2016/11/08/tools/"/>
+    <id>http://blog.sjtunix.cn/2016/11/08/tools/</id>
+    <published>2016-11-08T13:55:37.000Z</published>
+    <updated>2016-11-08T13:57:48.616Z</updated>
+    
+    <content type="html"><![CDATA[<p>不定期更新前端好用的工具和新技术，自我洗脑=，=</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;不定期更新前端好用的工具和新技术，自我洗脑=，=&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="收藏" scheme="http://blog.sjtunix.cn/categories/%E6%94%B6%E8%97%8F/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>搜索网站汇总</title>
+    <link href="http://blog.sjtunix.cn/2016/11/08/favorites/"/>
+    <id>http://blog.sjtunix.cn/2016/11/08/favorites/</id>
+    <published>2016-11-08T13:16:22.899Z</published>
+    <updated>2016-11-08T13:54:14.834Z</updated>
+    
+    <content type="html"><![CDATA[<p>不定期汇总各种种子搜索网站。</p>
+<h2 id="视频类："><a href="#视频类：" class="headerlink" title="视频类："></a>视频类：</h2><ul>
+<li><p><a href="http://btmee.net/" target="_blank" rel="external">BTmee.net</a>——偶然找到的一个非常好的视频种子下载网站，资源很多</p>
+</li>
+<li><p><a href="http://www.quansouji.com/" target="_blank" rel="external">全搜集</a>——一个带有社交网络平台的视频分享网站，做的非常棒</p>
+</li>
+<li><p><a href="http://www.celebritymoviearchive.com/" target="_blank" rel="external">Celebrity Movie Archive</a>——收集了大量的名人电影信息，不过好像没有种子，但对于想找自己喜欢的明星（老外）电影的朋友来说，非常有用</p>
+</li>
+<li><p><a href="http://www.qindou8.com/" target="_blank" rel="external">亲豆网</a>——偶然搜到的视频种子网站</p>
+</li>
+<li><p><a href="http://www.zhuixinfan.com/" target="_blank" rel="external">追新番</a>——日剧下载网站</p>
+</li>
+</ul>
+<h2 id="综合类："><a href="#综合类：" class="headerlink" title="综合类："></a>综合类：</h2><ul>
+<li><p><a href="http://www.btany.com/" target="_blank" rel="external">Bt ants</a>——号称是最大的BT资源搜索引擎</p>
+</li>
+<li><p><a href="https://thepiratebay.se/" target="_blank" rel="external">海盗船</a>——不用多说了</p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;不定期汇总各种种子搜索网站。&lt;/p&gt;
+&lt;h2 id=&quot;视频类：&quot;&gt;&lt;a href=&quot;#视频类：&quot; class=&quot;headerlink&quot; title=&quot;视频类：&quot;&gt;&lt;/a&gt;视频类：&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://btmee.net/&quot; tar
+    
+    </summary>
+    
+      <category term="收藏" scheme="http://blog.sjtunix.cn/categories/%E6%94%B6%E8%97%8F/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>VPN</title>
@@ -43,10 +106,11 @@
     <link href="http://blog.sjtunix.cn/2016/11/06/hello-world/"/>
     <id>http://blog.sjtunix.cn/2016/11/06/hello-world/</id>
     <published>2016-11-06T08:11:26.598Z</published>
-    <updated>2016-11-06T12:45:24.384Z</updated>
+    <updated>2016-11-08T13:34:13.909Z</updated>
     
     <content type="html"><![CDATA[<p>楼主有一台国外的vps，之前搭过wordpress，但是访问延迟较大，又因为前段时间服务器系统搞坏了，重装了系统，打算把那台服务器完全用来搭VPN和SS了，不再放网站在上面了。于是，转入了Hexo。本博文完成以下目标，首先，安装hexo博客系统，然后安装主题，最后做一个域名绑定。楼主记性最近不好，虽然文章网上都能搜到，但是做个记载还是好的。</p>
 <h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div><div class="line">$ hexo init [目录名]</div><div class="line">$ <span class="built_in">cd</span> [目录名]</div><div class="line">$ npm install</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>注意这个地方有个坑，楼主当时打完这段命令，然后按照提示用<code>4000</code>端口访问<code>localhost:4000</code>，发现怎么都加载不出来，百度了好久，发现是安装了福昕pdf阅读器的原因，太坑了！<code>4000</code>被占用了！所以，你可以使用如下命令换个端口号:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server -p [你要用的端口号]</div></pre></td></tr></table></figure></p>
 <p>详见：<a href="https://hexo.io/docs/commands.html#server" target="_blank" rel="external">server</a></p>
 <p>更多信息: <a href="https://hexo.io" target="_blank" rel="external">安装</a></p>
@@ -108,10 +172,15 @@
     
     <summary type="html">
     
-      &lt;p&gt;楼主有一台国外的vps，之前搭过wordpress，但是访问延迟较大，又因为前段时间服务器系统搞坏了，重装了系统，打算把那台服务器完全用来搭VPN和SS了，不再放网站在上面了。于是，转入了Hexo。本博文完成以下目标，首先，安装hexo博客系统，然后安装主题，最后做一个域名
+      &lt;p&gt;楼主有一台国外的vps，之前搭过wordpress，但是访问延迟较大，又因为前段时间服务器系统搞坏了，重装了系统，打算把那台服务器完全用来搭VPN和SS了，不再放网站在上面了。于是，转入了Hexo。本博文完成以下目标，首先，安装hexo博客系统，然后安装主题，最后做一个域名绑定。楼主记性最近不好，虽然文章网上都能搜到，但是做个记载还是好的。&lt;/p&gt;
+&lt;h2 id=&quot;Hexo安装&quot;&gt;&lt;a href=&quot;#Hexo安装&quot; class=&quot;headerlink&quot; title=&quot;Hexo安装&quot;&gt;&lt;/a&gt;Hexo安装&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ npm install hexo-cli -g&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ hexo init [目录名]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; [目录名]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ npm install&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ hexo server&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
+      <category term="技术" scheme="http://blog.sjtunix.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Node.js" scheme="http://blog.sjtunix.cn/tags/Node-js/"/>
     
   </entry>
   
