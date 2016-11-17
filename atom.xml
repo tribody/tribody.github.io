@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sjtunix.cn/"/>
-  <updated>2016-11-16T07:51:24.161Z</updated>
+  <updated>2016-11-17T08:34:50.300Z</updated>
   <id>http://blog.sjtunix.cn/</id>
   
   <author>
@@ -20,22 +20,37 @@
     <link href="http://blog.sjtunix.cn/2016/11/16/ubuntu/"/>
     <id>http://blog.sjtunix.cn/2016/11/16/ubuntu/</id>
     <published>2016-11-16T05:11:18.000Z</published>
-    <updated>2016-11-16T07:51:24.161Z</updated>
+    <updated>2016-11-17T08:34:50.300Z</updated>
     
-    <content type="html"><![CDATA[<p>记录一些unbuntu安装后的调整优化工作</p>
+    <content type="html"><![CDATA[<h2 id="ubuntu16-04安装后的一些优化"><a href="#ubuntu16-04安装后的一些优化" class="headerlink" title="ubuntu16.04安装后的一些优化"></a>ubuntu16.04安装后的一些优化</h2><p>记录一些unbuntu安装后的调整优化工作和各种开发环境搭建工作</p>
 <h3 id="调整启动器"><a href="#调整启动器" class="headerlink" title="调整启动器"></a>调整启动器</h3><p>将默认的左栏调整到底部<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gsettings <span class="built_in">set</span> com.canonical.Unity.Launcher launcher-position Bottom</div></pre></td></tr></table></figure></p>
 <h3 id="卸载”Amazon”链接"><a href="#卸载”Amazon”链接" class="headerlink" title="卸载”Amazon”链接"></a>卸载”Amazon”链接</h3><p>在启动器删掉，然后执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get remove unity-webapps-common</div></pre></td></tr></table></figure></p>
+<a id="more"></a>
 <h3 id="卸载”LibreOffice”办公软件"><a href="#卸载”LibreOffice”办公软件" class="headerlink" title="卸载”LibreOffice”办公软件"></a>卸载”LibreOffice”办公软件</h3><p>不太方便，还是使用wps比较好<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get remove libreoffice-common<span class="string">"</span></div></pre></td></tr></table></figure></p>
 <h3 id="删除很多几乎不用的软件"><a href="#删除很多几乎不用的软件" class="headerlink" title="删除很多几乎不用的软件"></a>删除很多几乎不用的软件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get remove thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku  landscape-client-ui-install</div></pre></td></tr></table></figure>
+<h3 id="安装”Oracle-Java”"><a href="#安装”Oracle-Java”" class="headerlink" title="安装”Oracle Java”"></a>安装”Oracle Java”</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo add-apt-repository ppa:webupd8team/java    </div><div class="line">sudo apt-get update    </div><div class="line">sudo apt-get install oracle-java8-installer</div></pre></td></tr></table></figure>
+<h3 id="安装”git”"><a href="#安装”git”" class="headerlink" title="安装”git”"></a>安装”git”</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install git</div></pre></td></tr></table></figure>
 <h3 id="安装”vim”"><a href="#安装”vim”" class="headerlink" title="安装”vim”"></a>安装”vim”</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install vim</div></pre></td></tr></table></figure>
-<h2 id="安装”sublime-text3”"><a href="#安装”sublime-text3”" class="headerlink" title="安装”sublime text3”"></a>安装”sublime text3”</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo add-apt-repository ppa:webupd8team/sublime-text-3    </div><div class="line">sudo apt-get update    </div><div class="line">sudo apt-get install sublime-text</div></pre></td></tr></table></figure>
-<p>###</p>
+<h3 id="安装”sublime-text3”"><a href="#安装”sublime-text3”" class="headerlink" title="安装”sublime text3”"></a>安装”sublime text3”</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo add-apt-repository ppa:webupd8team/sublime-text-3    </div><div class="line">sudo apt-get update    </div><div class="line">sudo apt-get install sublime-text</div></pre></td></tr></table></figure>
+<h3 id="安装”unrar”"><a href="#安装”unrar”" class="headerlink" title="安装”unrar”"></a>安装”unrar”</h3><p>常用的解压软件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install unrar</div></pre></td></tr></table></figure></p>
+<h3 id="安装”cmake和qtcreator”"><a href="#安装”cmake和qtcreator”" class="headerlink" title="安装”cmake和qtcreator”"></a>安装”cmake和qtcreator”</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install cmake qtcreator</div></pre></td></tr></table></figure>
+<h3 id="安装”android-studio”"><a href="#安装”android-studio”" class="headerlink" title="安装”android studio”"></a>安装”android studio”</h3><p>先去官网下载最新安装包IDE，然后解压到一个目录，我解压到了<code>/usr/local/</code>，然后可以在<code>PATH</code>中加入启动命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vim /etc/profile</div></pre></td></tr></table></figure></p>
+<p>注意这是修改的个人用户的全局变量，然后可以<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">source</span> /etc/profile</div></pre></td></tr></table></figure></p>
+<p>更新一下该文件</p>
+<p>安装完android studio后会提示下载SDK，可以用代理快很多，另外64位的ubuntu要安装32支持包<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install lib32z1 lib32ncurses5 lib32bz2-1.0 lib32stdc++6</div></pre></td></tr></table></figure></p>
+<p>按照官方文档会提示找不到该库，需要删掉其中一个<code>lib32bz2-1.0</code>，然后单独安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install lib32z1 lib32ncurses5 lib32stdc++6</div></pre></td></tr></table></figure></p>
+<p>单独安装命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo dpkg --add-architecture i386</div><div class="line">sudo apt-get update</div><div class="line">sudo apt-get install lib32bz2-1.0:i386</div></pre></td></tr></table></figure></p>
+<h2 id="安装Macbuntu主题"><a href="#安装Macbuntu主题" class="headerlink" title="安装Macbuntu主题"></a>安装Macbuntu主题</h2><p>链接地址<a href="http://www.noobslab.com/2016/04/macbuntu-1604-transformation-pack-for.html" target="_blank" rel="external">macbuntu</a><br>macbuntu是一套主题图标和各种字体plank的一套素材，能让你的ubuntu非常接近mac osx的外观。</p>
+<h2 id="ubuntu下的一些问题"><a href="#ubuntu下的一些问题" class="headerlink" title="ubuntu下的一些问题"></a>ubuntu下的一些问题</h2><p>无法挂载ntfs的格式的分区<br>使用了ntfsfix命令修复了这个问题。</p>
+<pre><code>ntfsfix repairs some fundamental NTFS inconsistencies, resets the NTFS journal file and schedules an NTFS consistency check for the first boot into Windows.
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ntfsfix /dev/[yourdevice partion]</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;记录一些unbuntu安装后的调整优化工作&lt;/p&gt;
-&lt;h3 id=&quot;调整启动器&quot;&gt;&lt;a href=&quot;#调整启动器&quot; class=&quot;headerlink&quot; title=&quot;调整启动器&quot;&gt;&lt;/a&gt;调整启动器&lt;/h3&gt;&lt;p&gt;将默认的左栏调整到底部&lt;br&gt;&lt;figure class=
+      &lt;h2 id=&quot;ubuntu16-04安装后的一些优化&quot;&gt;&lt;a href=&quot;#ubuntu16-04安装后的一些优化&quot; class=&quot;headerlink&quot; title=&quot;ubuntu16.04安装后的一些优化&quot;&gt;&lt;/a&gt;ubuntu16.04安装后的一些优化&lt;/h2&gt;&lt;p&gt;记录一些unbuntu安装后的调整优化工作和各种开发环境搭建工作&lt;/p&gt;
+&lt;h3 id=&quot;调整启动器&quot;&gt;&lt;a href=&quot;#调整启动器&quot; class=&quot;headerlink&quot; title=&quot;调整启动器&quot;&gt;&lt;/a&gt;调整启动器&lt;/h3&gt;&lt;p&gt;将默认的左栏调整到底部&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;gsettings &lt;span class=&quot;built_in&quot;&gt;set&lt;/span&gt; com.canonical.Unity.Launcher launcher-position Bottom&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3 id=&quot;卸载”Amazon”链接&quot;&gt;&lt;a href=&quot;#卸载”Amazon”链接&quot; class=&quot;headerlink&quot; title=&quot;卸载”Amazon”链接&quot;&gt;&lt;/a&gt;卸载”Amazon”链接&lt;/h3&gt;&lt;p&gt;在启动器删掉，然后执行&lt;br&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo apt-get remove unity-webapps-common&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
     
     </summary>
     
