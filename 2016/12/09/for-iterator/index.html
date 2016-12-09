@@ -1,25 +1,33 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="River He"><meta name="description" content="昨天看了下C++的并行运算实现方式，编程实现有两种方式，知乎上有做比较，暂作摘录，MPI和OpenMP.区别在于：OpenMP：线程级（并行粒度）；共享存储；隐式（数据分配方式）；可扩展性差；MPI：进程级；分布式存储；显式；可扩展性好。OpenMP采用共享存储，意味着它只"><meta name="keywords" content="C++"><title>for iterator · Sjtunix</title><link rel="icon" href="/favicon.ico"><link rel="canonical" href="http://blog.sjtunix.cn/2016/12/09/for-iterator/"><link rel="alternate" href="/atom.xml" title="Sjtunix"><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><link rel="stylesheet" href="/css/style.css"><script type="text/javascript">var _hmt = _hmt || [];
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="River He"><meta name="description" content="昨天看了下C++的并行运算实现方式，编程实现有两种方式，MPI和OpenMP。知乎上有做比较，暂作摘录，区别在于：OpenMP：线程级（并行粒度）；共享存储；隐式（数据分配方式）；可扩展性差；MPI：进程级；分布式存储；显式；可扩展性好。OpenMP采用共享存储，意味着"><meta name="keywords" content="C++"><title>for iterator · Sjtunix</title><link rel="icon" href="/favicon.ico"><link rel="canonical" href="http://blog.sjtunix.cn/2016/12/09/for-iterator/"><link rel="alternate" href="/atom.xml" title="Sjtunix"><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><link rel="stylesheet" href="/css/style.css"><script type="text/javascript">var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "//hm.baidu.com/hm.js?a67714dba8e9a4f625fd5051c7965382";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">for iterator</h1><span class="post-time">2016年12月9日</span><div class="post-content"><p>昨天看了下C++的并行运算实现方式，编程实现有两种方式，知乎上有做比较，暂作摘录，MPI和OpenMP.区别在于：</p>
+</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">for iterator</h1><span class="post-time">2016年12月9日</span><div class="post-content"><p>昨天看了下C++的并行运算实现方式，编程实现有两种方式，MPI和OpenMP。知乎上有做比较，暂作摘录，区别在于：</p>
 <ul>
 <li>OpenMP：线程级（并行粒度）；共享存储；隐式（数据分配方式）；可扩展性差；</li>
-<li>MPI：进程级；分布式存储；显式；可扩展性好。<br>OpenMP采用共享存储，意味着它只适应于SMP,DSM机器，不适合于集群。MPI虽适合于各种机器，但它的编程模型复杂：</li>
+<li>MPI：进程级；分布式存储；显式；可扩展性好。</li>
+</ul>
+<p>OpenMP采用共享存储，意味着它只适应于SMP,DSM机器，不适合于集群。MPI虽适合于各种机器，但它的编程模型复杂：</p>
+<ul>
 <li>需要分析及划分应用程序问题，并将问题映射到分布式进程集合；</li>
 <li>需要解决通信延迟大和负载不平衡两个主要问题；</li>
 <li>调试MPI程序麻烦；</li>
-<li>MPI程序可靠性差，一个进程出问题，整个程序将错误；</li>
+<li>MPI程序可靠性差，一个进程出问题，整个程序将错误；<a id="more"></a>
+</li>
 </ul>
+<blockquote>
 <p>作者：李超铮<br>链接：<a href="https://www.zhihu.com/question/20188244/answer/14552204" target="_blank" rel="external">https://www.zhihu.com/question/20188244/answer/14552204</a><br>来源：知乎<br>著作权归作者所有，转载请联系作者获得授权。</p>
+</blockquote>
 <p>最近在移植一份linux c++代码，正好用到了OpenMP。使用很简单，直接VS开启OpenMP支持，然后在代码前添加#pragma注释即可。</p>
 <p>当然前面都是背景…</p>
 <p>并行计算最适合的场景是for循环，然后就顺带了解了下c++11支持的for循环结构。众所周知，java在1.5JDK版本就开始支持了增强for循环，有多好用不用我多说了，现在基本语言都支持了增强for循环，C++11也实现了。以下为C++11支持的5种for循环方式：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;algorithm&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; numSet;</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">size_t</span> i = <span class="number">0</span>; i &lt; numSet.size(); i++);</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> itr = numSet.begin(); itr != numSet.end(); itr++);</div><div class="line"></div><div class="line">	<span class="keyword">for</span> (<span class="keyword">auto</span> item : numSet);</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">for</span> <span class="title">each</span><span class="params">(<span class="keyword">auto</span> item in numSet)</span></span>;</div><div class="line"></div><div class="line">	<span class="built_in">std</span>::for_each(numSet.begin(), numSet.end(), [&amp;](<span class="keyword">int</span> i)&#123;;&#125;);</div><div class="line"></div><div class="line">	<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>按轮子哥的说法，<br>第一个不好，万一numSet[i]不是O(1)的呢，容器可不止vector一种。<br>第二个太长了。<br>第三个是推荐的。<br>第四个是VC++的C++/CLI或C++/CX扩展，不过他跟第三个其实完全没有区别，因为互相都可以用。<br>第五个很难讲，主要是你要把整个程序写成函数式或响应式的，用这个才有额外的好处。</p>
+<p>按轮子哥的说法，<br>第一个不好，万一numSet[i]不是O(1)的呢，容器可不止vector一种。<br>第二个太长了。<br><strong>第三个是推荐的。</strong><br>第四个是VC++的C++/CLI或C++/CX扩展，不过他跟第三个其实完全没有区别，因为互相都可以用。<br>第五个很难讲，主要是你要把整个程序写成函数式或响应式的，用这个才有额外的好处。</p>
+<blockquote>
 <p>作者：vczh<br>链接：<a href="https://www.zhihu.com/question/28127777/answer/39500842" target="_blank" rel="external">https://www.zhihu.com/question/28127777/answer/39500842</a><br>来源：知乎<br>著作权归作者所有，转载请联系作者获得授权。</p>
+</blockquote>
 </div></article><div class="tags"><a href="/tags/C/">C++</a></div><div class="paginator"><a href="/2016/11/16/ubuntu/" class="next"><span>Next</span><i class="iconfont icon-right"></i></a></div><section id="comments"><div id="disqus_thread"></div></section><script type="text/javascript">var disqus_config = function () {
     this.page.url = 'http://blog.sjtunix.cn/2016/12/09/for-iterator/';
     this.page.identifier = '2016/12/09/for-iterator/';
