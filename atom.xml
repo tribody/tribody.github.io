@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sjtunix.cn/"/>
-  <updated>2016-12-13T06:46:33.981Z</updated>
+  <updated>2016-12-13T07:02:09.594Z</updated>
   <id>http://blog.sjtunix.cn/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++中的宏定义</title>
+    <link href="http://blog.sjtunix.cn/2016/12/13/C-%E4%B8%AD%E7%9A%84%E5%AE%8F%E5%AE%9A%E4%B9%89/"/>
+    <id>http://blog.sjtunix.cn/2016/12/13/C-中的宏定义/</id>
+    <published>2016-12-13T06:57:51.000Z</published>
+    <updated>2016-12-13T07:02:09.594Z</updated>
+    
+    <content type="html"><![CDATA[<p>由于很长时间没有摸C++这门儿语言了，把宏定义简单理解成了类似于变量声明和函数声明式地东西。然而，爬了一下博客才发现，宏仅仅只会在在预处理过程中展开，做简单的字符串替换，而<code>没有任何的计算过程</code>。</p>
+<p>两篇关于C++宏的相关讲解。<br><a href="http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html" target="_blank" rel="external">http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html</a></p>
+<p><a href="http://blog.chinaunix.net/uid-21372424-id-119797.html" target="_blank" rel="external">http://blog.chinaunix.net/uid-21372424-id-119797.html</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;由于很长时间没有摸C++这门儿语言了，把宏定义简单理解成了类似于变量声明和函数声明式地东西。然而，爬了一下博客才发现，宏仅仅只会在在预处理过程中展开，做简单的字符串替换，而&lt;code&gt;没有任何的计算过程&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;两篇关于C++宏的相关讲解。&lt;br&gt;&lt;a
+    
+    </summary>
+    
+      <category term="技术" scheme="http://blog.sjtunix.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="C++" scheme="http://blog.sjtunix.cn/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>C++中的##和#</title>
