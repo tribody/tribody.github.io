@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sjtunix.cn/"/>
-  <updated>2016-12-14T04:50:47.240Z</updated>
+  <updated>2016-12-14T05:28:20.040Z</updated>
   <id>http://blog.sjtunix.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.sjtunix.cn/2016/12/13/C-%E4%B8%AD%E7%9A%84%E5%AE%8F%E5%AE%9A%E4%B9%89/"/>
     <id>http://blog.sjtunix.cn/2016/12/13/C-中的宏定义/</id>
     <published>2016-12-13T06:57:51.000Z</published>
-    <updated>2016-12-14T04:50:47.240Z</updated>
+    <updated>2016-12-14T05:28:20.040Z</updated>
     
     <content type="html"><![CDATA[<h1 id="C-中的宏"><a href="#C-中的宏" class="headerlink" title="C++中的宏"></a>C++中的宏</h1><p>由于很长时间没有摸C++这门儿语言了，把宏定义简单理解成了类似于变量声明和函数声明式地东西。然而，爬了一下博客才发现，宏仅仅只会在在预处理过程中展开，做简单的字符串替换，而<code>没有任何的计算过程</code>。</p>
 <p>两篇关于C++宏的相关讲解。<br><a href="http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html" target="_blank" rel="external">http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html</a>,这一篇强烈推荐。</p>
@@ -38,6 +38,8 @@
 </ul>
 <p><code>params</code>表示参数列表，<br><code>ret</code>表示返回值类型，<br><code>statements</code>就是函数体了。</p>
 <p>参考自<a href="http://www.cnblogs.com/lidabo/p/3908663.html" target="_blank" rel="external">http://www.cnblogs.com/lidabo/p/3908663.html</a></p>
+<h1 id="C-中构造函数之间的调用"><a href="#C-中构造函数之间的调用" class="headerlink" title="C++中构造函数之间的调用"></a>C++中构造函数之间的调用</h1><p>偶然看一份代码的时候，发现C++构造函数之间时可以互相调用的，这样可以减少重载构造函数时所需的代码量。这种构造函数之间的调用称为<code>委托</code>或<code>转接</code>（delegation)，Java以及C#都支持这种功能。例如：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> SomeType &#123;</div><div class="line">  <span class="keyword">int</span> number;</div><div class="line">  <span class="built_in">string</span> name;</div><div class="line">  SomeType( <span class="keyword">int</span> i, <span class="built_in">string</span>&amp; s ) : number(i), name(s)&#123;&#125;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  SomeType( )           : SomeType( <span class="number">0</span>, <span class="string">"invalid"</span> )&#123;&#125;</div><div class="line">  SomeType( <span class="keyword">int</span> i )     : SomeType( i, <span class="string">"guest"</span> )&#123;&#125;</div><div class="line">  SomeType( <span class="built_in">string</span>&amp; s ) : SomeType( <span class="number">1</span>, s )&#123; PostInit(); &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<p>相关内容参考自<a href="http://www.cnblogs.com/ayanmw/archive/2012/08/20/2647808.html" target="_blank" rel="external">http://www.cnblogs.com/ayanmw/archive/2012/08/20/2647808.html</a></p>
 ]]></content>
     
     <summary type="html">
