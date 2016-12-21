@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="River He"><meta name="description" content="最近开始在跟进coursera的算法课程，为明年的实习面试做准备。Sedgewick的这门算法课程非常出名，配套的有一本书叫做《Algorithms》,和Coursera上的课程配套。第一周课程先以一个案例即union-find算法为例，阐述算法分析的基础。#动态连通性uni"><meta name="keywords" content="算法"><title>算法学习之union-find · Sjtunix</title><link rel="icon" href="/favicon.ico"><link rel="canonical" href="http://blog.sjtunix.cn/2016/12/16/unionfind/"><link rel="alternate" href="/atom.xml" title="Sjtunix"><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><link rel="stylesheet" href="/css/style.css"><script type="text/javascript">var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a67714dba8e9a4f625fd5051c7965382";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">算法学习之union-find</h1><span class="post-time">2016年12月16日</span><div class="post-content"><p>最近开始在跟进coursera的算法课程，为明年的实习面试做准备。Sedgewick的这门算法课程非常出名，配套的有一本书叫做《Algorithms》,和Coursera上的课程配套。</p>
+<p>第一周课程先以一个案例即union-find算法为例，阐述算法分析的基础。</p>
+<p>#动态连通性<br>union-find算法要解决的是一个连通性问题。首先，问题描述：<br>给定一个有N个对象的集合，定义如下操作:</p>
+<ul>
+<li>Union command: 连接两个对象。</li>
+<li>Find/connected query：两个对象之间是否是连通的。</li>
+</ul>
+<p>该问题有许多应用场景，如迷宫寻路，物理化学中的渗流和通信网络中的连通性等等。</p>
+<p>我们将问题描述如下</p>
+</div></article><div class="tags"><a href="/tags/算法/">算法</a></div><div class="paginator"><a href="/2016/12/21/After-Effectss-DEV/" class="prev"><i class="iconfont icon-left"></i><span> Пред.</span></a><a href="/2016/12/13/C-中的宏定义/" class="next"><span>След.</span><i class="iconfont icon-right"></i></a></div><section id="comments"><div id="disqus_thread"></div></section><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'http://blog.sjtunix.cn/2016/12/16/unionfind/';
+    this.page.identifier = '2016/12/16/unionfind/';
+    this.page.title = '算法学习之union-find';
+};
+(function() {
+var d = document, s = d.createElement('script');
+
+s.src = '//tribody.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();</script></section><footer><div class="social"><a href="mailto:hctongxue@163.com" title="email" class="iconfont icon-email"></a><a href="https://github.com/tribody" title="github" class="iconfont icon-github"></a><a href="/atom.xml" title="rss" class="iconfont icon-rss"></a></div><div class="copyright"><p class="power">Powered by <a href="https://hexo.io/">Hexo</a> and Theme by <a href="https://github.com/ahonn/hexo-theme-even"> Even</a></p><p class="since">&copy;2015-2016<span class="heart"><i class="iconfont icon-heart"></i></span><span class="author">River He</span></p></div><div id="back2top"><i class="iconfont icon-up"></i></div></footer></div><script src="/js/zepto.min.js"></script><script src="/js/theme.js"></script></body></html>

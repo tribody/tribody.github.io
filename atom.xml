@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sjtunix.cn/"/>
-  <updated>2016-12-14T05:30:51.144Z</updated>
+  <updated>2016-12-21T01:17:51.279Z</updated>
   <id>http://blog.sjtunix.cn/</id>
   
   <author>
@@ -16,11 +16,71 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>After Effectss DEV</title>
+    <link href="http://blog.sjtunix.cn/2016/12/21/After-Effectss-DEV/"/>
+    <id>http://blog.sjtunix.cn/2016/12/21/After-Effectss-DEV/</id>
+    <published>2016-12-21T00:18:16.000Z</published>
+    <updated>2016-12-21T01:17:51.279Z</updated>
+    
+    <content type="html"><![CDATA[<p>#简介<br>Effect（效果器）插件可以被用来创作、处理音视频。它是AE中的一种插件类型。<br>Effect（效果器）出现在Effect菜单和Effect&amp;Presets面板中，并在PiPL文件中申明。一旦应用了Effect（效果器）,它的参数控制就会出现在效果器控制面板中（Effect Control panel, ECP）。<br>插件都必须包含一个Plug-in Property List（PiPL），并且插件必须放在特定的文件夹中以便AE加载。</p>
+<p>对于所有的effect插件，AE通过发送命令选择器（command selector）到插件的入口函数（在PiPL资源文件中指定的）与插件沟通。而这些命令通过用户的一些行为触发，包括应用effect，改变参数，擦除时间轴的帧，显然序列等等。AE创建了effect的多个实例，以便于对于每个序列它的设置和输入都是独立的。但所有的实例都拥有相同的全局变量，并在它们序列的所有帧之间共享数据。一旦用户应用effectAE才会开始处理图片数据。</p>
+<p>#创建项目<br>第一步，要创建一个自己的effect项目，首先复制整个<code>\Skeleton</code>文件夹，重命名为<code>\YourName</code>，然后使用Ultraedit或其他编辑器批量替换<code>\YourName</code>文件夹下所有的<code>Skeleton</code>和<code>SKELETON</code>为<code>YourName&#39;和</code>YOURNAME`。</p>
+<p>第二步，在VS中配置输出目录为AE的插件目录。可以在环境变量中新建一个变量<code>AE_PLUGIN_BUILD_DIR</code>，值为<code>C:\Program Files\Adobe\Common\Plug-ins\7.0\MediaCore\</code>（可能有所区别，以具体安装版本和情况为准），然后在<code>配置属性&gt;常规&gt;输出目录</code>中设置输出目录。</p>
+<p>第三步，在VS中配置调试文件为AE的可执行文件。在<code>配置属性&gt;调试&gt;命令</code>中设置AE的可执行文件路径。如<code>D:\Program Files\Adobe\Adobe After Effects CC 2014\Support Files\AfterFX.exe</code>。</p>
+<p>调试时可选择删除配置信息。方法为在每次AE重启的时候按住<code>Ctrl-Alt-Shift</code>即可。</p>
+<p>PiPL资源文件规定了入口函数名称，显示的名称，和插件的匹配名称（match name）。</p>
+<p>#Effect基础</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#简介&lt;br&gt;Effect（效果器）插件可以被用来创作、处理音视频。它是AE中的一种插件类型。&lt;br&gt;Effect（效果器）出现在Effect菜单和Effect&amp;amp;Presets面板中，并在PiPL文件中申明。一旦应用了Effect（效果器）,它的参数控制就会出现在效
+    
+    </summary>
+    
+      <category term="技术" scheme="http://blog.sjtunix.cn/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="AE开发" scheme="http://blog.sjtunix.cn/tags/AE%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>算法学习之union-find</title>
+    <link href="http://blog.sjtunix.cn/2016/12/16/unionfind/"/>
+    <id>http://blog.sjtunix.cn/2016/12/16/unionfind/</id>
+    <published>2016-12-16T10:13:18.000Z</published>
+    <updated>2016-12-17T01:12:50.576Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近开始在跟进coursera的算法课程，为明年的实习面试做准备。Sedgewick的这门算法课程非常出名，配套的有一本书叫做《Algorithms》,和Coursera上的课程配套。</p>
+<p>第一周课程先以一个案例即union-find算法为例，阐述算法分析的基础。</p>
+<p>#动态连通性<br>union-find算法要解决的是一个连通性问题。首先，问题描述：<br>给定一个有N个对象的集合，定义如下操作:</p>
+<ul>
+<li>Union command: 连接两个对象。</li>
+<li>Find/connected query：两个对象之间是否是连通的。</li>
+</ul>
+<p>该问题有许多应用场景，如迷宫寻路，物理化学中的渗流和通信网络中的连通性等等。</p>
+<p>我们将问题描述如下</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近开始在跟进coursera的算法课程，为明年的实习面试做准备。Sedgewick的这门算法课程非常出名，配套的有一本书叫做《Algorithms》,和Coursera上的课程配套。&lt;/p&gt;
+&lt;p&gt;第一周课程先以一个案例即union-find算法为例，阐述算法分析的基础。
+    
+    </summary>
+    
+    
+      <category term="算法" scheme="http://blog.sjtunix.cn/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>C++学习笔记</title>
     <link href="http://blog.sjtunix.cn/2016/12/13/C-%E4%B8%AD%E7%9A%84%E5%AE%8F%E5%AE%9A%E4%B9%89/"/>
     <id>http://blog.sjtunix.cn/2016/12/13/C-中的宏定义/</id>
     <published>2016-12-13T06:57:51.000Z</published>
-    <updated>2016-12-14T05:30:51.144Z</updated>
+    <updated>2016-12-14T05:31:20.546Z</updated>
     
     <content type="html"><![CDATA[<h1 id="C-中的宏"><a href="#C-中的宏" class="headerlink" title="C++中的宏"></a>C++中的宏</h1><p>由于很长时间没有摸C++这门儿语言了，把宏定义简单理解成了类似于变量声明和函数声明式地东西。然而，爬了一下博客才发现，宏仅仅只会在在预处理过程中展开，做简单的字符串替换，而<code>没有任何的计算过程</code>。</p>
 <p>两篇关于C++宏的相关讲解。<br><a href="http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html" target="_blank" rel="external">http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html</a>,这一篇强烈推荐。</p>

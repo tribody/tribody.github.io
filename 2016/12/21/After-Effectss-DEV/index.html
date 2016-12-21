@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="River He"><meta name="description" content="#简介Effect（效果器）插件可以被用来创作、处理音视频。它是AE中的一种插件类型。Effect（效果器）出现在Effect菜单和Effect&amp;amp;Presets面板中，并在PiPL文件中申明。一旦应用了Effect（效果器）,它的参数控制就会出现在效果器控制面板中（Eff"><meta name="keywords" content="AE开发"><title>After Effectss DEV · Sjtunix</title><link rel="icon" href="/favicon.ico"><link rel="canonical" href="http://blog.sjtunix.cn/2016/12/21/After-Effectss-DEV/"><link rel="alternate" href="/atom.xml" title="Sjtunix"><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><link rel="stylesheet" href="/css/style.css"><script type="text/javascript">var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a67714dba8e9a4f625fd5051c7965382";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">After Effectss DEV</h1><span class="post-time">2016年12月21日</span><div class="post-content"><p>#简介<br>Effect（效果器）插件可以被用来创作、处理音视频。它是AE中的一种插件类型。<br>Effect（效果器）出现在Effect菜单和Effect&amp;Presets面板中，并在PiPL文件中申明。一旦应用了Effect（效果器）,它的参数控制就会出现在效果器控制面板中（Effect Control panel, ECP）。<br>插件都必须包含一个Plug-in Property List（PiPL），并且插件必须放在特定的文件夹中以便AE加载。</p>
+<p>对于所有的effect插件，AE通过发送命令选择器（command selector）到插件的入口函数（在PiPL资源文件中指定的）与插件沟通。而这些命令通过用户的一些行为触发，包括应用effect，改变参数，擦除时间轴的帧，显然序列等等。AE创建了effect的多个实例，以便于对于每个序列它的设置和输入都是独立的。但所有的实例都拥有相同的全局变量，并在它们序列的所有帧之间共享数据。一旦用户应用effectAE才会开始处理图片数据。</p>
+<p>#创建项目<br>第一步，要创建一个自己的effect项目，首先复制整个<code>\Skeleton</code>文件夹，重命名为<code>\YourName</code>，然后使用Ultraedit或其他编辑器批量替换<code>\YourName</code>文件夹下所有的<code>Skeleton</code>和<code>SKELETON</code>为<code>YourName&#39;和</code>YOURNAME`。</p>
+<p>第二步，在VS中配置输出目录为AE的插件目录。可以在环境变量中新建一个变量<code>AE_PLUGIN_BUILD_DIR</code>，值为<code>C:\Program Files\Adobe\Common\Plug-ins\7.0\MediaCore\</code>（可能有所区别，以具体安装版本和情况为准），然后在<code>配置属性&gt;常规&gt;输出目录</code>中设置输出目录。</p>
+<p>第三步，在VS中配置调试文件为AE的可执行文件。在<code>配置属性&gt;调试&gt;命令</code>中设置AE的可执行文件路径。如<code>D:\Program Files\Adobe\Adobe After Effects CC 2014\Support Files\AfterFX.exe</code>。</p>
+<p>调试时可选择删除配置信息。方法为在每次AE重启的时候按住<code>Ctrl-Alt-Shift</code>即可。</p>
+<p>PiPL资源文件规定了入口函数名称，显示的名称，和插件的匹配名称（match name）。</p>
+<p>#Effect基础</p>
+</div></article><div class="tags"><a href="/tags/AE开发/">AE开发</a></div><div class="paginator"><a href="/2016/12/16/unionfind/" class="next"><span>След.</span><i class="iconfont icon-right"></i></a></div><section id="comments"><div id="disqus_thread"></div></section><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'http://blog.sjtunix.cn/2016/12/21/After-Effectss-DEV/';
+    this.page.identifier = '2016/12/21/After-Effectss-DEV/';
+    this.page.title = 'After Effectss DEV';
+};
+(function() {
+var d = document, s = d.createElement('script');
+
+s.src = '//tribody.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();</script></section><footer><div class="social"><a href="mailto:hctongxue@163.com" title="email" class="iconfont icon-email"></a><a href="https://github.com/tribody" title="github" class="iconfont icon-github"></a><a href="/atom.xml" title="rss" class="iconfont icon-rss"></a></div><div class="copyright"><p class="power">Powered by <a href="https://hexo.io/">Hexo</a> and Theme by <a href="https://github.com/ahonn/hexo-theme-even"> Even</a></p><p class="since">&copy;2015-2016<span class="heart"><i class="iconfont icon-heart"></i></span><span class="author">River He</span></p></div><div id="back2top"><i class="iconfont icon-up"></i></div></footer></div><script src="/js/zepto.min.js"></script><script src="/js/theme.js"></script></body></html>
