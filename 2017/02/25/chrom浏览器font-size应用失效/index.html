@@ -1,0 +1,22 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="River He"><meta name="description" content="whatthehell!今天学css调试的时候，应用font-size:10px一直无效，半天无头绪，百度了才知道，chrome根本不支持font-size&amp;lt;12px的情况，开发者认为亚洲字符最小不应该小于12px！这是什么逻辑？另外，今天记录下em和px两个单位的"><meta name="keywords" content="css"><title>chrom浏览器font-size应用失效 · Sjtunix</title><link rel="icon" href="/favicon.ico"><link rel="canonical" href="http://blog.sjtunix.cn/2017/02/25/chrom浏览器font-size应用失效/"><link rel="alternate" href="/atom.xml" title="Sjtunix"><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><link rel="stylesheet" href="/css/style.css"><script type="text/javascript">var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a67714dba8e9a4f625fd5051c7965382";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">chrom浏览器font-size应用失效</h1><span class="post-time">2017年2月25日</span><div class="post-content"><p>what the hell!<br>今天学css调试的时候，应用<code>font-size: 10px</code>一直无效，半天无头绪，百度了才知道，chrome根本不支持<code>font-size&lt;12px</code>的情况，开发者认为亚洲字符最小不应该小于12px！这是什么逻辑？</p>
+<p>另外，今天记录下em和px两个单位的转换，在写css时，为了避免单位混乱，可以在html中定义<code>font-size</code>，然后，通过em换算定义长度单位，em转换为px公式为<code>em * font-size</code>。</p>
+</div></article><div class="tags"><a href="/tags/css/">css</a></div><div class="paginator"><a href="/2016/12/27/排序算法/" class="next"><span>Next</span><i class="iconfont icon-right"></i></a></div><section id="comments"><div id="disqus_thread"></div></section><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'http://blog.sjtunix.cn/2017/02/25/chrom浏览器font-size应用失效/';
+    this.page.identifier = '2017/02/25/chrom浏览器font-size应用失效/';
+    this.page.title = 'chrom浏览器font-size应用失效';
+};
+(function() {
+var d = document, s = d.createElement('script');
+
+s.src = '//tribody.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();</script></section><footer><div class="social"><a href="mailto:hctongxue@163.com" title="email" class="iconfont icon-email"></a><a href="https://github.com/tribody" title="github" class="iconfont icon-github"></a><a href="/atom.xml" title="rss" class="iconfont icon-rss"></a></div><div class="copyright"><p class="power">Powered by <a href="https://hexo.io/">Hexo</a> and Theme by <a href="https://github.com/ahonn/hexo-theme-even"> Even</a></p><p class="since">&copy;2015-2017<span class="heart"><i class="iconfont icon-heart"></i></span><span class="author">River He</span></p></div><div id="back2top"><i class="iconfont icon-up"></i></div></footer></div><script src="/js/zepto.min.js"></script><script src="/js/theme.js"></script></body></html>

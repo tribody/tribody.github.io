@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sjtunix.cn/"/>
-  <updated>2016-12-27T13:54:11.630Z</updated>
+  <updated>2017-02-25T08:51:25.662Z</updated>
   <id>http://blog.sjtunix.cn/</id>
   
   <author>
@@ -16,11 +16,49 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>chrom浏览器font-size应用失效</title>
+    <link href="http://blog.sjtunix.cn/2017/02/25/chrom%E6%B5%8F%E8%A7%88%E5%99%A8font-size%E5%BA%94%E7%94%A8%E5%A4%B1%E6%95%88/"/>
+    <id>http://blog.sjtunix.cn/2017/02/25/chrom浏览器font-size应用失效/</id>
+    <published>2017-02-25T08:45:13.000Z</published>
+    <updated>2017-02-25T08:51:25.662Z</updated>
+    
+    <content type="html"><![CDATA[<p>what the hell!<br>今天学css调试的时候，应用<code>font-size: 10px</code>一直无效，半天无头绪，百度了才知道，chrome根本不支持<code>font-size&lt;12px</code>的情况，开发者认为亚洲字符最小不应该小于12px！这是什么逻辑？</p>
+<p>另外，今天记录下em和px两个单位的转换，在写css时，为了避免单位混乱，可以在html中定义<code>font-size</code>，然后，通过em换算定义长度单位，em转换为px公式为<code>em * font-size</code>。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;what the hell!&lt;br&gt;今天学css调试的时候，应用&lt;code&gt;font-size: 10px&lt;/code&gt;一直无效，半天无头绪，百度了才知道，chrome根本不支持&lt;code&gt;font-size&amp;lt;12px&lt;/code&gt;的情况，开发者认为亚洲字符最小不应该
+    
+    </summary>
+    
+      <category term="前端" scheme="http://blog.sjtunix.cn/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+      <category term="css" scheme="http://blog.sjtunix.cn/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>排序算法</title>
+    <link href="http://blog.sjtunix.cn/2016/12/27/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/"/>
+    <id>http://blog.sjtunix.cn/2016/12/27/排序算法/</id>
+    <published>2016-12-27T13:55:35.000Z</published>
+    <updated>2016-12-27T13:55:35.805Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>Stacks and Queues</title>
     <link href="http://blog.sjtunix.cn/2016/12/27/Stack-and-Queue/"/>
     <id>http://blog.sjtunix.cn/2016/12/27/Stack-and-Queue/</id>
     <published>2016-12-27T12:39:22.000Z</published>
-    <updated>2016-12-27T13:54:11.630Z</updated>
+    <updated>2016-12-27T13:54:44.161Z</updated>
     
     <content type="html"><![CDATA[<p>堆栈和队列都可以通过链表和数组分别来实现。</p>
 <p>在堆栈和队列的实现过程中，使用到了泛型和接口的技术。</p>
