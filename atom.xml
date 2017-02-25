@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sjtunix.cn/"/>
-  <updated>2017-02-25T13:58:04.220Z</updated>
+  <updated>2017-02-25T14:00:31.174Z</updated>
   <id>http://blog.sjtunix.cn/</id>
   
   <author>
@@ -20,12 +20,11 @@
     <link href="http://blog.sjtunix.cn/2017/02/25/chrom%E6%B5%8F%E8%A7%88%E5%99%A8font-size%E5%BA%94%E7%94%A8%E5%A4%B1%E6%95%88/"/>
     <id>http://blog.sjtunix.cn/2017/02/25/chrom浏览器font-size应用失效/</id>
     <published>2017-02-25T08:45:13.000Z</published>
-    <updated>2017-02-25T13:58:04.220Z</updated>
+    <updated>2017-02-25T14:00:31.174Z</updated>
     
     <content type="html"><![CDATA[<p>what the hell!<br>今天学css调试的时候，应用<code>font-size: 10px</code>一直无效，半天无头绪，百度了才知道，chrome根本不支持<code>font-size&lt;12px</code>的情况，开发者认为亚洲字符最小不应该小于12px！这是什么逻辑？</p>
 <p>em和px两个单位的转换，在写css时，为了文本域相关标签设置的方便，可以在html下定义font-size，以此为基准，使用em单位来定义相关标签的padding，margin，line-height以及所有文字的font-size属性，会非常方便。</p>
-<p>``` css<br>html {<br>    font-family: Arial, ‘Microsoft YaHei’;<br>    <!-- 以此为基准，该css应用的页面所有em单位都有1em = 15px --><br>    font-size: 15px;<br>}</p>
-]]></content>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">html &#123;</div><div class="line">	font-family: Arial, 'Microsoft YaHei';</div><div class="line">	&lt;!-- 以此为基准，该css应用的页面所有em单位都有1em = 15px --&gt;</div><div class="line">	font-size: 15px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
