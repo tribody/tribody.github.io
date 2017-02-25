@@ -1,11 +1,11 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="River He"><meta name="description" content="from zero to one"><title>Sjtunix</title><link rel="icon" href="/favicon.ico"><link rel="canonical" href="http://blog.sjtunix.cn/"><link rel="alternate" href="/atom.xml" title="Sjtunix"><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><link rel="stylesheet" href="/css/style.css"><script type="text/javascript">var _hmt = _hmt || [];
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="River He"><meta name="description" content="position:absolute和fixed脱离了文档流，无法计算高度，作为子元素的话是无法撑开父元素的。CSS很弱鸡的说，因此参加百度前端技术学院恶补下，今天三栏式布局，一不小心踩了一堆的坑。现在来总结一样，收获还是不晓得（小的…）首先给的题目是这样的：首先拿到题目"><meta name="keywords" content="CSS"><title>三栏式布局 · Sjtunix</title><link rel="icon" href="/favicon.ico"><link rel="canonical" href="http://blog.sjtunix.cn/2017/02/26/三栏式布局/"><link rel="alternate" href="/atom.xml" title="Sjtunix"><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><link rel="stylesheet" href="/css/style.css"><script type="text/javascript">var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "//hm.baidu.com/hm.js?a67714dba8e9a4f625fd5051c7965382";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><ul class="home"><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/02/26/三栏式布局/" class="post-link">三栏式布局</a></h2><span class="post-time">2017年2月26日</span><div class="post-content"><p>position: absolute和fixed脱离了文档流，无法计算高度，作为子元素的话是无法撑开父元素的。</p>
+</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">三栏式布局</h1><span class="post-time">2017年2月26日</span><div class="post-content"><p>position: absolute和fixed脱离了文档流，无法计算高度，作为子元素的话是无法撑开父元素的。</p>
 <p>CSS很弱鸡的说，因此参加百度前端技术学院恶补下，今天三栏式布局，一不小心踩了一堆的坑。现在来总结一样，收获还是不晓得（小的…）</p>
 <p>首先给的题目是这样的：</p>
 <p><img src="./img/three_column_layout.jpg" alt="三栏式布局"></p>
@@ -24,38 +24,16 @@
 <p>除此之外，如果后面还要再加布局，一定要注意清除浮动<code>clear: both</code>。</p>
 <p>总结下知识点，主要考查知识点<code>position</code>，<code>static</code>属性属于默认的，按照文档流布局，<code>absolute</code>和<code>fixed</code>都是绝对定位，区别在于<code>fixed</code>相对于浏览器窗口，<code>absolute</code>相对于<code>static</code>之外的第一个父元素。<code>relative</code>相对于其正常位置偏移，使用<code>top</code>、<code>right</code>、<code>bottom</code>和<code>left</code>定位。<code>inherit</code>继承父级元素<code>position</code>属性。</p>
 <p>需要注意的是绝对定位无法自适应计算高宽，在遇到需要这种情况时采用相对布局。</p>
-</div></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/02/25/chrom浏览器font-size应用失效/" class="post-link">chrom浏览器font-size应用失效</a></h2><span class="post-time">2017年2月25日</span><div class="post-content"><p>what the hell!<br>今天学css调试的时候，应用<code>font-size: 10px</code>一直无效，半天无头绪，百度了才知道，chrome根本不支持<code>font-size&lt;12px</code>的情况，开发者认为亚洲字符最小不应该小于12px！这是什么逻辑？</p>
-<p>em和px两个单位的转换，在写css时，为了文本域相关标签设置的方便，可以在html下定义font-size，以此为基准，使用em单位来定义相关标签的padding，margin，line-height以及所有文字的font-size属性，会非常方便。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">html &#123;</div><div class="line">	font-family: Arial, 'Microsoft YaHei';</div><div class="line">	&lt;!-- 以此为基准，该css应用的页面所有em单位都有1em = 15px --&gt;</div><div class="line">	font-size: 15px;</div><div class="line">&#125;</div></pre></td></tr></table></figure></div></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2016/12/27/排序算法/" class="post-link">排序算法</a></h2><span class="post-time">2016年12月27日</span><div class="post-content"></div></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2016/12/27/Stack-and-Queue/" class="post-link">Stacks and Queues</a></h2><span class="post-time">2016年12月27日</span><div class="post-content"><p>堆栈和队列都可以通过链表和数组分别来实现。</p>
-<p>在堆栈和队列的实现过程中，使用到了泛型和接口的技术。</p>
-<h1 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h1><p>堆栈是一种先进后出的存储结构(FILO)。</p>
-<p>在用数组实现堆栈的时候需要在一定情况下调整数组大小。</p></div><a href="/2016/12/27/Stack-and-Queue/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2016/12/21/After-Effectss-DEV/" class="post-link">After Effects DEV</a></h2><span class="post-time">2016年12月21日</span><div class="post-content"><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Effect（效果器）插件可以被用来创作、处理音视频。它是AE中的一种插件类型。</p>
-<p>Effect（效果器）出现在Effect菜单和Effect&amp;Presets面板中，并在PiPL文件中申明。一旦应用了Effect（效果器）,它的参数控制就会出现在效果器控制面板中（Effect Control panel, ECP）。</p>
-<p>插件都必须包含一个Plug-in Property List（PiPL），并且插件必须放在特定的文件夹中以便AE加载。</p>
-<p>对于所有的effect插件，AE通过发送命令选择器（command selector）到插件的入口函数（在PiPL资源文件中指定的）与插件沟通。而这些命令通过用户的一些行为触发，包括应用effect，改变参数，擦除时间轴的帧，显然序列等等。AE创建了effect的多个实例，以便于对于每个序列它的设置和输入都是独立的。但所有的实例都拥有相同的全局变量，并在它们序列的所有帧之间共享数据。一旦用户应用effectAE才会开始处理图片数据。</p></div><a href="/2016/12/21/After-Effectss-DEV/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2016/12/16/unionfind/" class="post-link">算法学习之union-find</a></h2><span class="post-time">2016年12月16日</span><div class="post-content"><p>最近开始在跟进coursera的算法课程，为明年的实习面试做准备。Sedgewick的这门算法课程非常出名，配套的有一本书叫做《Algorithms》,和Coursera上的课程配套。</p>
-<p>第一周课程先以一个案例即union-find算法为例，阐述算法分析的基础。</p>
-<p>#动态连通性<br>union-find算法要解决的是一个连通性问题。首先，问题描述：<br>给定一个有N个对象的集合，定义如下操作:</p>
-<ul>
-<li>Union command: 连接两个对象。</li>
-<li>Find/connected query：两个对象之间是否是连通的。</li>
-</ul>
-<p>该问题有许多应用场景，如迷宫寻路，物理化学中的渗流和通信网络中的连通性等等。</p></div><a href="/2016/12/16/unionfind/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2016/12/13/C-中的宏定义/" class="post-link">C++学习笔记</a></h2><span class="post-time">2016年12月13日</span><div class="post-content"><h1 id="C-中的宏"><a href="#C-中的宏" class="headerlink" title="C++中的宏"></a>C++中的宏</h1><p>由于很长时间没有摸C++这门儿语言了，把宏定义简单理解成了类似于变量声明和函数声明式地东西。然而，爬了一下博客才发现，宏仅仅只会在在预处理过程中展开，做简单的字符串替换，而<code>没有任何的计算过程</code>。</p>
-<p>两篇关于C++宏的相关讲解。<br><a href="http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html">http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html</a>,这一篇强烈推荐。</p>
-<p><a href="http://blog.chinaunix.net/uid-21372424-id-119797.html">http://blog.chinaunix.net/uid-21372424-id-119797.html</a></p>
-<hr></div><a href="/2016/12/13/C-中的宏定义/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2016/12/13/C-中的-和/" class="post-link">C++中的##和#</a></h2><span class="post-time">2016年12月13日</span><div class="post-content"><p>原文来自<a href="http://www.2cto.com/kf/201503/381187.html">http://www.2cto.com/kf/201503/381187.html</a></p>
-<p>在C/C++的宏中，“#”的功能是将其后面的宏参数进行字符串化操作(Stringfication)，简单说就是在对它所引用的宏变量通过替换后在其左右各加上一个双引号。</p>
-<p>而“##”被称为连接符(concatenator)，用来将两个子串Token连接为一个Token。注意这里连接的对象是Token就行，而不一定是宏的变量。还可以n个##符号连接n+1个Token，这个特性是“#”符号所不具备的。</p>
-<p>凡是宏定义里有用“#”或“##”的地方宏参数是不会再展开。</p>
-<p>若要使“#”和“##”的宏参数被展开，可以加多一层中间转换宏。加这层宏的用意是把所有宏的参数在这层里全部展开，那么在转换宏里的那一个宏就能得到正确的宏参数。<br></div><a href="/2016/12/13/C-中的-和/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2016/12/09/for-iterator/" class="post-link">for iterator</a></h2><span class="post-time">2016年12月9日</span><div class="post-content"><p>昨天看了下C++的并行运算实现方式，编程实现有两种方式，MPI和OpenMP。知乎上有做比较，暂作摘录，区别在于：</p>
-<ul>
-<li>OpenMP：线程级（并行粒度）；共享存储；隐式（数据分配方式）；可扩展性差；</li>
-<li>MPI：进程级；分布式存储；显式；可扩展性好。</li>
-</ul>
-<p>OpenMP采用共享存储，意味着它只适应于SMP,DSM机器，不适合于集群。MPI虽适合于各种机器，但它的编程模型复杂：</p>
-<ul>
-<li>需要分析及划分应用程序问题，并将问题映射到分布式进程集合；</li>
-<li>需要解决通信延迟大和负载不平衡两个主要问题；</li>
-<li>调试MPI程序麻烦；</li>
-<li>MPI程序可靠性差，一个进程出问题，整个程序将错误；</div><a href="/2016/12/09/for-iterator/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2016/11/16/ubuntu/" class="post-link">ubuntu</a></h2><span class="post-time">2016年11月16日</span><div class="post-content"><h2 id="ubuntu16-04安装后的一些优化"><a href="#ubuntu16-04安装后的一些优化" class="headerlink" title="ubuntu16.04安装后的一些优化"></a>ubuntu16.04安装后的一些优化</h2><p>记录一些unbuntu安装后的调整优化工作和各种开发环境搭建工作</p>
-<h3 id="调整启动器"><a href="#调整启动器" class="headerlink" title="调整启动器"></a>调整启动器</h3><p>将默认的左栏调整到底部<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gsettings <span class="built_in">set</span> com.canonical.Unity.Launcher launcher-position Bottom</div></pre></td></tr></table></figure></p>
-<h3 id="卸载”Amazon”链接"><a href="#卸载”Amazon”链接" class="headerlink" title="卸载”Amazon”链接"></a>卸载”Amazon”链接</h3><p>在启动器删掉，然后执行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get remove unity-webapps-common</div></pre></td></tr></table></figure></p></div><a href="/2016/11/16/ubuntu/" class="read-more">Read more..</a></article></li></ul><div class="paginator"><a href="/page/2/" class="next"><span>Next</span><i class="iconfont icon-right"></i></a></div></section><footer><div class="social"><a href="mailto:hctongxue@163.com" title="email" class="iconfont icon-email"></a><a href="https://github.com/tribody" title="github" class="iconfont icon-github"></a><a href="/atom.xml" title="rss" class="iconfont icon-rss"></a></div><div class="copyright"><p class="power">Powered by <a href="https://hexo.io/">Hexo</a> and Theme by <a href="https://github.com/ahonn/hexo-theme-even"> Even</a></p><p class="since">&copy;2015-2017<span class="heart"><i class="iconfont icon-heart"></i></span><span class="author">River He</span></p></div><div id="back2top"><i class="iconfont icon-up"></i></div></footer></div><script src="/js/zepto.min.js"></script><script src="/js/theme.js"></script></body></html>
+</div></article><div class="tags"><a href="/tags/CSS/">CSS</a></div><div class="paginator"><a href="/2017/02/25/chrom浏览器font-size应用失效/" class="next"><span>Next</span><i class="iconfont icon-right"></i></a></div><section id="comments"><div id="disqus_thread"></div></section><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'http://blog.sjtunix.cn/2017/02/26/三栏式布局/';
+    this.page.identifier = '2017/02/26/三栏式布局/';
+    this.page.title = '三栏式布局';
+};
+(function() {
+var d = document, s = d.createElement('script');
+
+s.src = '//tribody.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();</script></section><footer><div class="social"><a href="mailto:hctongxue@163.com" title="email" class="iconfont icon-email"></a><a href="https://github.com/tribody" title="github" class="iconfont icon-github"></a><a href="/atom.xml" title="rss" class="iconfont icon-rss"></a></div><div class="copyright"><p class="power">Powered by <a href="https://hexo.io/">Hexo</a> and Theme by <a href="https://github.com/ahonn/hexo-theme-even"> Even</a></p><p class="since">&copy;2015-2017<span class="heart"><i class="iconfont icon-heart"></i></span><span class="author">River He</span></p></div><div id="back2top"><i class="iconfont icon-up"></i></div></footer></div><script src="/js/zepto.min.js"></script><script src="/js/theme.js"></script></body></html>
