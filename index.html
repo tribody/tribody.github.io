@@ -5,42 +5,9 @@
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><ul class="home"><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/03/02/JS异步调用/" class="post-link">JS异步调用和event-loop</a></h2><span class="post-time">2017年3月2日</span><div class="post-content"><p>文章转自<a href="https://github.com/wangfupeng1988/js-async-tutorial/blob/master/part1-basic/02-event-loop.md" target="_blank" rel="external">github</a></p>
+</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><ul class="home"><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/03/02/JS异步调用/" class="post-link">JS异步调用和event-loop</a></h2><span class="post-time">2017年3月2日</span><div class="post-content"><p>文章转自<a href="https://github.com/wangfupeng1988/js-async-tutorial/blob/master/part1-basic/02-event-loop.md">github</a></p>
 <h1 id="异步和-event-loop"><a href="#异步和-event-loop" class="headerlink" title="异步和 event-loop"></a>异步和 event-loop</h1><p>提到异步，就必须提 event-loop 。event-loop 中文翻译叫做“时间轮询”，它是能体现出单线程中异步操作是如何被执行的。</p>
-<p>首先，<strong>强烈大家观看一个歪果仁的视频《<a href="http://www.tudou.com/programs/view/ACDNKZJm6pQ/" target="_blank" rel="external">what the hack is event loop</a>》</strong>，只有不到半个小时的时间，但是将的非常详细。<em>如果那个链接失效，访问<a href="http://pan.baidu.com/s/1c1E0rjM" target="_blank" rel="external">这里</a>（密码: xx9f）</em></p>
-<p>其次，再结合阮一峰老师的《<a href="http://www.ruanyifeng.com/blog/2013/10/event_loop.html" target="_blank" rel="external">什么是event loop</a>》一起看一下。将这两个看完就基本了解 event loop 了</p>
-<p>最后，event-loop 是一块内容比较独立的技术性知识，它是什么样子就是什么样子，讲解起来可变通性非常小。因此，本节说一下我对 event-loop 的理解和体会</p>
-<h2 id="本节内容概述"><a href="#本节内容概述" class="headerlink" title="本节内容概述"></a>本节内容概述</h2><ul>
-<li>举例说明</li>
-<li>核心概念</li>
-<li>思考两个问题</li>
-</ul>
-<h2 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h2><p>给出一段简单的 js 代码</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'line 1'</span>)</div><div class="line">setTimeout(<span class="built_in">console</span>.log, <span class="number">1000</span>, <span class="string">'line 2'</span>)</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'line 3'</span>)</div></pre></td></tr></table></figure>
-<p>以上一共三行代码，该程序被执行的时候，会依次挨行执行，这被称作 <strong>main-stack</strong> 。</p>
-<ul>
-<li>第一步，执行第一行，将结果<code>line 1</code>打印出来</li>
-<li>第二步，执行第二行，注意此时会将这个操作暂时存储在一个叫做 <strong>call-stack</strong> 的内存地址中，因为<code>setTimeout</code>是一个异步执行操作。</li>
-<li>第三步，执行第三行，将结果<code>line 3</code>打印出出来</li>
-<li>第四步，等待 <strong>main-stack</strong> 的程序（一共三行）都全部执行完了，然后立马实时查看 <strong>call-stack</strong> 中是否还有未执行的异步回调，如果有（1000ms 之后）则把它拿到主线程中来执行</li>
-<li>第五步，主线程又被执行完了，再实时查看 <strong>call-stack</strong> 中是否还有未执行的异步回调。</li>
-</ul>
-<p>以上只拿了<code>setTimeout</code>举例子，但是对于网络请求、IO操作、事件绑定道理都是一样的。<strong>如果我讲的简单例子你还是看不懂，一定要去看文章最初提到的《what the hack is event loop》视频，重要重要！！！</strong></p>
-<h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><p>理解 event-loop 的核心概念是要明白以下几点：</p>
-<ul>
-<li><strong>main-stack</strong> 和 <strong>call-stack</strong> 的区别</li>
-<li>执行 <strong>main-stack</strong> 时将异步操作暂存到 <strong>call-stack</strong></li>
-<li><strong>main-stack</strong> 执行完成之后，实时检查 <strong>call-stack</strong> 的任务是否应该被拿到 <strong>main-stack</strong> 中来执行</li>
-</ul>
-<h2 id="思考三个问题"><a href="#思考三个问题" class="headerlink" title="思考三个问题"></a>思考三个问题</h2><p><strong>第一题，以下代码的输出顺序是什么</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">setTimeout(<span class="built_in">console</span>.log, <span class="number">0</span>, <span class="string">'a'</span>)</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'b'</span>)</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'c'</span>)</div></pre></td></tr></table></figure>
-<p>答案是<code>b c a</code>，有疑问的需要再去看上面的介绍或者那个视频。</p>
-<p><strong>第二题，以下代码中，最后输出的结果是否是 500</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> i, t = <span class="built_in">Date</span>.now()</div><div class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">100000000</span>; i++) &#123;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">Date</span>.now() - t)  <span class="comment">// 输出多少？？？</span></div><div class="line">&#125;</div><div class="line">setTimeout(fn, <span class="number">500</span>)</div></pre></td></tr></table></figure>
-<p>答案是大于 500ms ，因为 for 函数需要花费一些时间，等 for 执行完之后再开始计算 500ms 之后执行 fn</p>
-<p><strong>第三题，事件绑定是不是异步操作？</strong></p>
-<p>这个问题大家根据 event-loop 的讲解和视频来思考，我们下一节再给出解答。</p>
-</div></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/03/02/阿里在线编程题/" class="post-link">阿里在线编程题</a></h2><span class="post-time">2017年3月2日</span><div class="post-content"><p>记录阿里的在线面试题。</p>
+<p>首先，<strong>强烈大家观看一个歪果仁的视频《<a href="http://www.tudou.com/programs/view/ACDNKZJm6pQ/">what the hack is event loop</a>》</strong>，只有不到半个小时的时间，但是将的非常详细。<em>如果那个链接失效，访问<a href="http://pan.baidu.com/s/1c1E0rjM">这里</a>（密码: xx9f）</em></p></div><a href="/2017/03/02/JS异步调用/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/03/02/阿里在线编程题/" class="post-link">阿里在线编程题</a></h2><span class="post-time">2017年3月2日</span><div class="post-content"><p>记录阿里的在线面试题。</p>
 <h1 id="数组切片题"><a href="#数组切片题" class="headerlink" title="数组切片题"></a>数组切片题</h1><h2 id="题设"><a href="#题设" class="headerlink" title="题设"></a>题设</h2><p>对于一个长度为N的整型数组A，数组里所有的数都是正整数，对于两个满足<code>0&lt;=X&lt;=Y&lt;N</code>的整数，<code>A[X], A[X+1]...A[Y]</code>构成A的一个切片，记作<code>(X, Y)</code>。<br>用三个下标<code>m1, m2, m3</code>下标满足条件<code>0&lt;m1, m2+1&lt;m2, m2+1&lt;m3&lt;N-1</code>。<br>可以把这个整型数组分成<code>(0, m1-1), (m1+1, m2-1), (m2+1, m3-1), (m3+1, N-1)</code>四个切片。如果这四个切片中的整数求和相等，称作“四等分”。<br>编写一个函数，求一个给定的整型数组是否可以四等分看，如果可以，返回一个布尔类型的<code>true</code>，如果不可以返回一个布尔类型的<code>false</code>。<br></div><a href="/2017/03/02/阿里在线编程题/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/02/26/三栏式布局/" class="post-link">三栏式布局</a></h2><span class="post-time">2017年2月26日</span><div class="post-content"><p>position: absolute和fixed脱离了文档流，无法计算高度，作为子元素的话是无法撑开父元素的。</p>
 <p>CSS很弱鸡的说，因此参加百度前端技术学院恶补下，今天三栏式布局，一不小心踩了一堆的坑。现在来总结一样，收获还是不晓得（小的…）</p>
 <p>首先给的题目是这样的：</p></div><a href="/2017/02/26/三栏式布局/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/02/25/chrom浏览器font-size应用失效/" class="post-link">chrom浏览器font-size应用失效</a></h2><span class="post-time">2017年2月25日</span><div class="post-content"><p>what the hell!<br>今天学css调试的时候，应用<code>font-size: 10px</code>一直无效，半天无头绪，百度了才知道，chrome根本不支持<code>font-size&lt;12px</code>的情况，开发者认为亚洲字符最小不应该小于12px！这是什么逻辑？</p>

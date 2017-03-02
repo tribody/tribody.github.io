@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sjtunix.cn/"/>
-  <updated>2017-03-02T10:30:24.263Z</updated>
+  <updated>2017-03-02T10:30:39.700Z</updated>
   <id>http://blog.sjtunix.cn/</id>
   
   <author>
@@ -20,11 +20,12 @@
     <link href="http://blog.sjtunix.cn/2017/03/02/JS%E5%BC%82%E6%AD%A5%E8%B0%83%E7%94%A8/"/>
     <id>http://blog.sjtunix.cn/2017/03/02/JS异步调用/</id>
     <published>2017-03-02T10:22:39.000Z</published>
-    <updated>2017-03-02T10:30:24.263Z</updated>
+    <updated>2017-03-02T10:30:39.700Z</updated>
     
     <content type="html"><![CDATA[<p>文章转自<a href="https://github.com/wangfupeng1988/js-async-tutorial/blob/master/part1-basic/02-event-loop.md" target="_blank" rel="external">github</a></p>
 <h1 id="异步和-event-loop"><a href="#异步和-event-loop" class="headerlink" title="异步和 event-loop"></a>异步和 event-loop</h1><p>提到异步，就必须提 event-loop 。event-loop 中文翻译叫做“时间轮询”，它是能体现出单线程中异步操作是如何被执行的。</p>
 <p>首先，<strong>强烈大家观看一个歪果仁的视频《<a href="http://www.tudou.com/programs/view/ACDNKZJm6pQ/" target="_blank" rel="external">what the hack is event loop</a>》</strong>，只有不到半个小时的时间，但是将的非常详细。<em>如果那个链接失效，访问<a href="http://pan.baidu.com/s/1c1E0rjM" target="_blank" rel="external">这里</a>（密码: xx9f）</em></p>
+<a id="more"></a>
 <p>其次，再结合阮一峰老师的《<a href="http://www.ruanyifeng.com/blog/2013/10/event_loop.html" target="_blank" rel="external">什么是event loop</a>》一起看一下。将这两个看完就基本了解 event loop 了</p>
 <p>最后，event-loop 是一块内容比较独立的技术性知识，它是什么样子就是什么样子，讲解起来可变通性非常小。因此，本节说一下我对 event-loop 的理解和体会</p>
 <h2 id="本节内容概述"><a href="#本节内容概述" class="headerlink" title="本节内容概述"></a>本节内容概述</h2><ul>
@@ -61,7 +62,9 @@
     
     <summary type="html">
     
-      &lt;p&gt;文章转自&lt;a href=&quot;https://github.com/wangfupeng1988/js-async-tutorial/blob/master/part1-basic/02-event-loop.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;
+      &lt;p&gt;文章转自&lt;a href=&quot;https://github.com/wangfupeng1988/js-async-tutorial/blob/master/part1-basic/02-event-loop.md&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;异步和-event-loop&quot;&gt;&lt;a href=&quot;#异步和-event-loop&quot; class=&quot;headerlink&quot; title=&quot;异步和 event-loop&quot;&gt;&lt;/a&gt;异步和 event-loop&lt;/h1&gt;&lt;p&gt;提到异步，就必须提 event-loop 。event-loop 中文翻译叫做“时间轮询”，它是能体现出单线程中异步操作是如何被执行的。&lt;/p&gt;
+&lt;p&gt;首先，&lt;strong&gt;强烈大家观看一个歪果仁的视频《&lt;a href=&quot;http://www.tudou.com/programs/view/ACDNKZJm6pQ/&quot;&gt;what the hack is event loop&lt;/a&gt;》&lt;/strong&gt;，只有不到半个小时的时间，但是将的非常详细。&lt;em&gt;如果那个链接失效，访问&lt;a href=&quot;http://pan.baidu.com/s/1c1E0rjM&quot;&gt;这里&lt;/a&gt;（密码: xx9f）&lt;/em&gt;&lt;/p&gt;
     
     </summary>
     
