@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sjtunix.cn/"/>
-  <updated>2017-03-02T10:16:57.465Z</updated>
+  <updated>2017-03-02T10:18:30.907Z</updated>
   <id>http://blog.sjtunix.cn/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://blog.sjtunix.cn/2017/03/02/%E9%98%BF%E9%87%8C%E5%9C%A8%E7%BA%BF%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
     <id>http://blog.sjtunix.cn/2017/03/02/阿里在线编程题/</id>
     <published>2017-03-02T09:51:49.000Z</published>
-    <updated>2017-03-02T10:16:57.465Z</updated>
+    <updated>2017-03-02T10:18:30.907Z</updated>
     
     <content type="html"><![CDATA[<p>记录阿里的在线面试题。</p>
-<h1 id="数组切片题"><a href="#数组切片题" class="headerlink" title="数组切片题"></a>数组切片题</h1><h2 id="题设"><a href="#题设" class="headerlink" title="题设"></a>题设</h2><p>对于一个长度为N的整型数组A，数组里所有的数都是正整数，对于两个满足<code>0&lt;=X&lt;=Y&lt;N</code>的整数，<code>A[X], A[X+1]...A[Y]</code>构成A的一个切片，记作<code>(X, Y)</code>。<br>用三个下标<code>m1, m2, m3</code>下标满足条件<code>0&lt;m1, m2+1&lt;m2, m2+1&lt;m3&lt;N-1</code>。<br>可以把这个整型数组分成<code>(0, m1-1), (m1+1, m2-1), (m2+1, m3-1), (m3+1, N-1)</code>四个切片。如果这四个切片中的整数求和相等，称作“四等分”。<br>编写一个函数，求一个给定的整型数组是否可以四等分看，如果可以，返回一个布尔类型的<code>true</code>，如果不可以返回一个布尔类型的<code>false</code>。<br>限制条件：数组A最多有1,000,000项，数组中的整数取值范围介于-1,000,000到1,000,000之间。<br>要求：函数的计算复杂度为<code>O(N)</code>，使用额外存储空间（除了输入的数组之外）最多为<code>O(N)</code>。<br>例子：<br>对于数组A=[1, 5, 1, 1, 1, 1, 4, 1, 7, 3, 7]存在下标2, 7, 9使得数组分成四个分片[2, 5], [1, 1, 1, 4], [7], [7]，这三个分片内整数之和相等，所以对于这个数组，函数应该返回<code>true</code>。<br>对于数组A=[10, 2, 11, 13, 1, 1, 1, 1, 1]，找不到能把数组四等分的下标，所以函数应该返回<code>false</code>。</p>
+<h1 id="数组切片题"><a href="#数组切片题" class="headerlink" title="数组切片题"></a>数组切片题</h1><h2 id="题设"><a href="#题设" class="headerlink" title="题设"></a>题设</h2><p>对于一个长度为N的整型数组A，数组里所有的数都是正整数，对于两个满足<code>0&lt;=X&lt;=Y&lt;N</code>的整数，<code>A[X], A[X+1]...A[Y]</code>构成A的一个切片，记作<code>(X, Y)</code>。<br>用三个下标<code>m1, m2, m3</code>下标满足条件<code>0&lt;m1, m2+1&lt;m2, m2+1&lt;m3&lt;N-1</code>。<br>可以把这个整型数组分成<code>(0, m1-1), (m1+1, m2-1), (m2+1, m3-1), (m3+1, N-1)</code>四个切片。如果这四个切片中的整数求和相等，称作“四等分”。<br>编写一个函数，求一个给定的整型数组是否可以四等分看，如果可以，返回一个布尔类型的<code>true</code>，如果不可以返回一个布尔类型的<code>false</code>。<br><a id="more"></a><br>限制条件：数组A最多有1,000,000项，数组中的整数取值范围介于-1,000,000到1,000,000之间。<br>要求：函数的计算复杂度为<code>O(N)</code>，使用额外存储空间（除了输入的数组之外）最多为<code>O(N)</code>。<br>例子：<br>对于数组A=[1, 5, 1, 1, 1, 1, 4, 1, 7, 3, 7]存在下标2, 7, 9使得数组分成四个分片[2, 5], [1, 1, 1, 4], [7], [7]，这三个分片内整数之和相等，所以对于这个数组，函数应该返回<code>true</code>。<br>对于数组A=[10, 2, 11, 13, 1, 1, 1, 1, 1]，找不到能把数组四等分的下标，所以函数应该返回<code>false</code>。</p>
 <h2 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h2><p>很遗憾，当时把题目看错了，因为室友前一天做了，所以以为下表元素是算在求和之内的。直到最后五分钟才意识到，已经晚了。</p>
 <p>第一种思路当然是暴力求解，三个<code>for</code>循环，但是这显然是不行的。因为复杂度为<code>O(N^3)</code>。</p>
 <p>我这里采用的方法，受到了很多排序算法的启发，步骤如下：</p>
@@ -41,7 +41,7 @@
     <summary type="html">
     
       &lt;p&gt;记录阿里的在线面试题。&lt;/p&gt;
-&lt;h1 id=&quot;数组切片题&quot;&gt;&lt;a href=&quot;#数组切片题&quot; class=&quot;headerlink&quot; title=&quot;数组切片题&quot;&gt;&lt;/a&gt;数组切片题&lt;/h1&gt;&lt;h2 id=&quot;题设&quot;&gt;&lt;a href=&quot;#题设&quot; class=&quot;headerlin
+&lt;h1 id=&quot;数组切片题&quot;&gt;&lt;a href=&quot;#数组切片题&quot; class=&quot;headerlink&quot; title=&quot;数组切片题&quot;&gt;&lt;/a&gt;数组切片题&lt;/h1&gt;&lt;h2 id=&quot;题设&quot;&gt;&lt;a href=&quot;#题设&quot; class=&quot;headerlink&quot; title=&quot;题设&quot;&gt;&lt;/a&gt;题设&lt;/h2&gt;&lt;p&gt;对于一个长度为N的整型数组A，数组里所有的数都是正整数，对于两个满足&lt;code&gt;0&amp;lt;=X&amp;lt;=Y&amp;lt;N&lt;/code&gt;的整数，&lt;code&gt;A[X], A[X+1]...A[Y]&lt;/code&gt;构成A的一个切片，记作&lt;code&gt;(X, Y)&lt;/code&gt;。&lt;br&gt;用三个下标&lt;code&gt;m1, m2, m3&lt;/code&gt;下标满足条件&lt;code&gt;0&amp;lt;m1, m2+1&amp;lt;m2, m2+1&amp;lt;m3&amp;lt;N-1&lt;/code&gt;。&lt;br&gt;可以把这个整型数组分成&lt;code&gt;(0, m1-1), (m1+1, m2-1), (m2+1, m3-1), (m3+1, N-1)&lt;/code&gt;四个切片。如果这四个切片中的整数求和相等，称作“四等分”。&lt;br&gt;编写一个函数，求一个给定的整型数组是否可以四等分看，如果可以，返回一个布尔类型的&lt;code&gt;true&lt;/code&gt;，如果不可以返回一个布尔类型的&lt;code&gt;false&lt;/code&gt;。&lt;br&gt;
     
     </summary>
     
