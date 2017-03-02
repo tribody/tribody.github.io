@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sjtunix.cn/"/>
-  <updated>2017-03-02T10:18:30.907Z</updated>
+  <updated>2017-03-02T10:30:24.263Z</updated>
   <id>http://blog.sjtunix.cn/</id>
   
   <author>
@@ -14,6 +14,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JS异步调用和event-loop</title>
+    <link href="http://blog.sjtunix.cn/2017/03/02/JS%E5%BC%82%E6%AD%A5%E8%B0%83%E7%94%A8/"/>
+    <id>http://blog.sjtunix.cn/2017/03/02/JS异步调用/</id>
+    <published>2017-03-02T10:22:39.000Z</published>
+    <updated>2017-03-02T10:30:24.263Z</updated>
+    
+    <content type="html"><![CDATA[<p>文章转自<a href="https://github.com/wangfupeng1988/js-async-tutorial/blob/master/part1-basic/02-event-loop.md" target="_blank" rel="external">github</a></p>
+<h1 id="异步和-event-loop"><a href="#异步和-event-loop" class="headerlink" title="异步和 event-loop"></a>异步和 event-loop</h1><p>提到异步，就必须提 event-loop 。event-loop 中文翻译叫做“时间轮询”，它是能体现出单线程中异步操作是如何被执行的。</p>
+<p>首先，<strong>强烈大家观看一个歪果仁的视频《<a href="http://www.tudou.com/programs/view/ACDNKZJm6pQ/" target="_blank" rel="external">what the hack is event loop</a>》</strong>，只有不到半个小时的时间，但是将的非常详细。<em>如果那个链接失效，访问<a href="http://pan.baidu.com/s/1c1E0rjM" target="_blank" rel="external">这里</a>（密码: xx9f）</em></p>
+<p>其次，再结合阮一峰老师的《<a href="http://www.ruanyifeng.com/blog/2013/10/event_loop.html" target="_blank" rel="external">什么是event loop</a>》一起看一下。将这两个看完就基本了解 event loop 了</p>
+<p>最后，event-loop 是一块内容比较独立的技术性知识，它是什么样子就是什么样子，讲解起来可变通性非常小。因此，本节说一下我对 event-loop 的理解和体会</p>
+<h2 id="本节内容概述"><a href="#本节内容概述" class="headerlink" title="本节内容概述"></a>本节内容概述</h2><ul>
+<li>举例说明</li>
+<li>核心概念</li>
+<li>思考两个问题</li>
+</ul>
+<h2 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h2><p>给出一段简单的 js 代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'line 1'</span>)</div><div class="line">setTimeout(<span class="built_in">console</span>.log, <span class="number">1000</span>, <span class="string">'line 2'</span>)</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'line 3'</span>)</div></pre></td></tr></table></figure>
+<p>以上一共三行代码，该程序被执行的时候，会依次挨行执行，这被称作 <strong>main-stack</strong> 。</p>
+<ul>
+<li>第一步，执行第一行，将结果<code>line 1</code>打印出来</li>
+<li>第二步，执行第二行，注意此时会将这个操作暂时存储在一个叫做 <strong>call-stack</strong> 的内存地址中，因为<code>setTimeout</code>是一个异步执行操作。</li>
+<li>第三步，执行第三行，将结果<code>line 3</code>打印出出来</li>
+<li>第四步，等待 <strong>main-stack</strong> 的程序（一共三行）都全部执行完了，然后立马实时查看 <strong>call-stack</strong> 中是否还有未执行的异步回调，如果有（1000ms 之后）则把它拿到主线程中来执行</li>
+<li>第五步，主线程又被执行完了，再实时查看 <strong>call-stack</strong> 中是否还有未执行的异步回调。</li>
+</ul>
+<p>以上只拿了<code>setTimeout</code>举例子，但是对于网络请求、IO操作、事件绑定道理都是一样的。<strong>如果我讲的简单例子你还是看不懂，一定要去看文章最初提到的《what the hack is event loop》视频，重要重要！！！</strong></p>
+<h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><p>理解 event-loop 的核心概念是要明白以下几点：</p>
+<ul>
+<li><strong>main-stack</strong> 和 <strong>call-stack</strong> 的区别</li>
+<li>执行 <strong>main-stack</strong> 时将异步操作暂存到 <strong>call-stack</strong></li>
+<li><strong>main-stack</strong> 执行完成之后，实时检查 <strong>call-stack</strong> 的任务是否应该被拿到 <strong>main-stack</strong> 中来执行</li>
+</ul>
+<h2 id="思考三个问题"><a href="#思考三个问题" class="headerlink" title="思考三个问题"></a>思考三个问题</h2><p><strong>第一题，以下代码的输出顺序是什么</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">setTimeout(<span class="built_in">console</span>.log, <span class="number">0</span>, <span class="string">'a'</span>)</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'b'</span>)</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'c'</span>)</div></pre></td></tr></table></figure>
+<p>答案是<code>b c a</code>，有疑问的需要再去看上面的介绍或者那个视频。</p>
+<p><strong>第二题，以下代码中，最后输出的结果是否是 500</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> i, t = <span class="built_in">Date</span>.now()</div><div class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">100000000</span>; i++) &#123;</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="built_in">Date</span>.now() - t)  <span class="comment">// 输出多少？？？</span></div><div class="line">&#125;</div><div class="line">setTimeout(fn, <span class="number">500</span>)</div></pre></td></tr></table></figure>
+<p>答案是大于 500ms ，因为 for 函数需要花费一些时间，等 for 执行完之后再开始计算 500ms 之后执行 fn</p>
+<p><strong>第三题，事件绑定是不是异步操作？</strong></p>
+<p>这个问题大家根据 event-loop 的讲解和视频来思考，我们下一节再给出解答。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;文章转自&lt;a href=&quot;https://github.com/wangfupeng1988/js-async-tutorial/blob/master/part1-basic/02-event-loop.md&quot; target=&quot;_blank&quot; rel=&quot;external&quot;
+    
+    </summary>
+    
+    
+      <category term="JavaScript" scheme="http://blog.sjtunix.cn/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>阿里在线编程题</title>
