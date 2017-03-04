@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sjtunix.cn/"/>
-  <updated>2017-03-04T13:38:16.502Z</updated>
+  <updated>2017-03-04T13:39:51.404Z</updated>
   <id>http://blog.sjtunix.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.sjtunix.cn/2017/03/04/inline-block/"/>
     <id>http://blog.sjtunix.cn/2017/03/04/inline-block/</id>
     <published>2017-03-04T13:19:26.000Z</published>
-    <updated>2017-03-04T13:38:16.502Z</updated>
+    <updated>2017-03-04T13:39:51.404Z</updated>
     
     <content type="html"><![CDATA[<p>参考自<a href="http://www.cnblogs.com/KeithWang/p/3139517.html" target="_blank" rel="external">http://www.cnblogs.com/KeithWang/p/3139517.html</a></p>
 <p><a href="http://www.zhangxinxu.com/wordpress/2010/11/%E6%8B%9C%E6%8B%9C%E4%BA%86%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80-%E5%9F%BA%E4%BA%8Edisplayinline-block%E7%9A%84%E5%88%97%E8%A1%A8%E5%B8%83%E5%B1%80/" target="_blank" rel="external">http://www.zhangxinxu.com/wordpress/2010/11/%E6%8B%9C%E6%8B%9C%E4%BA%86%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80-%E5%9F%BA%E4%BA%8Edisplayinline-block%E7%9A%84%E5%88%97%E8%A1%A8%E5%B8%83%E5%B1%80/</a></p>
@@ -30,6 +30,7 @@
 <li>block元素可以包含block元素和inline元素；但inline元素只能包含inline元素。要注意的是这个是个大概的说法，每个特定的元素能包含的元素也是特定的，所以具体到个别元素上，这条规律是不适用的。比如 P 元素，只能包含inline元素，而不能包含block元素。</li>
 <li>一般来说，可以通过display:inline和display:block的设置，改变元素的布局级别。</li>
 </ol>
+<a id="more"></a>
 <h2 id="block，inline和inline-block细节对比"><a href="#block，inline和inline-block细节对比" class="headerlink" title="block，inline和inline-block细节对比"></a>block，inline和inline-block细节对比</h2><ul>
 <li>display:block<ol>
 <li>block元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度自动填满其父元素宽度。</li>
@@ -76,7 +77,14 @@
     
     <summary type="html">
     
-      &lt;p&gt;参考自&lt;a href=&quot;http://www.cnblogs.com/KeithWang/p/3139517.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.cnblogs.com/KeithWang/p/3139517.ht
+      &lt;p&gt;参考自&lt;a href=&quot;http://www.cnblogs.com/KeithWang/p/3139517.html&quot;&gt;http://www.cnblogs.com/KeithWang/p/3139517.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.zhangxinxu.com/wordpress/2010/11/%E6%8B%9C%E6%8B%9C%E4%BA%86%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80-%E5%9F%BA%E4%BA%8Edisplayinline-block%E7%9A%84%E5%88%97%E8%A1%A8%E5%B8%83%E5%B1%80/&quot;&gt;http://www.zhangxinxu.com/wordpress/2010/11/%E6%8B%9C%E6%8B%9C%E4%BA%86%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80-%E5%9F%BA%E4%BA%8Edisplayinline-block%E7%9A%84%E5%88%97%E8%A1%A8%E5%B8%83%E5%B1%80/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;总体概念&quot;&gt;&lt;a href=&quot;#总体概念&quot; class=&quot;headerlink&quot; title=&quot;总体概念&quot;&gt;&lt;/a&gt;总体概念&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;block和inline这两个概念是简略的说法，完整确切的说应该是 block-level elements (块级元素) 和 inline elements (内联元素)。block元素通常被现实为独立的一块，会单独换一行；inline元素则前后不会产生换行，一系列inline元素都在一行内显示，直到该行排满。&lt;/li&gt;
+&lt;li&gt;大体来说HTML元素各有其自身的布局级别（block元素还是inline元素）：&lt;br&gt;常见的块级元素有 DIV, FORM, TABLE, P, PRE, H1~H6, DL, OL, UL 等。&lt;br&gt;常见的内联元素有 SPAN, A, STRONG, EM, LABEL, INPUT, SELECT, TEXTAREA, IMG, BR 等。&lt;/li&gt;
+&lt;li&gt;block元素可以包含block元素和inline元素；但inline元素只能包含inline元素。要注意的是这个是个大概的说法，每个特定的元素能包含的元素也是特定的，所以具体到个别元素上，这条规律是不适用的。比如 P 元素，只能包含inline元素，而不能包含block元素。&lt;/li&gt;
+&lt;li&gt;一般来说，可以通过display:inline和display:block的设置，改变元素的布局级别。&lt;/li&gt;
+&lt;/ol&gt;
     
     </summary>
     
@@ -150,10 +158,11 @@
     <link href="http://blog.sjtunix.cn/2017/03/02/%E9%98%BF%E9%87%8C%E5%9C%A8%E7%BA%BF%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
     <id>http://blog.sjtunix.cn/2017/03/02/阿里在线编程题/</id>
     <published>2017-03-02T09:51:49.000Z</published>
-    <updated>2017-03-03T15:16:05.656Z</updated>
+    <updated>2017-03-04T13:40:04.893Z</updated>
     
     <content type="html"><![CDATA[<p>记录阿里的在线面试题。</p>
-<h1 id="数组切片题"><a href="#数组切片题" class="headerlink" title="数组切片题"></a>数组切片题</h1><h2 id="题设"><a href="#题设" class="headerlink" title="题设"></a>题设</h2><p>对于一个长度为N的整型数组A，数组里所有的数都是正整数，对于两个满足<code>0&lt;=X&lt;=Y&lt;N</code>的整数，<code>A[X], A[X+1]...A[Y]</code>构成A的一个切片，记作<code>(X, Y)</code>。<br>用三个下标<code>m1, m2, m3</code>下标满足条件<code>0&lt;m1, m2+1&lt;m2, m2+1&lt;m3&lt;N-1</code>。<br>可以把这个整型数组分成<code>(0, m1-1), (m1+1, m2-1), (m2+1, m3-1), (m3+1, N-1)</code>四个切片。如果这四个切片中的整数求和相等，称作“四等分”。<br>编写一个函数，求一个给定的整型数组是否可以四等分看，如果可以，返回一个布尔类型的<code>true</code>，如果不可以返回一个布尔类型的<code>false</code>。<br><a id="more"></a><br>限制条件：数组A最多有1,000,000项，数组中的整数取值范围介于-1,000,000到1,000,000之间。<br>要求：函数的计算复杂度为<code>O(N)</code>，使用额外存储空间（除了输入的数组之外）最多为<code>O(N)</code>。<br>例子：<br>对于数组A=[1, 5, 1, 1, 1, 1, 4, 1, 7, 3, 7]存在下标2, 7, 9使得数组分成四个分片[2, 5], [1, 1, 1, 4], [7], [7]，这三个分片内整数之和相等，所以对于这个数组，函数应该返回<code>true</code>。<br>对于数组A=[10, 2, 11, 13, 1, 1, 1, 1, 1]，找不到能把数组四等分的下标，所以函数应该返回<code>false</code>。</p>
+<h1 id="数组切片题"><a href="#数组切片题" class="headerlink" title="数组切片题"></a>数组切片题</h1><h2 id="题设"><a href="#题设" class="headerlink" title="题设"></a>题设</h2><p>对于一个长度为N的整型数组A，数组里所有的数都是正整数，对于两个满足<code>0&lt;=X&lt;=Y&lt;N</code>的整数，<code>A[X], A[X+1]...A[Y]</code>构成A的一个切片，记作<code>(X, Y)</code>。<br>用三个下标<code>m1, m2, m3</code>下标满足条件<code>0&lt;m1, m2+1&lt;m2, m2+1&lt;m3&lt;N-1</code>。<br>可以把这个整型数组分成<code>(0, m1-1), (m1+1, m2-1), (m2+1, m3-1), (m3+1, N-1)</code>四个切片。如果这四个切片中的整数求和相等，称作“四等分”。<br>编写一个函数，求一个给定的整型数组是否可以四等分看，如果可以，返回一个布尔类型的<code>true</code>，如果不可以返回一个布尔类型的<code>false</code>。</p>
+<p>限制条件：数组A最多有1,000,000项，数组中的整数取值范围介于-1,000,000到1,000,000之间。<br>要求：函数的计算复杂度为<code>O(N)</code>，使用额外存储空间（除了输入的数组之外）最多为<code>O(N)</code>。<br>例子：<br>对于数组A=[1, 5, 1, 1, 1, 1, 4, 1, 7, 3, 7]存在下标2, 7, 9使得数组分成四个分片[2, 5], [1, 1, 1, 4], [7], [7]，这三个分片内整数之和相等，所以对于这个数组，函数应该返回<code>true</code>。<br>对于数组A=[10, 2, 11, 13, 1, 1, 1, 1, 1]，找不到能把数组四等分的下标，所以函数应该返回<code>false</code>。<br><a id="more"></a></p>
 <h2 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h2><p>很遗憾，当时把题目看错了，因为室友前一天做了，所以以为下表元素是算在求和之内的。直到最后五分钟才意识到，已经晚了。</p>
 <p>第一种思路当然是暴力求解，三个<code>for</code>循环，但是这显然是不行的。因为复杂度为<code>O(N^3)</code>。</p>
 <p>我这里采用的方法，受到了很多排序算法的启发，步骤如下：</p>
@@ -175,7 +184,8 @@
     <summary type="html">
     
       &lt;p&gt;记录阿里的在线面试题。&lt;/p&gt;
-&lt;h1 id=&quot;数组切片题&quot;&gt;&lt;a href=&quot;#数组切片题&quot; class=&quot;headerlink&quot; title=&quot;数组切片题&quot;&gt;&lt;/a&gt;数组切片题&lt;/h1&gt;&lt;h2 id=&quot;题设&quot;&gt;&lt;a href=&quot;#题设&quot; class=&quot;headerlink&quot; title=&quot;题设&quot;&gt;&lt;/a&gt;题设&lt;/h2&gt;&lt;p&gt;对于一个长度为N的整型数组A，数组里所有的数都是正整数，对于两个满足&lt;code&gt;0&amp;lt;=X&amp;lt;=Y&amp;lt;N&lt;/code&gt;的整数，&lt;code&gt;A[X], A[X+1]...A[Y]&lt;/code&gt;构成A的一个切片，记作&lt;code&gt;(X, Y)&lt;/code&gt;。&lt;br&gt;用三个下标&lt;code&gt;m1, m2, m3&lt;/code&gt;下标满足条件&lt;code&gt;0&amp;lt;m1, m2+1&amp;lt;m2, m2+1&amp;lt;m3&amp;lt;N-1&lt;/code&gt;。&lt;br&gt;可以把这个整型数组分成&lt;code&gt;(0, m1-1), (m1+1, m2-1), (m2+1, m3-1), (m3+1, N-1)&lt;/code&gt;四个切片。如果这四个切片中的整数求和相等，称作“四等分”。&lt;br&gt;编写一个函数，求一个给定的整型数组是否可以四等分看，如果可以，返回一个布尔类型的&lt;code&gt;true&lt;/code&gt;，如果不可以返回一个布尔类型的&lt;code&gt;false&lt;/code&gt;。&lt;br&gt;
+&lt;h1 id=&quot;数组切片题&quot;&gt;&lt;a href=&quot;#数组切片题&quot; class=&quot;headerlink&quot; title=&quot;数组切片题&quot;&gt;&lt;/a&gt;数组切片题&lt;/h1&gt;&lt;h2 id=&quot;题设&quot;&gt;&lt;a href=&quot;#题设&quot; class=&quot;headerlink&quot; title=&quot;题设&quot;&gt;&lt;/a&gt;题设&lt;/h2&gt;&lt;p&gt;对于一个长度为N的整型数组A，数组里所有的数都是正整数，对于两个满足&lt;code&gt;0&amp;lt;=X&amp;lt;=Y&amp;lt;N&lt;/code&gt;的整数，&lt;code&gt;A[X], A[X+1]...A[Y]&lt;/code&gt;构成A的一个切片，记作&lt;code&gt;(X, Y)&lt;/code&gt;。&lt;br&gt;用三个下标&lt;code&gt;m1, m2, m3&lt;/code&gt;下标满足条件&lt;code&gt;0&amp;lt;m1, m2+1&amp;lt;m2, m2+1&amp;lt;m3&amp;lt;N-1&lt;/code&gt;。&lt;br&gt;可以把这个整型数组分成&lt;code&gt;(0, m1-1), (m1+1, m2-1), (m2+1, m3-1), (m3+1, N-1)&lt;/code&gt;四个切片。如果这四个切片中的整数求和相等，称作“四等分”。&lt;br&gt;编写一个函数，求一个给定的整型数组是否可以四等分看，如果可以，返回一个布尔类型的&lt;code&gt;true&lt;/code&gt;，如果不可以返回一个布尔类型的&lt;code&gt;false&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;限制条件：数组A最多有1,000,000项，数组中的整数取值范围介于-1,000,000到1,000,000之间。&lt;br&gt;要求：函数的计算复杂度为&lt;code&gt;O(N)&lt;/code&gt;，使用额外存储空间（除了输入的数组之外）最多为&lt;code&gt;O(N)&lt;/code&gt;。&lt;br&gt;例子：&lt;br&gt;对于数组A=[1, 5, 1, 1, 1, 1, 4, 1, 7, 3, 7]存在下标2, 7, 9使得数组分成四个分片[2, 5], [1, 1, 1, 4], [7], [7]，这三个分片内整数之和相等，所以对于这个数组，函数应该返回&lt;code&gt;true&lt;/code&gt;。&lt;br&gt;对于数组A=[10, 2, 11, 13, 1, 1, 1, 1, 1]，找不到能把数组四等分的下标，所以函数应该返回&lt;code&gt;false&lt;/code&gt;。&lt;br&gt;
     
     </summary>
     
