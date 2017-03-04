@@ -5,7 +5,57 @@
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><ul class="home"><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/03/02/JS异步调用/" class="post-link">JS异步调用和event-loop</a></h2><span class="post-time">2017年3月2日</span><div class="post-content"><p>文章转自<a href="https://github.com/wangfupeng1988/js-async-tutorial/blob/master/part1-basic/02-event-loop.md">github</a></p>
+</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><ul class="home"><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/03/04/inline-block/" class="post-link">block，inline和inline-block概念和区别</a></h2><span class="post-time">2017年3月4日</span><div class="post-content"><p>参考自<a href="http://www.cnblogs.com/KeithWang/p/3139517.html" target="_blank" rel="external">http://www.cnblogs.com/KeithWang/p/3139517.html</a></p>
+<p><a href="http://www.zhangxinxu.com/wordpress/2010/11/%E6%8B%9C%E6%8B%9C%E4%BA%86%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80-%E5%9F%BA%E4%BA%8Edisplayinline-block%E7%9A%84%E5%88%97%E8%A1%A8%E5%B8%83%E5%B1%80/" target="_blank" rel="external">http://www.zhangxinxu.com/wordpress/2010/11/%E6%8B%9C%E6%8B%9C%E4%BA%86%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80-%E5%9F%BA%E4%BA%8Edisplayinline-block%E7%9A%84%E5%88%97%E8%A1%A8%E5%B8%83%E5%B1%80/</a></p>
+<h2 id="总体概念"><a href="#总体概念" class="headerlink" title="总体概念"></a>总体概念</h2><ol>
+<li>block和inline这两个概念是简略的说法，完整确切的说应该是 block-level elements (块级元素) 和 inline elements (内联元素)。block元素通常被现实为独立的一块，会单独换一行；inline元素则前后不会产生换行，一系列inline元素都在一行内显示，直到该行排满。</li>
+<li>大体来说HTML元素各有其自身的布局级别（block元素还是inline元素）：<br>常见的块级元素有 DIV, FORM, TABLE, P, PRE, H1~H6, DL, OL, UL 等。<br>常见的内联元素有 SPAN, A, STRONG, EM, LABEL, INPUT, SELECT, TEXTAREA, IMG, BR 等。</li>
+<li>block元素可以包含block元素和inline元素；但inline元素只能包含inline元素。要注意的是这个是个大概的说法，每个特定的元素能包含的元素也是特定的，所以具体到个别元素上，这条规律是不适用的。比如 P 元素，只能包含inline元素，而不能包含block元素。</li>
+<li>一般来说，可以通过display:inline和display:block的设置，改变元素的布局级别。</li>
+</ol>
+<h2 id="block，inline和inline-block细节对比"><a href="#block，inline和inline-block细节对比" class="headerlink" title="block，inline和inline-block细节对比"></a>block，inline和inline-block细节对比</h2><ul>
+<li>display:block<ol>
+<li>block元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度自动填满其父元素宽度。</li>
+<li>block元素可以设置width,height属性。块级元素即使设置了宽度,仍然是独占一行。</li>
+<li>block元素可以设置margin和padding属性。</li>
+</ol>
+</li>
+<li>display:inline<ol>
+<li>inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。</li>
+<li>inline元素设置width,height属性无效。</li>
+<li>inline元素的margin和padding属性，水平方向的padding-left, padding-right, margin-left, margin-right都产生边距效果；但竖直方向的padding-top, padding-bottom, margin-top, margin-bottom不会产生边距效果。</li>
+</ol>
+</li>
+<li><p>display:inline-block</p>
+<ol>
+<li>简单来说就是将对象呈现为inline对象，但是对象的内容作为block对象呈现。之后的内联对象会被排列在同一行内。比如我们可以给一个link（a元素）inline-block属性值，使其既具有block的宽度高度特性又具有inline的同行特性。</li>
+</ol>
+<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2></li>
+<li><p>一般我们会用display:block，display:inline或者display:inline-block来调整元素的布局级别，其实display的参数远远不止这三种，仅仅是比较常用而已。</p>
+</li>
+<li>IE（低版本IE）本来是不支持inline-block的，所以在IE中对内联元素使用display:inline-block，理论上IE是不识别的，但使用display:inline-block在IE下会触发layout，从而使内联元素拥有了display:inline-block属性的表象。</li>
+</ul>
+<h2 id="消除inline-block之间的空格"><a href="#消除inline-block之间的空格" class="headerlink" title="消除inline-block之间的空格"></a>消除inline-block之间的空格</h2><p>在完整的展示兼容性的像素级的inline-block元素列表布局前，有必要讲讲使用display:inline-block列表布局经常会遇到的“换行符/空格间隙问题”。</p>
+<p>如果inline-block元素间有空格或是换行产生了间隙，那是正常的，应该的。如果没有空格与间隙才是不正常的（IE6/7 block水平元素）。真正的inline-block元素，就像个图片一样。例如，两个不在一行的img标签，形成的两个图片之间就会有间隙。</p>
+<p>要让这些空格不出现，最简单的最容易理解的就是让列表的结束标签与下一个列表的开始标签连在一起，就像是：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">span</span>&gt;</span>...<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">span</span>&gt;</span>...<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></div></pre></td></tr></table></figure>
+<p>但是，这种做法好傻啊，而且HTML代码的可读性很不好。尤其考虑到现实情况：后台人员可能不清楚标签换行对样式的影响，直接后台repeat的时候，换行了。所以，此方法顶多临时应付些小打小闹的地方，要想广泛使用，显然业余了。</p>
+<p>其实，我们只要细细想想，空格符本质上就是个字符，与a,b,c,d这些字符是个同一个属性的东西，只是他是空格，透明的看不见而已（但可以选中）。所以，只要我们使用让文字宽度为0的那些方法，不就可以解决inline-block元素间换行符间隙的问题啦！</p>
+<p>于是，很自然而然的，想到了以下样式：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="attribute">font-size</span>: <span class="number">0</span>;&#125;</div></pre></td></tr></table></figure>
+<p>但是chrome浏览器不支持，考虑另一种方式，使用<code>letter-spacing</code>属性。可以控制文字间的水平距离，支持负值，可以让文字水平方向上重叠（line<br>-height是让文字垂直方向上重叠）。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="attribute">letter-spaceing</span>:-<span class="number">4px</span>;&#125; <span class="comment">/* 依据不同字体，有不同的间距值选择</span></div></pre></td></tr></table></figure>
+<p>总结就是：</p>
+<ul>
+<li>block水平的元素inline-block化后，IE6/7没有换行符间隙问题，其他浏览器均有；</li>
+<li>inline水平的元素inline-block后，所有主流浏览器都有换行符/空格间隙问题；</li>
+<li>font-size:0，去除换行符间隙，在IE6/7下残留1像素间隙，Chrome浏览器无效，其他浏览器都完美去除；</li>
+<li>letter-spacing负值可以去除所有浏览器的换行符间隙，但是，Opera浏览器下极限是间隙1像素，0像素会反弹，换行符间隙还原。</li>
+</ul>
+<p>考录两种办法结合，兼容竟可能多的浏览器，</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="attribute">letter-spacing</span>:-<span class="number">3px</span>; <span class="attribute">font-size</span>:<span class="number">0</span>;&#125; <span class="comment">/* 针对Arial字体 */</span></div></pre></td></tr></table></figure>
+<p>所以，应用display:inline-block属性实现列表布局的几个关键字就是：<em>block水平的标签，font-size:0和letter-spacing负值</em>。</p>
+</div></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/03/02/JS异步调用/" class="post-link">JS异步调用和event-loop</a></h2><span class="post-time">2017年3月2日</span><div class="post-content"><p>文章转自<a href="https://github.com/wangfupeng1988/js-async-tutorial/blob/master/part1-basic/02-event-loop.md">github</a></p>
 <h1 id="异步和-event-loop"><a href="#异步和-event-loop" class="headerlink" title="异步和 event-loop"></a>异步和 event-loop</h1><p>提到异步，就必须提 event-loop 。event-loop 中文翻译叫做“时间轮询”，它是能体现出单线程中异步操作是如何被执行的。</p>
 <p>首先，<strong>强烈大家观看一个歪果仁的视频《<a href="http://www.tudou.com/programs/view/ACDNKZJm6pQ/">what the hack is event loop</a>》</strong>，只有不到半个小时的时间，但是将的非常详细。<em>如果那个链接失效，访问<a href="http://pan.baidu.com/s/1c1E0rjM">这里</a>（密码: xx9f）</em></p></div><a href="/2017/03/02/JS异步调用/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/03/02/阿里在线编程题/" class="post-link">阿里在线编程题</a></h2><span class="post-time">2017年3月2日</span><div class="post-content"><p>记录阿里的在线面试题。</p>
 <h1 id="数组切片题"><a href="#数组切片题" class="headerlink" title="数组切片题"></a>数组切片题</h1><h2 id="题设"><a href="#题设" class="headerlink" title="题设"></a>题设</h2><p>对于一个长度为N的整型数组A，数组里所有的数都是正整数，对于两个满足<code>0&lt;=X&lt;=Y&lt;N</code>的整数，<code>A[X], A[X+1]...A[Y]</code>构成A的一个切片，记作<code>(X, Y)</code>。<br>用三个下标<code>m1, m2, m3</code>下标满足条件<code>0&lt;m1, m2+1&lt;m2, m2+1&lt;m3&lt;N-1</code>。<br>可以把这个整型数组分成<code>(0, m1-1), (m1+1, m2-1), (m2+1, m3-1), (m3+1, N-1)</code>四个切片。如果这四个切片中的整数求和相等，称作“四等分”。<br>编写一个函数，求一个给定的整型数组是否可以四等分看，如果可以，返回一个布尔类型的<code>true</code>，如果不可以返回一个布尔类型的<code>false</code>。<br></div><a href="/2017/03/02/阿里在线编程题/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/02/26/三栏式布局/" class="post-link">三栏式布局</a></h2><span class="post-time">2017年2月26日</span><div class="post-content"><p>position: absolute和fixed脱离了文档流，无法计算高度，作为子元素的话是无法撑开父元素的。</p>
@@ -28,8 +78,4 @@
 <p>该问题有许多应用场景，如迷宫寻路，物理化学中的渗流和通信网络中的连通性等等。</p></div><a href="/2016/12/16/unionfind/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2016/12/13/C-中的宏定义/" class="post-link">C++学习笔记</a></h2><span class="post-time">2016年12月13日</span><div class="post-content"><h1 id="C-中的宏"><a href="#C-中的宏" class="headerlink" title="C++中的宏"></a>C++中的宏</h1><p>由于很长时间没有摸C++这门儿语言了，把宏定义简单理解成了类似于变量声明和函数声明式地东西。然而，爬了一下博客才发现，宏仅仅只会在在预处理过程中展开，做简单的字符串替换，而<code>没有任何的计算过程</code>。</p>
 <p>两篇关于C++宏的相关讲解。<br><a href="http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html">http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html</a>,这一篇强烈推荐。</p>
 <p><a href="http://blog.chinaunix.net/uid-21372424-id-119797.html">http://blog.chinaunix.net/uid-21372424-id-119797.html</a></p>
-<hr></div><a href="/2016/12/13/C-中的宏定义/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2016/12/13/C-中的-和/" class="post-link">C++中的##和#</a></h2><span class="post-time">2016年12月13日</span><div class="post-content"><p>原文来自<a href="http://www.2cto.com/kf/201503/381187.html">http://www.2cto.com/kf/201503/381187.html</a></p>
-<p>在C/C++的宏中，“#”的功能是将其后面的宏参数进行字符串化操作(Stringfication)，简单说就是在对它所引用的宏变量通过替换后在其左右各加上一个双引号。</p>
-<p>而“##”被称为连接符(concatenator)，用来将两个子串Token连接为一个Token。注意这里连接的对象是Token就行，而不一定是宏的变量。还可以n个##符号连接n+1个Token，这个特性是“#”符号所不具备的。</p>
-<p>凡是宏定义里有用“#”或“##”的地方宏参数是不会再展开。</p>
-<p>若要使“#”和“##”的宏参数被展开，可以加多一层中间转换宏。加这层宏的用意是把所有宏的参数在这层里全部展开，那么在转换宏里的那一个宏就能得到正确的宏参数。<br></div><a href="/2016/12/13/C-中的-和/" class="read-more">Read more..</a></article></li></ul><div class="paginator"><a href="/page/2/" class="next"><span>Next</span><i class="iconfont icon-right"></i></a></div></section><footer><div class="social"><a href="mailto:hctongxue@163.com" title="email" class="iconfont icon-email"></a><a href="https://github.com/tribody" title="github" class="iconfont icon-github"></a><a href="/atom.xml" title="rss" class="iconfont icon-rss"></a></div><div class="copyright"><p class="power">Powered by <a href="https://hexo.io/">Hexo</a> and Theme by <a href="https://github.com/ahonn/hexo-theme-even"> Even</a></p><p class="since">&copy;2015-2017<span class="heart"><i class="iconfont icon-heart"></i></span><span class="author">River He</span></p></div><div id="back2top"><i class="iconfont icon-up"></i></div></footer></div><script src="/js/zepto.min.js"></script><script src="/js/theme.js"></script></body></html>
+<hr></div><a href="/2016/12/13/C-中的宏定义/" class="read-more">Read more..</a></article></li></ul><div class="paginator"><a href="/page/2/" class="next"><span>Next</span><i class="iconfont icon-right"></i></a></div></section><footer><div class="social"><a href="mailto:hctongxue@163.com" title="email" class="iconfont icon-email"></a><a href="https://github.com/tribody" title="github" class="iconfont icon-github"></a><a href="/atom.xml" title="rss" class="iconfont icon-rss"></a></div><div class="copyright"><p class="power">Powered by <a href="https://hexo.io/">Hexo</a> and Theme by <a href="https://github.com/ahonn/hexo-theme-even"> Even</a></p><p class="since">&copy;2015-2017<span class="heart"><i class="iconfont icon-heart"></i></span><span class="author">River He</span></p></div><div id="back2top"><i class="iconfont icon-up"></i></div></footer></div><script src="/js/zepto.min.js"></script><script src="/js/theme.js"></script></body></html>
