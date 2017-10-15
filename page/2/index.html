@@ -5,7 +5,17 @@
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><ul class="home"><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2016/12/13/C-中的-和/" class="post-link">C++中的##和#</a></h2><span class="post-time">2016年12月13日</span><div class="post-content"><p>原文来自<a href="http://www.2cto.com/kf/201503/381187.html">http://www.2cto.com/kf/201503/381187.html</a></p>
+</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><ul class="home"><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2016/12/16/unionfind/" class="post-link">算法学习之union-find</a></h2><span class="post-time">2016年12月16日</span><div class="post-content"><p>最近开始在跟进coursera的算法课程，为明年的实习面试做准备。Sedgewick的这门算法课程非常出名，配套的有一本书叫做《Algorithms》,和Coursera上的课程配套。</p>
+<p>第一周课程先以一个案例即union-find算法为例，阐述算法分析的基础。</p>
+<p>#动态连通性<br>union-find算法要解决的是一个连通性问题。首先，问题描述：<br>给定一个有N个对象的集合，定义如下操作:</p>
+<ul>
+<li>Union command: 连接两个对象。</li>
+<li>Find/connected query：两个对象之间是否是连通的。</li>
+</ul>
+<p>该问题有许多应用场景，如迷宫寻路，物理化学中的渗流和通信网络中的连通性等等。</p></div><a href="/2016/12/16/unionfind/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2016/12/13/C-中的宏定义/" class="post-link">C++学习笔记</a></h2><span class="post-time">2016年12月13日</span><div class="post-content"><h1 id="C-中的宏"><a href="#C-中的宏" class="headerlink" title="C++中的宏"></a>C++中的宏</h1><p>由于很长时间没有摸C++这门儿语言了，把宏定义简单理解成了类似于变量声明和函数声明式地东西。然而，爬了一下博客才发现，宏仅仅只会在在预处理过程中展开，做简单的字符串替换，而<code>没有任何的计算过程</code>。</p>
+<p>两篇关于C++宏的相关讲解。<br><a href="http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html">http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html</a>,这一篇强烈推荐。</p>
+<p><a href="http://blog.chinaunix.net/uid-21372424-id-119797.html">http://blog.chinaunix.net/uid-21372424-id-119797.html</a></p>
+<hr></div><a href="/2016/12/13/C-中的宏定义/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2016/12/13/C-中的-和/" class="post-link">C++中的##和#</a></h2><span class="post-time">2016年12月13日</span><div class="post-content"><p>原文来自<a href="http://www.2cto.com/kf/201503/381187.html">http://www.2cto.com/kf/201503/381187.html</a></p>
 <p>在C/C++的宏中，“#”的功能是将其后面的宏参数进行字符串化操作(Stringfication)，简单说就是在对它所引用的宏变量通过替换后在其左右各加上一个双引号。</p>
 <p>而“##”被称为连接符(concatenator)，用来将两个子串Token连接为一个Token。注意这里连接的对象是Token就行，而不一定是宏的变量。还可以n个##符号连接n+1个Token，这个特性是“#”符号所不具备的。</p>
 <p>凡是宏定义里有用“#”或“##”的地方宏参数是不会再展开。</p>
