@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sjtunix.cn/"/>
-  <updated>2017-11-21T07:48:30.839Z</updated>
+  <updated>2017-11-21T07:52:38.939Z</updated>
   <id>http://blog.sjtunix.cn/</id>
   
   <author>
@@ -20,16 +20,21 @@
     <link href="http://blog.sjtunix.cn/2017/11/21/%E4%BD%BF%E7%94%A8sublime-texlivee%E6%90%AD%E5%BB%BA%E4%B8%AD%E6%96%87tex%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83/"/>
     <id>http://blog.sjtunix.cn/2017/11/21/使用sublime-texlivee搭建中文tex集成环境/</id>
     <published>2017-11-21T03:45:00.000Z</published>
-    <updated>2017-11-21T07:48:30.839Z</updated>
+    <updated>2017-11-21T07:52:38.939Z</updated>
     
     <content type="html"><![CDATA[<p>TeX是一种排版程序，最初由D.E.Knuth编写，在1982年之后就没有多大变化了。</p>
 <p>TeX本身也是一门语言，因此基于TeX编写了很多的“TeX宏包”，它实际上是扩展了TeX的功能，这其中比较出名的就是LaTeX。这些宏包被称之为“format”。</p>
 <p>目前LaTeX的版本叫做LaTeXe。</p>
 <p>现在我们常用的MiTeX、teTeX等等称之为TeX的发行版，它是将Tex和许许多多的程序一起打包发布。Tex<br>和MiTeX、teTeX之间的关系，就好像linux与Debian、Ubuntu之间的关系。</p>
-<p>中文常用的Tex发行版有MiTeX、TeXLive和MacTeX，除此之外还有CTeX项目。<br><a id="more"></a></p>
+<p>中文常用的Tex发行版有MiTeX、TeXLive和MacTeX，除此之外还有CTeX项目。</p>
+<a id="more"></a>
 <p>废话不多说了，</p>
 <p>本人的安装环境是如下：</p>
-<p>windows 10专业版 1607版本<br>texlive2016<br>sublimetext 3</p>
+<ul>
+<li>windows 10专业版 1607版本</li>
+<li>texlive2016</li>
+<li>sublimetext 3</li>
+</ul>
 <p>首先第一步，先安装TeXLive2016，至于为什么用这个版本而不用2017（睡不想用最新版= =），因为我在win10上安装2017成功后，发现编译不了tex模板（硕士论文模板），输出错误应该是qt版本太低。可能需要升级Qt，相关解答在这里：</p>
 <ul>
 <li><a href="https://tex.stackexchange.com/questions/85792/miktex-x64-on-windows-8-qt-error" target="_blank" rel="external">stackexchange</a></li>
@@ -57,9 +62,11 @@
 &lt;p&gt;TeX本身也是一门语言，因此基于TeX编写了很多的“TeX宏包”，它实际上是扩展了TeX的功能，这其中比较出名的就是LaTeX。这些宏包被称之为“format”。&lt;/p&gt;
 &lt;p&gt;目前LaTeX的版本叫做LaTeXe。&lt;/p&gt;
 &lt;p&gt;现在我们常用的MiTeX、teTeX等等称之为TeX的发行版，它是将Tex和许许多多的程序一起打包发布。Tex&lt;br&gt;和MiTeX、teTeX之间的关系，就好像linux与Debian、Ubuntu之间的关系。&lt;/p&gt;
-&lt;p&gt;中文常用的Tex发行版有MiTeX、TeXLive和MacTeX，除此之外还有CTeX项目。&lt;br&gt;
+&lt;p&gt;中文常用的Tex发行版有MiTeX、TeXLive和MacTeX，除此之外还有CTeX项目。&lt;/p&gt;
     
     </summary>
+    
+      <category term="技术" scheme="http://blog.sjtunix.cn/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="Tex" scheme="http://blog.sjtunix.cn/tags/Tex/"/>
@@ -71,7 +78,7 @@
     <link href="http://blog.sjtunix.cn/2017/11/16/%E8%B0%88%E8%B0%88%E6%89%93%E6%A0%87%E7%AD%BE%E8%BF%99%E4%BB%B6%E4%BA%8B%E5%84%BF/"/>
     <id>http://blog.sjtunix.cn/2017/11/16/谈谈打标签这件事儿/</id>
     <published>2017-11-15T16:51:21.000Z</published>
-    <updated>2017-11-21T07:48:38.136Z</updated>
+    <updated>2017-11-21T07:52:09.717Z</updated>
     
     <content type="html"><![CDATA[<p>最近对打标签这件事儿挺感兴趣的，因为几天前被一个陌生人打了个“中央空调”的标签。</p>
 <p>事情经过挺简单，去一个实验室找同学，被她实验室一个女生看到了。这之后，我同学（一天真烂漫直女）来和我说，这女孩儿说我挺高挺萌的（这评价应该不错？，被夸“呆萌”不是第一次了），同学表示我对人还很好，女孩儿回道：“是暖男吧？”同学答：“恩恩，对大家都很好！”“不会是中央空调吧？”</p>
@@ -89,6 +96,8 @@
 &lt;p&gt;事情经过挺简单，去一个实验室找同学，被她实验室一个女生看到了。这之后，我同学（一天真烂漫直女）来和我说，这女孩儿说我挺高挺萌的（这评价应该不错？，被夸“呆萌”不是第一次了），同学表示我对人还很好，女孩儿回道：“是暖男吧？”同学答：“恩恩，对大家都很好！”“不会是中央空调吧？”&lt;/p&gt;
     
     </summary>
+    
+      <category term="读书" scheme="http://blog.sjtunix.cn/categories/%E8%AF%BB%E4%B9%A6/"/>
     
     
       <category term="杂文轶事儿" scheme="http://blog.sjtunix.cn/tags/%E6%9D%82%E6%96%87%E8%BD%B6%E4%BA%8B%E5%84%BF/"/>
