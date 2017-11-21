@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sjtunix.cn/"/>
-  <updated>2017-11-21T07:55:14.259Z</updated>
+  <updated>2017-11-21T08:35:58.864Z</updated>
   <id>http://blog.sjtunix.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.sjtunix.cn/2017/11/21/%E4%BD%BF%E7%94%A8sublime-texlivee%E6%90%AD%E5%BB%BA%E4%B8%AD%E6%96%87tex%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83/"/>
     <id>http://blog.sjtunix.cn/2017/11/21/使用sublime-texlivee搭建中文tex集成环境/</id>
     <published>2017-11-21T03:45:00.000Z</published>
-    <updated>2017-11-21T07:55:14.259Z</updated>
+    <updated>2017-11-21T08:35:58.864Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Tex简介"><a href="#Tex简介" class="headerlink" title="Tex简介"></a>Tex简介</h2><p>TeX是一种排版程序，最初由D.E.Knuth编写，在1982年之后就没有多大变化了。</p>
 <p>TeX本身也是一门语言，因此基于TeX编写了很多的“TeX宏包”，它实际上是扩展了TeX的功能，这其中比较出名的就是LaTeX。这些宏包被称之为“format”。</p>
@@ -29,25 +29,34 @@
 <p>中文常用的Tex发行版有MiTeX、TeXLive和MacTeX，除此之外还有CTeX项目。</p>
 <a id="more"></a>
 <p>废话不多说了，</p>
-<p>本人的安装环境是如下：</p>
+<p>本人的安装环境以及使用软件版本如下：</p>
 <ul>
 <li>windows 10专业版 1607版本</li>
 <li>texlive2016</li>
 <li>sublimetext 3</li>
 </ul>
-<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>首先第一步，先安装TeXLive2016，至于为什么用这个版本而不用2017（睡不想用最新版= =），因为我在win10上安装2017成功后，发现编译不了tex模板（硕士论文模板），输出错误应该是qt版本太低。可能需要升级Qt，相关解答在这里：</p>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>首先需要安装TeXLive2016，至于为什么用这个版本而不用2017（睡不想用最新版= =），因为我在win10上安装2017成功后，发现编译不了tex模板（硕士论文模板），输出错误应该是qt版本太低。可能需要升级Qt，相关解答在这里：</p>
 <ul>
 <li><a href="https://tex.stackexchange.com/questions/85792/miktex-x64-on-windows-8-qt-error" target="_blank" rel="external">stackexchange</a></li>
 <li><a href="https://forum.qt.io/topic/64887/how-to-get-rid-of-the-qt-untested-windows-version-10-0-detected-warning" target="_blank" rel="external">Qt Forum</a> </li>
 </ul>
 <p>基本上说的都是替换texlive中的qt版本，这个未来官方可能会修复。</p>
 <p>除此之外还有点儿小错误，太懒了，不想一个个去弄，急着用，以后可能会弄一下，于是就卸载掉了，重新安装模板推荐的texlive2016。注意安装texlive2016之前，需要在环境变量中添加<code>%SystemRoot%\system32</code>（因为win10中默认没有该变量路径，而texlive2016在安装的时候会搜索该路径）。</p>
-<p>然后需要安装gb7714-2015字符集库，在装好texlive2016之后，需要更新一下tex live manager，然后在tlmgr中安装该字符集。具体如下图：</p>
+<h3 id="安装TeXLive2016"><a href="#安装TeXLive2016" class="headerlink" title="安装TeXLive2016"></a>安装TeXLive2016</h3><p>我是下载的texlive2016的ISO镜像，加载镜像安装的时候，可选自定义模式，如下图：</p>
+<p><img src="/img/texlive2016.png" alt="texlive2016"></p>
+<p>在装好texlive2016之后，需要安装gb7714-2015字符集库。首先更新一下texlive manager，然后在texlive manager中安装该字符集（最好是选择国内镜像源，会快很多）。具体如下图：</p>
 <p><img src="/img/tlmgr.png" alt="tlmgr安装方式"></p>
-<p>第二步，安装sublime tex3（2也行，但显然3有更炫酷的效果），我非常喜欢sublime所以才有这么一个教程。新安装好后，先去装个package control（sublime的插件管理器），然后使用pci安装一个叫做LaTeXTools的插件。</p>
-<p>安装好后，首先下载<a href="http://www.sumatrapdfreader.org/" target="_blank" rel="external">sumatraPDF</a>，至于为什么用这个来预览Pdf，是因为它支持反向查找，这是一个非常神奇的功能，里可以随时找到Pdf某一个位置在tex文本中对应的位置，操作足够简单，双击即可。按账号sumatraPDF之后，需要在环境变量PATH中添加执行路径。然后在打开sumatraPDF，设置&gt;&gt;选项，设置反向搜索路径<code>&quot;D:\Program Files\Sublime Text 3\sublime_text.exe&quot; &quot;%f:%l&quot;</code>，具体路径以sumlime安装目录为准。这样，当你编译完tex文件后，就能绑定两者了！</p>
+<h3 id="安装sublime-text3"><a href="#安装sublime-text3" class="headerlink" title="安装sublime text3"></a>安装sublime text3</h3><p>接下来安装sublime text3（2也行，但显然3有更炫酷的效果），我非常喜欢sublime所以才有这么一个教程。安装好sublime后，先去装个package control（sublime的插件管理器），然后使用package control安装一个叫做LaTeXTools的插件（按组合键<code>Ctrl + Shift + P</code>，然后输入install，选择Package Control: install package，搜索LaTeXTools，按Enter键即可）。</p>
+<h3 id="配置LaTeXTools插件"><a href="#配置LaTeXTools插件" class="headerlink" title="配置LaTeXTools插件"></a>配置LaTeXTools插件</h3><p>安装好后，首先下载<a href="http://www.sumatrapdfreader.org/" target="_blank" rel="external">sumatraPDF</a>，至于为什么用这个来预览Pdf，是因为它支持反向查找，这是一个非常神奇的功能，里可以随时找到Pdf某一个位置在tex文本中对应的位置，操作足够简单，双击即可。按账号sumatraPDF之后，需要在环境变量PATH中添加执行路径。然后在打开sumatraPDF，设置&gt;&gt;选项，设置反向搜索路径<code>&quot;D:\Program Files\Sublime Text 3\sublime_text.exe&quot; &quot;%f:%l&quot;</code>（或者直接在命令行中输入：<code>sumatrapdf.exe -inverse-search &quot;\&quot;C:\Program Files\Sublime Text 3\sublime_text.exe\&quot; \&quot;%f:%l\&quot;&quot;</code>），具体路径以sumlime安装目录为准。这样，当你编译完tex文件后，就能绑定两者了！</p>
 <p>接下来配置LaTeXTools的图片和公式预览功能，首先texlive2016没有自带imagesticks，因此无法预览图片，但是有自带ghostscript（预览公式用）。需要我们自己下载安装<a href="http://www.imagemagick.org/" target="_blank" rel="external">ImageMagick</a>（预览图片用）。然后，我们需要在sumlime的preference&gt;&gt;package settings&gt;&gt;latex tools&gt;&gt;setting-user中找到windows对应位置的配置项，在texpath路径中分别添加ghostscript和imagemagick的可执行文件路径以及系统环境变量PATH。例如<code>&quot;texpath&quot; : &quot;D:\\texlive\\2016\\bin\\win32;D:\\texlive\\2016\\tlpkg\\tlgs\\bin;D:\\Program Files\\ImageMagick-7.0.7-Q16;$PATH&quot;</code>。到此，基本配置完毕，你就可以安心使用sumlime写你的论文了！</p>
 <p>除此之外，还有很多可配置项，都在<code>setting-user</code>中可以配置。</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><p>LaTexTools比较使用的功能有三个：</p>
+<ul>
+<li>公式预览：点击你输入的公式，停留一段时间后，会将渲染结果显示在公式下方。</li>
+<li>图片预览：将鼠标停留在包含图片的命令上，会弹出图片预览效果。</li>
+<li>与SumatraPDF的配合：在SumatraPDF中双击相应的内容，回跳到sublime text3中的对应位置。</li>
+</ul>
+<p>以上功能是默认的，当然可以配置具体的反馈机制。另外，使用<code>Ctrl + B</code>编译文档（具体的builid方式也可以自定义）。</p>
 <p>另外，LaTeX官方有较详细的文档可供阅读<a href="https://latextools.readthedocs.io/en/latest/" target="_blank" rel="external">LatexTools</a>。</p>
 <h2 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h2><ul>
 <li><a href="https://latextools.readthedocs.io/en/latest/" target="_blank" rel="external">LaTeXTools官方文档</a></li>
