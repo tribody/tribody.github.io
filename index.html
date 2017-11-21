@@ -9,37 +9,8 @@
 <p>TeX本身也是一门语言，因此基于TeX编写了很多的“TeX宏包”，它实际上是扩展了TeX的功能，这其中比较出名的就是LaTeX。这些宏包被称之为“format”。</p>
 <p>目前LaTeX的版本叫做LaTeXe。</p>
 <p>现在我们常用的MiTeX、teTeX等等称之为TeX的发行版，它是将Tex和许许多多的程序一起打包发布。Tex<br>和MiTeX、teTeX之间的关系，就好像linux与Debian、Ubuntu之间的关系。</p>
-<p>中文常用的Tex发行版有MiTeX、TeXLive和MacTeX，除此之外还有CTeX项目。</p>
-<p>废话不多说了，</p>
-<p>本人的安装环境是如下：</p>
-<p>windows 10专业版 1607版本<br>texlive2016<br>sublimetext 3</p>
-<p>首先第一步，先安装TeXLive2016，至于为什么用这个版本而不用2017（睡不想用最新版= =），因为我在win10上安装2017成功后，发现编译不了tex模板（硕士论文模板），输出错误应该是qt版本太低。可能需要升级Qt，相关解答在这里：</p>
-<ul>
-<li><a href="https://tex.stackexchange.com/questions/85792/miktex-x64-on-windows-8-qt-error" target="_blank" rel="external">stackexchange</a></li>
-<li><a href="https://forum.qt.io/topic/64887/how-to-get-rid-of-the-qt-untested-windows-version-10-0-detected-warning" target="_blank" rel="external">Qt Forum</a> </li>
-</ul>
-<p>基本上说的都是替换texlive中的qt版本，这个未来官方可能会修复。</p>
-<p>除此之外还有点儿小错误，太懒了，不想一个个去弄，急着用，以后可能会弄一下，于是就卸载掉了，重新安装模板推荐的texlive2016。注意安装texlive2016之前，需要在环境变量中添加<code>%SystemRoot%\system32</code>（因为win10中默认没有该变量路径，而texlive2016在安装的时候会搜索该路径）。</p>
-<p>然后需要安装gb7714-2015字符集库，在装好texlive2016之后，需要更新一下tex live manager，然后在tlmgr中安装该字符集。具体如下图：</p>
-<p><img src="/img/tlmgr.png" alt="tlmgr安装方式"></p>
-<p>第二步，安装sublime tex3（2也行，但显然3有更炫酷的效果），我非常喜欢sublime所以才有这么一个教程。新安装好后，先去装个package control（sublime的插件管理器），然后使用pci安装一个叫做LaTeXTools的插件。</p>
-<p>安装好后，首先下载<a href="http://www.sumatrapdfreader.org/" target="_blank" rel="external">sumatraPDF</a>，至于为什么用这个来预览Pdf，是因为它支持反向查找，这是一个非常神奇的功能，里可以随时找到Pdf某一个位置在tex文本中对应的位置，操作足够简单，双击即可。按账号sumatraPDF之后，需要在环境变量PATH中添加执行路径。然后在打开sumatraPDF，设置&gt;&gt;选项，设置反向搜索路径<code>&quot;D:\Program Files\Sublime Text 3\sublime_text.exe&quot; &quot;%f:%l&quot;</code>，具体路径以sumlime安装目录为准。这样，当你编译完tex文件后，就能绑定两者了！</p>
-<p>接下来配置LaTeXTools的图片和公式预览功能，首先texlive2016没有自带imagesticks，因此无法预览图片，但是有自带ghostscript（预览公式用）。需要我们自己下载安装<a href="http://www.imagemagick.org/" target="_blank" rel="external">ImageMagick</a>（预览图片用）。然后，我们需要在sumlime的preference&gt;&gt;package settings&gt;&gt;latex tools&gt;&gt;setting-user中找到windows对应位置的配置项，在texpath路径中分别添加ghostscript和imagemagick的可执行文件路径以及系统环境变量PATH。例如<code>&quot;texpath&quot; : &quot;D:\\texlive\\2016\\bin\\win32;D:\\texlive\\2016\\tlpkg\\tlgs\\bin;D:\\Program Files\\ImageMagick-7.0.7-Q16;$PATH&quot;</code>。到此，基本配置完毕，你就可以安心使用sumlime写你的论文了！</p>
-<p>除此之外，还有很多可配置项，都在<code>setting-user</code>中可以配置。</p>
-<p>另外，LaTeX官方有较详细的文档可供阅读<a href="https://latextools.readthedocs.io/en/latest/" target="_blank" rel="external">LatexTools</a>。</p>
-<p>参考文献：</p>
-<ul>
-<li><a href="https://latextools.readthedocs.io/en/latest/" target="_blank" rel="external">LaTeXTools官方文档</a></li>
-<li><a href="http://www.ctex.org/documents/shredder/tex_frame.html" target="_blank" rel="external">TeX — Beauty and Fun</a></li>
-</ul>
-</div></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/11/16/谈谈打标签这件事儿/" class="post-link">谈谈打标签这件事儿</a></h2><span class="post-time">2017年11月16日</span><div class="post-content"><p>最近对打标签这件事儿挺感兴趣的，因为几天前被一个陌生人打了个“中央空调”的标签。</p>
-<p>事情经过挺简单，去一个实验室找同学，被她实验室一个女生看到了。这之后，我同学（一天真烂漫直女）来和我说，这女孩儿说我挺高挺萌的（这评价应该不错？，被夸“呆萌”不是第一次了），同学表示我对人还很好，女孩儿回道：“是暖男吧？”同学答：“恩恩，对大家都很好！”“不会是中央空调吧？”</p>
-<p>看到没，一段简单的对话之中，我连续被一个陌生人打了两个标签，分别是“暖男”，“中央空调”。若说褒贬的话，大家都愿意接受“暖男”这个标签，毕竟“中央空调”不是谁都愿意当的（百科对“中央空调”的定义是：和很多女性暧昧的男性）。我听到这样讲自然是很生气的，一个素昧平生的人，给你打上这样的标签，莫名其妙。且不论我是不是这样的人，一面之词就可以将我这个人定性了，可以说是既简单粗暴有毫无道理。</p>
-<p>但是，当我反思，推敲这个陌生人在评价我的过程中的思维模式时，又觉得很多人其实都或多或少有做过如此愚蠢的事儿，甚至包括我自己。在这个网络流行词泛滥的年代，如此新颖又颇具“智慧”，凝结了作者“创造力”的精辟词汇，不断地涌现。这种词语往往“幽默又不失风趣”，戏谑感十足。我印象中最能脱口而出的词汇，像“屌丝”、“高富帅”、“矮矬穷”、“绿茶婊”、“学霸”等等很多，包括“中央空调”这种高科技名词。当然，还有很多定义性标签语言，并没有这么生动有趣，但他们依旧高效的出现在我们每个人的嘴中。这些标签好像能自动给人分类似的，将全人类商品化，摆在社会这个大市场上“售卖”。</p>
-<p>的确，标签化的语言，一旦运用在人的身上，能够很快的让我们“认识”周围的人，快速区分。我有时候觉得这样一个过程，甚至于特别的像机器学习中的分类算法，而人类就像是打上标签的结构化数据，易于学习。这样当我们新认识了一个人，只需观察其某些特征，就可以快速将其分类到某个标签下，既冷漠又高效。在这场由人类作为样本参与到的大规模神经网络学习中，我们高达60亿的“多样性”，竟然可以由这些标签如此“高效”的区分。我曾经是一个极其头脑简单的快速分类器，也被父母教导如何去对待身边的人，这种标签策略甚至可以简单到只用好坏就可以辨别，就像很多学校对待优等生和差等生的态度一样。当然，这么多年过去了，我头脑似乎没变聪明多少，但是我自觉自己可以感受到的维度会变多了很多。那些曾经被定义为好人也许现在看来还是好人，但是我从中能看到的也许不只有“好”这么简单的字眼。曾经认为的“坏人”，在我眼前，可能变得更立体了，可悲之人必有可恨之处，可恨之人可究其可恨之因。</p>
-<p>标签化表面上最受伤的是被标签化的对象，其实不然，打出标签的人，往往才是付出最沉重代价的。标签化的代价，是你可能会丧失一个了解另一个世界机会，甚至于让自己变得愚蠢。当你想要真正了解一个人的时候，你一定要一层层地去掉他身上的所有标签，这些标签可能是你贴的，也有可能是别人贴的，但是如果你真正在乎他（她）的话，一定要去了解最本真的他（她），那是独一无二的他（她)，那是他（她）生而为人，最宝贵的东西。</p>
-<p>在这个人工智能兴起的时代，只有机器人才做分类的事情，我们人类做的，是创造性的事情！</p>
-</div></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/05/10/同一个包下的公开类编译时找不到/" class="post-link">同一个包下的公开类编译时找不到</a></h2><span class="post-time">2017年5月10日</span><div class="post-content"><p>关于package命令的理解，</p>
+<p>中文常用的Tex发行版有MiTeX、TeXLive和MacTeX，除此之外还有CTeX项目。<br></div><a href="/2017/11/21/使用sublime-texlivee搭建中文tex集成环境/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/11/16/谈谈打标签这件事儿/" class="post-link">谈谈打标签这件事儿</a></h2><span class="post-time">2017年11月16日</span><div class="post-content"><p>最近对打标签这件事儿挺感兴趣的，因为几天前被一个陌生人打了个“中央空调”的标签。</p>
+<p>事情经过挺简单，去一个实验室找同学，被她实验室一个女生看到了。这之后，我同学（一天真烂漫直女）来和我说，这女孩儿说我挺高挺萌的（这评价应该不错？，被夸“呆萌”不是第一次了），同学表示我对人还很好，女孩儿回道：“是暖男吧？”同学答：“恩恩，对大家都很好！”“不会是中央空调吧？”</p></div><a href="/2017/11/16/谈谈打标签这件事儿/" class="read-more">Read more..</a></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/05/10/同一个包下的公开类编译时找不到/" class="post-link">同一个包下的公开类编译时找不到</a></h2><span class="post-time">2017年5月10日</span><div class="post-content"><p>关于package命令的理解，</p>
 </div></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/03/08/中国历代政治得失/" class="post-link">中国历代政治得失</a></h2><span class="post-time">2017年3月8日</span><div class="post-content"><h2 id="汉代"><a href="#汉代" class="headerlink" title="汉代"></a>汉代</h2><h3 id="汉代政府组织"><a href="#汉代政府组织" class="headerlink" title="汉代政府组织"></a>汉代政府组织</h3></div></article></li><li class="post-item"><article class="post"><h2 class="post-title"><a href="/2017/03/04/inline-block/" class="post-link">block，inline和inline-block概念和区别</a></h2><span class="post-time">2017年3月4日</span><div class="post-content"><p>参考自<a href="http://www.cnblogs.com/KeithWang/p/3139517.html">http://www.cnblogs.com/KeithWang/p/3139517.html</a></p>
 <p><a href="http://www.zhangxinxu.com/wordpress/2010/11/%E6%8B%9C%E6%8B%9C%E4%BA%86%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80-%E5%9F%BA%E4%BA%8Edisplayinline-block%E7%9A%84%E5%88%97%E8%A1%A8%E5%B8%83%E5%B1%80/">http://www.zhangxinxu.com/wordpress/2010/11/%E6%8B%9C%E6%8B%9C%E4%BA%86%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80-%E5%9F%BA%E4%BA%8Edisplayinline-block%E7%9A%84%E5%88%97%E8%A1%A8%E5%B8%83%E5%B1%80/</a></p>
 <h2 id="总体概念"><a href="#总体概念" class="headerlink" title="总体概念"></a>总体概念</h2><ol>
