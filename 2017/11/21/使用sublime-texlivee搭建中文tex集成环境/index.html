@@ -1,11 +1,11 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="River He"><meta name="description" content="TeX是一种排版程序，最初由D.E.Knuth编写，在1982年之后就没有多大变化了。TeX本身也是一门语言，因此基于TeX编写了很多的“TeX宏包”，它实际上是扩展了TeX的功能，这其中比较出名的就是LaTeX。这些宏包被称之为“format”。目前LaTeX的版本叫做La"><meta name="keywords" content="Tex"><title>使用sublime+texlive搭建中文tex集成环境 · Sjtunix</title><link rel="icon" href="/favicon.ico"><link rel="canonical" href="http://blog.sjtunix.cn/2017/11/21/使用sublime-texlivee搭建中文tex集成环境/"><link rel="alternate" href="/atom.xml" title="Sjtunix"><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><link rel="stylesheet" href="/css/style.css"><script type="text/javascript">var _hmt = _hmt || [];
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="River He"><meta name="description" content="Tex简介TeX是一种排版程序，最初由D.E.Knuth编写，在1982年之后就没有多大变化了。TeX本身也是一门语言，因此基于TeX编写了很多的“TeX宏包”，它实际上是扩展了TeX的功能，这其中比较出名的就是LaTeX。这些宏包被称之为“format”。目前LaTeX的版"><meta name="keywords" content="Tex"><title>使用sublime+texlive搭建中文tex集成环境 · Sjtunix</title><link rel="icon" href="/favicon.ico"><link rel="canonical" href="http://blog.sjtunix.cn/2017/11/21/使用sublime-texlivee搭建中文tex集成环境/"><link rel="alternate" href="/atom.xml" title="Sjtunix"><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><link rel="stylesheet" href="/css/style.css"><script type="text/javascript">var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
   hm.src = "//hm.baidu.com/hm.js?a67714dba8e9a4f625fd5051c7965382";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
-</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">使用sublime+texlive搭建中文tex集成环境</h1><span class="post-time">2017年11月21日</span><div class="post-content"><p>TeX是一种排版程序，最初由D.E.Knuth编写，在1982年之后就没有多大变化了。</p>
+</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">使用sublime+texlive搭建中文tex集成环境</h1><span class="post-time">2017年11月21日</span><div id="sidebar" class="post-sidebar"><h3 class="heading">Contents</h3><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Tex简介"><span class="toc-text">Tex简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#环境搭建"><span class="toc-text">环境搭建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#参考文献："><span class="toc-text">参考文献：</span></a></li></ol></div><div class="post-content"><h2 id="Tex简介"><a href="#Tex简介" class="headerlink" title="Tex简介"></a>Tex简介</h2><p>TeX是一种排版程序，最初由D.E.Knuth编写，在1982年之后就没有多大变化了。</p>
 <p>TeX本身也是一门语言，因此基于TeX编写了很多的“TeX宏包”，它实际上是扩展了TeX的功能，这其中比较出名的就是LaTeX。这些宏包被称之为“format”。</p>
 <p>目前LaTeX的版本叫做LaTeXe。</p>
 <p>现在我们常用的MiTeX、teTeX等等称之为TeX的发行版，它是将Tex和许许多多的程序一起打包发布。Tex<br>和MiTeX、teTeX之间的关系，就好像linux与Debian、Ubuntu之间的关系。</p>
@@ -18,7 +18,7 @@
 <li>texlive2016</li>
 <li>sublimetext 3</li>
 </ul>
-<p>首先第一步，先安装TeXLive2016，至于为什么用这个版本而不用2017（睡不想用最新版= =），因为我在win10上安装2017成功后，发现编译不了tex模板（硕士论文模板），输出错误应该是qt版本太低。可能需要升级Qt，相关解答在这里：</p>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>首先第一步，先安装TeXLive2016，至于为什么用这个版本而不用2017（睡不想用最新版= =），因为我在win10上安装2017成功后，发现编译不了tex模板（硕士论文模板），输出错误应该是qt版本太低。可能需要升级Qt，相关解答在这里：</p>
 <ul>
 <li><a href="https://tex.stackexchange.com/questions/85792/miktex-x64-on-windows-8-qt-error" target="_blank" rel="external">stackexchange</a></li>
 <li><a href="https://forum.qt.io/topic/64887/how-to-get-rid-of-the-qt-untested-windows-version-10-0-detected-warning" target="_blank" rel="external">Qt Forum</a> </li>
@@ -32,8 +32,7 @@
 <p>接下来配置LaTeXTools的图片和公式预览功能，首先texlive2016没有自带imagesticks，因此无法预览图片，但是有自带ghostscript（预览公式用）。需要我们自己下载安装<a href="http://www.imagemagick.org/" target="_blank" rel="external">ImageMagick</a>（预览图片用）。然后，我们需要在sumlime的preference&gt;&gt;package settings&gt;&gt;latex tools&gt;&gt;setting-user中找到windows对应位置的配置项，在texpath路径中分别添加ghostscript和imagemagick的可执行文件路径以及系统环境变量PATH。例如<code>&quot;texpath&quot; : &quot;D:\\texlive\\2016\\bin\\win32;D:\\texlive\\2016\\tlpkg\\tlgs\\bin;D:\\Program Files\\ImageMagick-7.0.7-Q16;$PATH&quot;</code>。到此，基本配置完毕，你就可以安心使用sumlime写你的论文了！</p>
 <p>除此之外，还有很多可配置项，都在<code>setting-user</code>中可以配置。</p>
 <p>另外，LaTeX官方有较详细的文档可供阅读<a href="https://latextools.readthedocs.io/en/latest/" target="_blank" rel="external">LatexTools</a>。</p>
-<p>参考文献：</p>
-<ul>
+<h2 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h2><ul>
 <li><a href="https://latextools.readthedocs.io/en/latest/" target="_blank" rel="external">LaTeXTools官方文档</a></li>
 <li><a href="http://www.ctex.org/documents/shredder/tex_frame.html" target="_blank" rel="external">TeX — Beauty and Fun</a></li>
 </ul>
