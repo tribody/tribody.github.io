@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sjtunix.cn/"/>
-  <updated>2017-11-21T08:35:58.864Z</updated>
+  <updated>2017-11-21T08:39:21.792Z</updated>
   <id>http://blog.sjtunix.cn/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.sjtunix.cn/2017/11/21/%E4%BD%BF%E7%94%A8sublime-texlivee%E6%90%AD%E5%BB%BA%E4%B8%AD%E6%96%87tex%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83/"/>
     <id>http://blog.sjtunix.cn/2017/11/21/使用sublime-texlivee搭建中文tex集成环境/</id>
     <published>2017-11-21T03:45:00.000Z</published>
-    <updated>2017-11-21T08:35:58.864Z</updated>
+    <updated>2017-11-21T08:39:21.792Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Tex简介"><a href="#Tex简介" class="headerlink" title="Tex简介"></a>Tex简介</h2><p>TeX是一种排版程序，最初由D.E.Knuth编写，在1982年之后就没有多大变化了。</p>
 <p>TeX本身也是一门语言，因此基于TeX编写了很多的“TeX宏包”，它实际上是扩展了TeX的功能，这其中比较出名的就是LaTeX。这些宏包被称之为“format”。</p>
@@ -56,6 +56,7 @@
 <li>图片预览：将鼠标停留在包含图片的命令上，会弹出图片预览效果。</li>
 <li>与SumatraPDF的配合：在SumatraPDF中双击相应的内容，回跳到sublime text3中的对应位置。</li>
 </ul>
+<p><img src="/img/formulation.png" alt="fomulation"></p>
 <p>以上功能是默认的，当然可以配置具体的反馈机制。另外，使用<code>Ctrl + B</code>编译文档（具体的builid方式也可以自定义）。</p>
 <p>另外，LaTeX官方有较详细的文档可供阅读<a href="https://latextools.readthedocs.io/en/latest/" target="_blank" rel="external">LatexTools</a>。</p>
 <h2 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h2><ul>
