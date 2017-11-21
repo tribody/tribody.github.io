@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sjtunix.cn/"/>
-  <updated>2017-11-15T17:42:39.506Z</updated>
+  <updated>2017-11-21T07:47:16.637Z</updated>
   <id>http://blog.sjtunix.cn/</id>
   
   <author>
@@ -14,6 +14,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用sublime+texlive搭建中文tex集成环境</title>
+    <link href="http://blog.sjtunix.cn/2017/11/21/%E4%BD%BF%E7%94%A8sublime-texlivee%E6%90%AD%E5%BB%BA%E4%B8%AD%E6%96%87tex%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83/"/>
+    <id>http://blog.sjtunix.cn/2017/11/21/使用sublime-texlivee搭建中文tex集成环境/</id>
+    <published>2017-11-21T03:45:00.000Z</published>
+    <updated>2017-11-21T07:47:16.637Z</updated>
+    
+    <content type="html"><![CDATA[<p>TeX是一种排版程序，最初由D.E.Knuth编写，在1982年之后就没有多大变化了。</p>
+<p>TeX本身也是一门语言，因此基于TeX编写了很多的“TeX宏包”，它实际上是扩展了TeX的功能，这其中比较出名的就是LaTeX。这些宏包被称之为“format”。</p>
+<p>目前LaTeX的版本叫做LaTeXe。</p>
+<p>现在我们常用的MiTeX、teTeX等等称之为TeX的发行版，它是将Tex和许许多多的程序一起打包发布。Tex<br>和MiTeX、teTeX之间的关系，就好像linux与Debian、Ubuntu之间的关系。</p>
+<p>中文常用的Tex发行版有MiTeX、TeXLive和MacTeX，除此之外还有CTeX项目。</p>
+<p>废话不多说了，</p>
+<p>本人的安装环境是如下：</p>
+<p>windows 10专业版 1607版本<br>texlive2016<br>sublimetext 3</p>
+<p>首先第一步，先安装TeXLive2016，至于为什么用这个版本而不用2017（睡不想用最新版= =），因为我在win10上安装2017成功后，发现编译不了tex模板（硕士论文模板），输出错误应该是qt版本太低。可能需要升级Qt，相关解答在这里：</p>
+<ul>
+<li><a href="https://tex.stackexchange.com/questions/85792/miktex-x64-on-windows-8-qt-error" target="_blank" rel="external">stackexchange</a></li>
+<li><a href="https://forum.qt.io/topic/64887/how-to-get-rid-of-the-qt-untested-windows-version-10-0-detected-warning" target="_blank" rel="external">Qt Forum</a> </li>
+</ul>
+<p>基本上说的都是替换texlive中的qt版本，这个未来官方可能会修复。</p>
+<p>除此之外还有点儿小错误，太懒了，不想一个个去弄，急着用，以后可能会弄一下，于是就卸载掉了，重新安装模板推荐的texlive2016。注意安装texlive2016之前，需要在环境变量中添加<code>%SystemRoot%\system32</code>（因为win10中默认没有该变量路径，而texlive2016在安装的时候会搜索该路径）。</p>
+<p>然后需要安装gb7714-2015字符集库，在装好texlive2016之后，需要更新一下tex live manager，然后在tlmgr中安装该字符集。具体如下图：</p>
+<p><img src="/img/tlmgr.png" alt="tlmgr安装方式"></p>
+<p>第二步，安装sublime tex3（2也行，但显然3有更炫酷的效果），我非常喜欢sublime所以才有这么一个教程。新安装好后，先去装个package control（sublime的插件管理器），然后使用pci安装一个叫做LaTeXTools的插件。</p>
+<p>安装好后，首先下载<a href="http://www.sumatrapdfreader.org/" target="_blank" rel="external">sumatraPDF</a>，至于为什么用这个来预览Pdf，是因为它支持反向查找，这是一个非常神奇的功能，里可以随时找到Pdf某一个位置在tex文本中对应的位置，操作足够简单，双击即可。按账号sumatraPDF之后，需要在环境变量PATH中添加执行路径。然后在打开sumatraPDF，设置&gt;&gt;选项，设置反向搜索路径<code>&quot;D:\Program Files\Sublime Text 3\sublime_text.exe&quot; &quot;%f:%l&quot;</code>，具体路径以sumlime安装目录为准。这样，当你编译完tex文件后，就能绑定两者了！</p>
+<p>接下来配置LaTeXTools的图片和公式预览功能，首先texlive2016没有自带imagesticks，因此无法预览图片，但是有自带ghostscript（预览公式用）。需要我们自己下载安装<a href="http://www.imagemagick.org/" target="_blank" rel="external">ImageMagick</a>（预览图片用）。然后，我们需要在sumlime的preference&gt;&gt;package settings&gt;&gt;latex tools&gt;&gt;setting-user中找到windows对应位置的配置项，在texpath路径中分别添加ghostscript和imagemagick的可执行文件路径以及系统环境变量PATH。例如<code>&quot;texpath&quot; : &quot;D:\\texlive\\2016\\bin\\win32;D:\\texlive\\2016\\tlpkg\\tlgs\\bin;D:\\Program Files\\ImageMagick-7.0.7-Q16;$PATH&quot;</code>。到此，基本配置完毕，你就可以安心使用sumlime写你的论文了！</p>
+<p>除此之外，还有很多可配置项，都在<code>setting-user</code>中可以配置。</p>
+<p>另外，LaTeX官方有较详细的文档可供阅读<a href="https://latextools.readthedocs.io/en/latest/" target="_blank" rel="external">LatexTools</a>。</p>
+<p>参考文献：</p>
+<ul>
+<li><a href="https://latextools.readthedocs.io/en/latest/" target="_blank" rel="external">LaTeXTools官方文档</a></li>
+<li><a href="http://www.ctex.org/documents/shredder/tex_frame.html" target="_blank" rel="external">TeX — Beauty and Fun</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;TeX是一种排版程序，最初由D.E.Knuth编写，在1982年之后就没有多大变化了。&lt;/p&gt;
+&lt;p&gt;TeX本身也是一门语言，因此基于TeX编写了很多的“TeX宏包”，它实际上是扩展了TeX的功能，这其中比较出名的就是LaTeX。这些宏包被称之为“format”。&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="Tex" scheme="http://blog.sjtunix.cn/tags/Tex/"/>
+    
+  </entry>
   
   <entry>
     <title>谈谈打标签这件事儿</title>
@@ -730,89 +779,6 @@
     
     
       <category term="VPN" scheme="http://blog.sjtunix.cn/tags/VPN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo入门</title>
-    <link href="http://blog.sjtunix.cn/2016/11/06/hello-world/"/>
-    <id>http://blog.sjtunix.cn/2016/11/06/hello-world/</id>
-    <published>2016-11-06T08:11:26.598Z</published>
-    <updated>2016-11-08T13:34:13.909Z</updated>
-    
-    <content type="html"><![CDATA[<p>楼主有一台国外的vps，之前搭过wordpress，但是访问延迟较大，又因为前段时间服务器系统搞坏了，重装了系统，打算把那台服务器完全用来搭VPN和SS了，不再放网站在上面了。于是，转入了Hexo。本博文完成以下目标，首先，安装hexo博客系统，然后安装主题，最后做一个域名绑定。楼主记性最近不好，虽然文章网上都能搜到，但是做个记载还是好的。</p>
-<h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div><div class="line">$ hexo init [目录名]</div><div class="line">$ <span class="built_in">cd</span> [目录名]</div><div class="line">$ npm install</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>注意这个地方有个坑，楼主当时打完这段命令，然后按照提示用<code>4000</code>端口访问<code>localhost:4000</code>，发现怎么都加载不出来，百度了好久，发现是安装了福昕pdf阅读器的原因，太坑了！<code>4000</code>被占用了！所以，你可以使用如下命令换个端口号:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server -p [你要用的端口号]</div></pre></td></tr></table></figure></p>
-<p>详见：<a href="https://hexo.io/docs/commands.html#server" target="_blank" rel="external">server</a></p>
-<p>更多信息: <a href="https://hexo.io" target="_blank" rel="external">安装</a></p>
-<h2 id="Hexo相关命令"><a href="#Hexo相关命令" class="headerlink" title="Hexo相关命令"></a>Hexo相关命令</h2><h3 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init [folder]</div></pre></td></tr></table></figure>
-<p>更多信息: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">服务器</a></p>
-<h3 id="生成静态网页"><a href="#生成静态网页" class="headerlink" title="生成静态网页"></a>生成静态网页</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>更多信息: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">生成页面</a></p>
-<h3 id="启动本地服务器"><a href="#启动本地服务器" class="headerlink" title="启动本地服务器"></a>启动本地服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>选项</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>-p</code>,<code>--port</code></td>
-<td>指定端口号</td>
-</tr>
-<tr>
-<td><code>-s</code>,<code>--static</code></td>
-<td>仅仅加载静态文件</td>
-</tr>
-<tr>
-<td><code>-l</code>,<code>--log</code></td>
-<td>打开日志输出</td>
-</tr>
-</tbody>
-</table>
-<p>更多信息: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">服务器</a></p>
-<h3 id="创建新文章-post"><a href="#创建新文章-post" class="headerlink" title="创建新文章(post)"></a>创建新文章(post)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
-<p>除了创建post（文章），还可以通过该命令创建自定义页面，</p>
-<ul>
-<li><p>在博客根目录下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new page xxxx</div></pre></td></tr></table></figure>
-</li>
-<li><p>设置页面模板</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title:xxxx</div><div class="line">layout:page  # 添加使用page模板</div><div class="line">---</div></pre></td></tr></table></figure>
-</li>
-<li><p>修改菜单</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  Home: /</div><div class="line">  Archives: /archives</div><div class="line">  About: /about/</div><div class="line">  xxxx: /xxxx/  # 确保与source/xxxx/index.md文件中的title一致</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="部署到站点"><a href="#部署到站点" class="headerlink" title="部署到站点"></a>部署到站点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>更多信息: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">部署</a></p>
-<p>Hexo主题虽然没有wordpress多，但也有相当量优秀的主题，楼主使用的这个主题叫<a href="https://github.com/ahonn/hexo-theme-even" target="_blank" rel="external">even</a>的主题,在此作分享。</p>
-<h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h2><p>首先，你得有一个域名。</p>
-<p>然后，在<code>source</code>目录下新建<code>CNAME</code>文件，内容为要绑定的域名，例如<code>blog.riverhe.cn</code>。</p>
-<p>然后，将域名解析到你的github-pages相对应的域名上来。</p>
-<ul>
-<li>添加DNS解析记录类型CNAME</li>
-<li>主机记录自己选择，我的是<code>blog</code></li>
-<li>记录值填写tribody.github.io（根据自己情况）</li>
-<li>其他默认</li>
-</ul>
-<p>如此便完成了域名绑定。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;楼主有一台国外的vps，之前搭过wordpress，但是访问延迟较大，又因为前段时间服务器系统搞坏了，重装了系统，打算把那台服务器完全用来搭VPN和SS了，不再放网站在上面了。于是，转入了Hexo。本博文完成以下目标，首先，安装hexo博客系统，然后安装主题，最后做一个域名绑定。楼主记性最近不好，虽然文章网上都能搜到，但是做个记载还是好的。&lt;/p&gt;
-&lt;h2 id=&quot;Hexo安装&quot;&gt;&lt;a href=&quot;#Hexo安装&quot; class=&quot;headerlink&quot; title=&quot;Hexo安装&quot;&gt;&lt;/a&gt;Hexo安装&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;$ npm install hexo-cli -g&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ hexo init [目录名]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ &lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; [目录名]&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ npm install&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;$ hexo server&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="http://blog.sjtunix.cn/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Node.js" scheme="http://blog.sjtunix.cn/tags/Node-js/"/>
     
   </entry>
   

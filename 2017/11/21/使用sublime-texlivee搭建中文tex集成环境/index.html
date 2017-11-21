@@ -1,0 +1,47 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="River He"><meta name="description" content="TeX是一种排版程序，最初由D.E.Knuth编写，在1982年之后就没有多大变化了。TeX本身也是一门语言，因此基于TeX编写了很多的“TeX宏包”，它实际上是扩展了TeX的功能，这其中比较出名的就是LaTeX。这些宏包被称之为“format”。目前LaTeX的版本叫做La"><meta name="keywords" content="Tex"><title>使用sublime+texlive搭建中文tex集成环境 · Sjtunix</title><link rel="icon" href="/favicon.ico"><link rel="canonical" href="http://blog.sjtunix.cn/2017/11/21/使用sublime-texlivee搭建中文tex集成环境/"><link rel="alternate" href="/atom.xml" title="Sjtunix"><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><link rel="stylesheet" href="/css/style.css"><script type="text/javascript">var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?a67714dba8e9a4f625fd5051c7965382";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">使用sublime+texlive搭建中文tex集成环境</h1><span class="post-time">2017年11月21日</span><div class="post-content"><p>TeX是一种排版程序，最初由D.E.Knuth编写，在1982年之后就没有多大变化了。</p>
+<p>TeX本身也是一门语言，因此基于TeX编写了很多的“TeX宏包”，它实际上是扩展了TeX的功能，这其中比较出名的就是LaTeX。这些宏包被称之为“format”。</p>
+<p>目前LaTeX的版本叫做LaTeXe。</p>
+<p>现在我们常用的MiTeX、teTeX等等称之为TeX的发行版，它是将Tex和许许多多的程序一起打包发布。Tex<br>和MiTeX、teTeX之间的关系，就好像linux与Debian、Ubuntu之间的关系。</p>
+<p>中文常用的Tex发行版有MiTeX、TeXLive和MacTeX，除此之外还有CTeX项目。</p>
+<p>废话不多说了，</p>
+<p>本人的安装环境是如下：</p>
+<p>windows 10专业版 1607版本<br>texlive2016<br>sublimetext 3</p>
+<p>首先第一步，先安装TeXLive2016，至于为什么用这个版本而不用2017（睡不想用最新版= =），因为我在win10上安装2017成功后，发现编译不了tex模板（硕士论文模板），输出错误应该是qt版本太低。可能需要升级Qt，相关解答在这里：</p>
+<ul>
+<li><a href="https://tex.stackexchange.com/questions/85792/miktex-x64-on-windows-8-qt-error" target="_blank" rel="external">stackexchange</a></li>
+<li><a href="https://forum.qt.io/topic/64887/how-to-get-rid-of-the-qt-untested-windows-version-10-0-detected-warning" target="_blank" rel="external">Qt Forum</a> </li>
+</ul>
+<p>基本上说的都是替换texlive中的qt版本，这个未来官方可能会修复。</p>
+<p>除此之外还有点儿小错误，太懒了，不想一个个去弄，急着用，以后可能会弄一下，于是就卸载掉了，重新安装模板推荐的texlive2016。注意安装texlive2016之前，需要在环境变量中添加<code>%SystemRoot%\system32</code>（因为win10中默认没有该变量路径，而texlive2016在安装的时候会搜索该路径）。</p>
+<p>然后需要安装gb7714-2015字符集库，在装好texlive2016之后，需要更新一下tex live manager，然后在tlmgr中安装该字符集。具体如下图：</p>
+<p><img src="/img/tlmgr.png" alt="tlmgr安装方式"></p>
+<p>第二步，安装sublime tex3（2也行，但显然3有更炫酷的效果），我非常喜欢sublime所以才有这么一个教程。新安装好后，先去装个package control（sublime的插件管理器），然后使用pci安装一个叫做LaTeXTools的插件。</p>
+<p>安装好后，首先下载<a href="http://www.sumatrapdfreader.org/" target="_blank" rel="external">sumatraPDF</a>，至于为什么用这个来预览Pdf，是因为它支持反向查找，这是一个非常神奇的功能，里可以随时找到Pdf某一个位置在tex文本中对应的位置，操作足够简单，双击即可。按账号sumatraPDF之后，需要在环境变量PATH中添加执行路径。然后在打开sumatraPDF，设置&gt;&gt;选项，设置反向搜索路径<code>&quot;D:\Program Files\Sublime Text 3\sublime_text.exe&quot; &quot;%f:%l&quot;</code>，具体路径以sumlime安装目录为准。这样，当你编译完tex文件后，就能绑定两者了！</p>
+<p>接下来配置LaTeXTools的图片和公式预览功能，首先texlive2016没有自带imagesticks，因此无法预览图片，但是有自带ghostscript（预览公式用）。需要我们自己下载安装<a href="http://www.imagemagick.org/" target="_blank" rel="external">ImageMagick</a>（预览图片用）。然后，我们需要在sumlime的preference&gt;&gt;package settings&gt;&gt;latex tools&gt;&gt;setting-user中找到windows对应位置的配置项，在texpath路径中分别添加ghostscript和imagemagick的可执行文件路径以及系统环境变量PATH。例如<code>&quot;texpath&quot; : &quot;D:\\texlive\\2016\\bin\\win32;D:\\texlive\\2016\\tlpkg\\tlgs\\bin;D:\\Program Files\\ImageMagick-7.0.7-Q16;$PATH&quot;</code>。到此，基本配置完毕，你就可以安心使用sumlime写你的论文了！</p>
+<p>除此之外，还有很多可配置项，都在<code>setting-user</code>中可以配置。</p>
+<p>另外，LaTeX官方有较详细的文档可供阅读<a href="https://latextools.readthedocs.io/en/latest/" target="_blank" rel="external">LatexTools</a>。</p>
+<p>参考文献：</p>
+<ul>
+<li><a href="https://latextools.readthedocs.io/en/latest/" target="_blank" rel="external">LaTeXTools官方文档</a></li>
+<li><a href="http://www.ctex.org/documents/shredder/tex_frame.html" target="_blank" rel="external">TeX — Beauty and Fun</a></li>
+</ul>
+</div></article><div class="tags"><a href="/tags/Tex/">Tex</a></div><div class="paginator"><a href="/2017/11/16/谈谈打标签这件事儿/" class="next"><span>Next</span><i class="iconfont icon-right"></i></a></div><section id="comments"><div id="disqus_thread"></div></section><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'http://blog.sjtunix.cn/2017/11/21/使用sublime-texlivee搭建中文tex集成环境/';
+    this.page.identifier = '2017/11/21/使用sublime-texlivee搭建中文tex集成环境/';
+    this.page.title = '使用sublime+texlive搭建中文tex集成环境';
+};
+(function() {
+var d = document, s = d.createElement('script');
+
+s.src = '//tribody.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();</script></section><footer><div class="social"><a href="mailto:hctongxue@163.com" title="email" class="iconfont icon-email"></a><a href="https://github.com/tribody" title="github" class="iconfont icon-github"></a><a href="/atom.xml" title="rss" class="iconfont icon-rss"></a></div><div class="copyright"><p class="power">Powered by <a href="https://hexo.io/">Hexo</a> and Theme by <a href="https://github.com/ahonn/hexo-theme-even"> Even</a></p><p class="since">&copy;2015-2017<span class="heart"><i class="iconfont icon-heart"></i></span><span class="author">River He</span></p></div><div id="back2top"><i class="iconfont icon-up"></i></div></footer></div><script src="/js/zepto.min.js"></script><script src="/js/theme.js"></script></body></html>
