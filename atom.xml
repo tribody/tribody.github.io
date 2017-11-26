@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.sjtunix.cn/"/>
-  <updated>2017-11-26T05:43:33.353Z</updated>
+  <updated>2017-11-26T06:42:23.311Z</updated>
   <id>http://blog.sjtunix.cn/</id>
   
   <author>
@@ -20,14 +20,49 @@
     <link href="http://blog.sjtunix.cn/2017/11/26/%E5%8D%9A%E5%AE%A2%E6%94%B9%E9%80%A0%E8%AE%A1%E5%88%92/"/>
     <id>http://blog.sjtunix.cn/2017/11/26/博客改造计划/</id>
     <published>2017-11-26T05:43:10.000Z</published>
-    <updated>2017-11-26T05:43:33.353Z</updated>
+    <updated>2017-11-26T06:42:23.311Z</updated>
+    
+    <content type="html"><![CDATA[<p>以前搭建博客太凌乱了，CSDN上面有一部分，hexo上面也有一部分，分类也很杂乱，阅读体验极差，内容整理的也不够良好。</p>
+<p>因此，决定重新整理改造博客，期限暂时定为明年，具体改造计划分为两方面：</p>
+<ul>
+<li>一、规范文章分类标签：<ul>
+<li>类别限定更加明确，分类不能够太随便，可参考一些专业分类法；</li>
+<li>表现尽量体现文章关键词，不可太乱；</li>
+</ul>
+</li>
+<li>二、博客功能改进：<ul>
+<li>增加博客流量统计功能</li>
+<li>申请百度搜索收录<a id="more"></a></li>
+<li>添加站内SEO功能</li>
+<li>添加Latex公式输入支持</li>
+<li>CSDN移植</li>
+<li>git上开两个分支，master存放资源文件，blog分支存放静态网页文件，并将blog分支开放git-pages</li>
+</ul>
+</li>
+</ul>
+<p>除此之外，计划学习hexo源码，会在适当时候开一个hexo源码分析专栏。</p>
+]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;以前搭建博客太凌乱了，CSDN上面有一部分，hexo上面也有一部分，分类也很杂乱，阅读体验极差，内容整理的也不够良好。&lt;/p&gt;
+&lt;p&gt;因此，决定重新整理改造博客，期限暂时定为明年，具体改造计划分为两方面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一、规范文章分类标签：&lt;ul&gt;
+&lt;li&gt;类别限定更加明确，分类不能够太随便，可参考一些专业分类法；&lt;/li&gt;
+&lt;li&gt;表现尽量体现文章关键词，不可太乱；&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;二、博客功能改进：&lt;ul&gt;
+&lt;li&gt;增加博客流量统计功能&lt;/li&gt;
+&lt;li&gt;申请百度搜索收录
+    
     </summary>
     
+      <category term="前端" scheme="http://blog.sjtunix.cn/categories/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="前端" scheme="http://blog.sjtunix.cn/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="hexo" scheme="http://blog.sjtunix.cn/tags/hexo/"/>
     
   </entry>
   
@@ -36,14 +71,12 @@
     <link href="http://blog.sjtunix.cn/2017/11/21/%E4%BD%BF%E7%94%A8sublime-texlivee%E6%90%AD%E5%BB%BA%E4%B8%AD%E6%96%87tex%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83/"/>
     <id>http://blog.sjtunix.cn/2017/11/21/使用sublime-texlivee搭建中文tex集成环境/</id>
     <published>2017-11-21T03:45:00.000Z</published>
-    <updated>2017-11-21T08:39:21.792Z</updated>
+    <updated>2017-11-26T06:42:53.924Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Tex简介"><a href="#Tex简介" class="headerlink" title="Tex简介"></a>Tex简介</h2><p>TeX是一种排版程序，最初由D.E.Knuth编写，在1982年之后就没有多大变化了。</p>
 <p>TeX本身也是一门语言，因此基于TeX编写了很多的“TeX宏包”，它实际上是扩展了TeX的功能，这其中比较出名的就是LaTeX。这些宏包被称之为“format”。</p>
 <p>目前LaTeX的版本叫做LaTeXe。</p>
-<p>现在我们常用的MiTeX、teTeX等等称之为TeX的发行版，它是将Tex和许许多多的程序一起打包发布。Tex<br>和MiTeX、teTeX之间的关系，就好像linux与Debian、Ubuntu之间的关系。</p>
-<p>中文常用的Tex发行版有MiTeX、TeXLive和MacTeX，除此之外还有CTeX项目。</p>
-<a id="more"></a>
+<p>现在我们常用的MiTeX、teTeX等等称之为TeX的发行版，它是将Tex和许许多多的程序一起打包发布。Tex<br>和MiTeX、teTeX之间的关系，就好像linux与Debian、Ubuntu之间的关系。<br><a id="more"></a><br>中文常用的Tex发行版有MiTeX、TeXLive和MacTeX，除此之外还有CTeX项目。</p>
 <p>废话不多说了，</p>
 <p>本人的安装环境以及使用软件版本如下：</p>
 <ul>
@@ -86,8 +119,7 @@
       &lt;h2 id=&quot;Tex简介&quot;&gt;&lt;a href=&quot;#Tex简介&quot; class=&quot;headerlink&quot; title=&quot;Tex简介&quot;&gt;&lt;/a&gt;Tex简介&lt;/h2&gt;&lt;p&gt;TeX是一种排版程序，最初由D.E.Knuth编写，在1982年之后就没有多大变化了。&lt;/p&gt;
 &lt;p&gt;TeX本身也是一门语言，因此基于TeX编写了很多的“TeX宏包”，它实际上是扩展了TeX的功能，这其中比较出名的就是LaTeX。这些宏包被称之为“format”。&lt;/p&gt;
 &lt;p&gt;目前LaTeX的版本叫做LaTeXe。&lt;/p&gt;
-&lt;p&gt;现在我们常用的MiTeX、teTeX等等称之为TeX的发行版，它是将Tex和许许多多的程序一起打包发布。Tex&lt;br&gt;和MiTeX、teTeX之间的关系，就好像linux与Debian、Ubuntu之间的关系。&lt;/p&gt;
-&lt;p&gt;中文常用的Tex发行版有MiTeX、TeXLive和MacTeX，除此之外还有CTeX项目。&lt;/p&gt;
+&lt;p&gt;现在我们常用的MiTeX、teTeX等等称之为TeX的发行版，它是将Tex和许许多多的程序一起打包发布。Tex&lt;br&gt;和MiTeX、teTeX之间的关系，就好像linux与Debian、Ubuntu之间的关系。&lt;br&gt;
     
     </summary>
     
@@ -103,12 +135,12 @@
     <link href="http://blog.sjtunix.cn/2017/11/16/%E8%B0%88%E8%B0%88%E6%89%93%E6%A0%87%E7%AD%BE%E8%BF%99%E4%BB%B6%E4%BA%8B%E5%84%BF/"/>
     <id>http://blog.sjtunix.cn/2017/11/16/谈谈打标签这件事儿/</id>
     <published>2017-11-15T16:51:21.000Z</published>
-    <updated>2017-11-21T07:52:09.717Z</updated>
+    <updated>2017-11-26T06:43:35.807Z</updated>
     
     <content type="html"><![CDATA[<p>最近对打标签这件事儿挺感兴趣的，因为几天前被一个陌生人打了个“中央空调”的标签。</p>
 <p>事情经过挺简单，去一个实验室找同学，被她实验室一个女生看到了。这之后，我同学（一天真烂漫直女）来和我说，这女孩儿说我挺高挺萌的（这评价应该不错？，被夸“呆萌”不是第一次了），同学表示我对人还很好，女孩儿回道：“是暖男吧？”同学答：“恩恩，对大家都很好！”“不会是中央空调吧？”</p>
-<a id="more"></a>
 <p>看到没，一段简单的对话之中，我连续被一个陌生人打了两个标签，分别是“暖男”，“中央空调”。若说褒贬的话，大家都愿意接受“暖男”这个标签，毕竟“中央空调”不是谁都愿意当的（百科对“中央空调”的定义是：和很多女性暧昧的男性）。我听到这样讲自然是很生气的，一个素昧平生的人，给你打上这样的标签，莫名其妙。且不论我是不是这样的人，一面之词就可以将我这个人定性了，可以说是既简单粗暴有毫无道理。</p>
+<a id="more"></a>
 <p>但是，当我反思，推敲这个陌生人在评价我的过程中的思维模式时，又觉得很多人其实都或多或少有做过如此愚蠢的事儿，甚至包括我自己。在这个网络流行词泛滥的年代，如此新颖又颇具“智慧”，凝结了作者“创造力”的精辟词汇，不断地涌现。这种词语往往“幽默又不失风趣”，戏谑感十足。我印象中最能脱口而出的词汇，像“屌丝”、“高富帅”、“矮矬穷”、“绿茶婊”、“学霸”等等很多，包括“中央空调”这种高科技名词。当然，还有很多定义性标签语言，并没有这么生动有趣，但他们依旧高效的出现在我们每个人的嘴中。这些标签好像能自动给人分类似的，将全人类商品化，摆在社会这个大市场上“售卖”。</p>
 <p>的确，标签化的语言，一旦运用在人的身上，能够很快的让我们“认识”周围的人，快速区分。我有时候觉得这样一个过程，甚至于特别的像机器学习中的分类算法，而人类就像是打上标签的结构化数据，易于学习。这样当我们新认识了一个人，只需观察其某些特征，就可以快速将其分类到某个标签下，既冷漠又高效。在这场由人类作为样本参与到的大规模神经网络学习中，我们高达60亿的“多样性”，竟然可以由这些标签如此“高效”的区分。我曾经是一个极其头脑简单的快速分类器，也被父母教导如何去对待身边的人，这种标签策略甚至可以简单到只用好坏就可以辨别，就像很多学校对待优等生和差等生的态度一样。当然，这么多年过去了，我头脑似乎没变聪明多少，但是我自觉自己可以感受到的维度会变多了很多。那些曾经被定义为好人也许现在看来还是好人，但是我从中能看到的也许不只有“好”这么简单的字眼。曾经认为的“坏人”，在我眼前，可能变得更立体了，可悲之人必有可恨之处，可恨之人可究其可恨之因。</p>
 <p>标签化表面上最受伤的是被标签化的对象，其实不然，打出标签的人，往往才是付出最沉重代价的。标签化的代价，是你可能会丧失一个了解另一个世界机会，甚至于让自己变得愚蠢。当你想要真正了解一个人的时候，你一定要一层层地去掉他身上的所有标签，这些标签可能是你贴的，也有可能是别人贴的，但是如果你真正在乎他（她）的话，一定要去了解最本真的他（她），那是独一无二的他（她)，那是他（她）生而为人，最宝贵的东西。</p>
@@ -119,6 +151,7 @@
     
       &lt;p&gt;最近对打标签这件事儿挺感兴趣的，因为几天前被一个陌生人打了个“中央空调”的标签。&lt;/p&gt;
 &lt;p&gt;事情经过挺简单，去一个实验室找同学，被她实验室一个女生看到了。这之后，我同学（一天真烂漫直女）来和我说，这女孩儿说我挺高挺萌的（这评价应该不错？，被夸“呆萌”不是第一次了），同学表示我对人还很好，女孩儿回道：“是暖男吧？”同学答：“恩恩，对大家都很好！”“不会是中央空调吧？”&lt;/p&gt;
+&lt;p&gt;看到没，一段简单的对话之中，我连续被一个陌生人打了两个标签，分别是“暖男”，“中央空调”。若说褒贬的话，大家都愿意接受“暖男”这个标签，毕竟“中央空调”不是谁都愿意当的（百科对“中央空调”的定义是：和很多女性暧昧的男性）。我听到这样讲自然是很生气的，一个素昧平生的人，给你打上这样的标签，莫名其妙。且不论我是不是这样的人，一面之词就可以将我这个人定性了，可以说是既简单粗暴有毫无道理。&lt;/p&gt;
     
     </summary>
     
@@ -134,37 +167,35 @@
     <link href="http://blog.sjtunix.cn/2017/03/04/inline-block/"/>
     <id>http://blog.sjtunix.cn/2017/03/04/inline-block/</id>
     <published>2017-03-04T13:19:26.000Z</published>
-    <updated>2017-03-04T13:46:54.464Z</updated>
+    <updated>2017-11-26T06:23:35.656Z</updated>
     
-    <content type="html"><![CDATA[<p>参考自<a href="http://www.cnblogs.com/KeithWang/p/3139517.html" target="_blank" rel="external">http://www.cnblogs.com/KeithWang/p/3139517.html</a></p>
-<p><a href="http://www.zhangxinxu.com/wordpress/2010/11/%E6%8B%9C%E6%8B%9C%E4%BA%86%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80-%E5%9F%BA%E4%BA%8Edisplayinline-block%E7%9A%84%E5%88%97%E8%A1%A8%E5%B8%83%E5%B1%80/" target="_blank" rel="external">http://www.zhangxinxu.com/wordpress/2010/11/%E6%8B%9C%E6%8B%9C%E4%BA%86%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80-%E5%9F%BA%E4%BA%8Edisplayinline-block%E7%9A%84%E5%88%97%E8%A1%A8%E5%B8%83%E5%B1%80/</a></p>
-<h2 id="总体概念"><a href="#总体概念" class="headerlink" title="总体概念"></a>总体概念</h2><ol>
+    <content type="html"><![CDATA[<h2 id="总体概念"><a href="#总体概念" class="headerlink" title="总体概念"></a>总体概念</h2><ul>
 <li>block和inline这两个概念是简略的说法，完整确切的说应该是 block-level elements (块级元素) 和 inline elements (内联元素)。block元素通常被现实为独立的一块，会单独换一行；inline元素则前后不会产生换行，一系列inline元素都在一行内显示，直到该行排满。</li>
 <li>大体来说HTML元素各有其自身的布局级别（block元素还是inline元素）：<br>常见的块级元素有 DIV, FORM, TABLE, P, PRE, H1~H6, DL, OL, UL 等。<br>常见的内联元素有 SPAN, A, STRONG, EM, LABEL, INPUT, SELECT, TEXTAREA, IMG, BR 等。</li>
 <li>block元素可以包含block元素和inline元素；但inline元素只能包含inline元素。要注意的是这个是个大概的说法，每个特定的元素能包含的元素也是特定的，所以具体到个别元素上，这条规律是不适用的。比如 P 元素，只能包含inline元素，而不能包含block元素。</li>
 <li>一般来说，可以通过display:inline和display:block的设置，改变元素的布局级别。</li>
-</ol>
+</ul>
 <a id="more"></a>
 <h2 id="block，inline和inline-block细节对比"><a href="#block，inline和inline-block细节对比" class="headerlink" title="block，inline和inline-block细节对比"></a>block，inline和inline-block细节对比</h2><ul>
-<li>display:block<ol>
+<li>display:block<ul>
 <li>block元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度自动填满其父元素宽度。</li>
 <li>block元素可以设置width,height属性。块级元素即使设置了宽度,仍然是独占一行。</li>
 <li>block元素可以设置margin和padding属性。</li>
-</ol>
+</ul>
 </li>
-<li>display:inline<ol>
+<li>display:inline<ul>
 <li>inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。</li>
 <li>inline元素设置width,height属性无效。</li>
 <li>inline元素的margin和padding属性，水平方向的padding-left, padding-right, margin-left, margin-right都产生边距效果；但竖直方向的padding-top, padding-bottom, margin-top, margin-bottom不会产生边距效果。</li>
-</ol>
+</ul>
 </li>
-<li><p>display:inline-block</p>
-<ol>
+<li>display:inline-block<ul>
 <li>简单来说就是将对象呈现为inline对象，但是对象的内容作为block对象呈现。之后的内联对象会被排列在同一行内。比如我们可以给一个link（a元素）inline-block属性值，使其既具有block的宽度高度特性又具有inline的同行特性。</li>
-</ol>
-<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2></li>
-<li><p>一般我们会用display:block，display:inline或者display:inline-block来调整元素的布局级别，其实display的参数远远不止这三种，仅仅是比较常用而已。</p>
+</ul>
 </li>
+</ul>
+<h2 id="补充说明"><a href="#补充说明" class="headerlink" title="补充说明"></a>补充说明</h2><ul>
+<li>一般我们会用display:block，display:inline或者display:inline-block来调整元素的布局级别，其实display的参数远远不止这三种，仅仅是比较常用而已。</li>
 <li>IE（低版本IE）本来是不支持inline-block的，所以在IE中对内联元素使用display:inline-block，理论上IE是不识别的，但使用display:inline-block在IE下会触发layout，从而使内联元素拥有了display:inline-block属性的表象。</li>
 </ul>
 <h2 id="消除inline-block之间的空格"><a href="#消除inline-block之间的空格" class="headerlink" title="消除inline-block之间的空格"></a>消除inline-block之间的空格</h2><p>在完整的展示兼容性的像素级的inline-block元素列表布局前，有必要讲讲使用display:inline-block列表布局经常会遇到的“换行符/空格间隙问题”。</p>
@@ -187,18 +218,20 @@
 <p>考录两种办法结合，兼容竟可能多的浏览器，</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;<span class="attribute">letter-spacing</span>:-<span class="number">3px</span>; <span class="attribute">font-size</span>:<span class="number">0</span>;&#125; <span class="comment">/* 针对Arial字体 */</span></div></pre></td></tr></table></figure>
 <p>所以，应用display:inline-block属性实现列表布局的几个关键字就是：<em>block水平的标签，font-size:0和letter-spacing负值</em>。</p>
+<h2 id="参考自："><a href="#参考自：" class="headerlink" title="参考自："></a>参考自：</h2><ul>
+<li><a href="http://www.cnblogs.com/KeithWang/p/3139517.html" target="_blank" rel="external">block，inline和inline-block概念和区别</a></li>
+<li><a href="http://www.zhangxinxu.com/wordpress/2010/11/%E6%8B%9C%E6%8B%9C%E4%BA%86%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80-%E5%9F%BA%E4%BA%8Edisplayinline-block%E7%9A%84%E5%88%97%E8%A1%A8%E5%B8%83%E5%B1%80/" target="_blank" rel="external">拜拜了,浮动布局-基于display:inline-block的列表布局</a></li>
+</ul>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;参考自&lt;a href=&quot;http://www.cnblogs.com/KeithWang/p/3139517.html&quot;&gt;http://www.cnblogs.com/KeithWang/p/3139517.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.zhangxinxu.com/wordpress/2010/11/%E6%8B%9C%E6%8B%9C%E4%BA%86%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80-%E5%9F%BA%E4%BA%8Edisplayinline-block%E7%9A%84%E5%88%97%E8%A1%A8%E5%B8%83%E5%B1%80/&quot;&gt;http://www.zhangxinxu.com/wordpress/2010/11/%E6%8B%9C%E6%8B%9C%E4%BA%86%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80-%E5%9F%BA%E4%BA%8Edisplayinline-block%E7%9A%84%E5%88%97%E8%A1%A8%E5%B8%83%E5%B1%80/&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;总体概念&quot;&gt;&lt;a href=&quot;#总体概念&quot; class=&quot;headerlink&quot; title=&quot;总体概念&quot;&gt;&lt;/a&gt;总体概念&lt;/h2&gt;&lt;ol&gt;
+      &lt;h2 id=&quot;总体概念&quot;&gt;&lt;a href=&quot;#总体概念&quot; class=&quot;headerlink&quot; title=&quot;总体概念&quot;&gt;&lt;/a&gt;总体概念&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;block和inline这两个概念是简略的说法，完整确切的说应该是 block-level elements (块级元素) 和 inline elements (内联元素)。block元素通常被现实为独立的一块，会单独换一行；inline元素则前后不会产生换行，一系列inline元素都在一行内显示，直到该行排满。&lt;/li&gt;
 &lt;li&gt;大体来说HTML元素各有其自身的布局级别（block元素还是inline元素）：&lt;br&gt;常见的块级元素有 DIV, FORM, TABLE, P, PRE, H1~H6, DL, OL, UL 等。&lt;br&gt;常见的内联元素有 SPAN, A, STRONG, EM, LABEL, INPUT, SELECT, TEXTAREA, IMG, BR 等。&lt;/li&gt;
 &lt;li&gt;block元素可以包含block元素和inline元素；但inline元素只能包含inline元素。要注意的是这个是个大概的说法，每个特定的元素能包含的元素也是特定的，所以具体到个别元素上，这条规律是不适用的。比如 P 元素，只能包含inline元素，而不能包含block元素。&lt;/li&gt;
 &lt;li&gt;一般来说，可以通过display:inline和display:block的设置，改变元素的布局级别。&lt;/li&gt;
-&lt;/ol&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -214,20 +247,19 @@
     <link href="http://blog.sjtunix.cn/2017/03/02/JS%E5%BC%82%E6%AD%A5%E8%B0%83%E7%94%A8/"/>
     <id>http://blog.sjtunix.cn/2017/03/02/JS异步调用/</id>
     <published>2017-03-02T10:22:39.000Z</published>
-    <updated>2017-03-02T10:30:39.700Z</updated>
+    <updated>2017-11-26T07:06:53.240Z</updated>
     
-    <content type="html"><![CDATA[<p>文章转自<a href="https://github.com/wangfupeng1988/js-async-tutorial/blob/master/part1-basic/02-event-loop.md" target="_blank" rel="external">github</a></p>
-<h1 id="异步和-event-loop"><a href="#异步和-event-loop" class="headerlink" title="异步和 event-loop"></a>异步和 event-loop</h1><p>提到异步，就必须提 event-loop 。event-loop 中文翻译叫做“时间轮询”，它是能体现出单线程中异步操作是如何被执行的。</p>
+    <content type="html"><![CDATA[<h2 id="异步和-event-loop"><a href="#异步和-event-loop" class="headerlink" title="异步和 event-loop"></a>异步和 event-loop</h2><p>提到异步，就必须提 event-loop 。event-loop 中文翻译叫做“时间轮询”，它是能体现出单线程中异步操作是如何被执行的。</p>
 <p>首先，<strong>强烈大家观看一个歪果仁的视频《<a href="http://www.tudou.com/programs/view/ACDNKZJm6pQ/" target="_blank" rel="external">what the hack is event loop</a>》</strong>，只有不到半个小时的时间，但是将的非常详细。<em>如果那个链接失效，访问<a href="http://pan.baidu.com/s/1c1E0rjM" target="_blank" rel="external">这里</a>（密码: xx9f）</em></p>
-<a id="more"></a>
 <p>其次，再结合阮一峰老师的《<a href="http://www.ruanyifeng.com/blog/2013/10/event_loop.html" target="_blank" rel="external">什么是event loop</a>》一起看一下。将这两个看完就基本了解 event loop 了</p>
 <p>最后，event-loop 是一块内容比较独立的技术性知识，它是什么样子就是什么样子，讲解起来可变通性非常小。因此，本节说一下我对 event-loop 的理解和体会</p>
+<a id="more"></a>
 <h2 id="本节内容概述"><a href="#本节内容概述" class="headerlink" title="本节内容概述"></a>本节内容概述</h2><ul>
 <li>举例说明</li>
 <li>核心概念</li>
 <li>思考两个问题</li>
 </ul>
-<h2 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h2><p>给出一段简单的 js 代码</p>
+<h3 id="举例说明"><a href="#举例说明" class="headerlink" title="举例说明"></a>举例说明</h3><p>给出一段简单的 js 代码</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="string">'line 1'</span>)</div><div class="line">setTimeout(<span class="built_in">console</span>.log, <span class="number">1000</span>, <span class="string">'line 2'</span>)</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'line 3'</span>)</div></pre></td></tr></table></figure>
 <p>以上一共三行代码，该程序被执行的时候，会依次挨行执行，这被称作 <strong>main-stack</strong> 。</p>
 <ul>
@@ -238,13 +270,13 @@
 <li>第五步，主线程又被执行完了，再实时查看 <strong>call-stack</strong> 中是否还有未执行的异步回调。</li>
 </ul>
 <p>以上只拿了<code>setTimeout</code>举例子，但是对于网络请求、IO操作、事件绑定道理都是一样的。<strong>如果我讲的简单例子你还是看不懂，一定要去看文章最初提到的《what the hack is event loop》视频，重要重要！！！</strong></p>
-<h2 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h2><p>理解 event-loop 的核心概念是要明白以下几点：</p>
+<h3 id="核心概念"><a href="#核心概念" class="headerlink" title="核心概念"></a>核心概念</h3><p>理解 event-loop 的核心概念是要明白以下几点：</p>
 <ul>
 <li><strong>main-stack</strong> 和 <strong>call-stack</strong> 的区别</li>
 <li>执行 <strong>main-stack</strong> 时将异步操作暂存到 <strong>call-stack</strong></li>
 <li><strong>main-stack</strong> 执行完成之后，实时检查 <strong>call-stack</strong> 的任务是否应该被拿到 <strong>main-stack</strong> 中来执行</li>
 </ul>
-<h2 id="思考三个问题"><a href="#思考三个问题" class="headerlink" title="思考三个问题"></a>思考三个问题</h2><p><strong>第一题，以下代码的输出顺序是什么</strong></p>
+<h3 id="思考三个问题"><a href="#思考三个问题" class="headerlink" title="思考三个问题"></a>思考三个问题</h3><p><strong>第一题，以下代码的输出顺序是什么</strong></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">setTimeout(<span class="built_in">console</span>.log, <span class="number">0</span>, <span class="string">'a'</span>)</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'b'</span>)</div><div class="line"><span class="built_in">console</span>.log(<span class="string">'c'</span>)</div></pre></td></tr></table></figure>
 <p>答案是<code>b c a</code>，有疑问的需要再去看上面的介绍或者那个视频。</p>
 <p><strong>第二题，以下代码中，最后输出的结果是否是 500</strong></p>
@@ -252,13 +284,17 @@
 <p>答案是大于 500ms ，因为 for 函数需要花费一些时间，等 for 执行完之后再开始计算 500ms 之后执行 fn</p>
 <p><strong>第三题，事件绑定是不是异步操作？</strong></p>
 <p>这个问题大家根据 event-loop 的讲解和视频来思考，我们下一节再给出解答。</p>
+<blockquote>
+<p>文章转自<a href="https://github.com/wangfupeng1988/js-async-tutorial/blob/master/part1-basic/02-event-loop.md" target="_blank" rel="external">wangfupeng1988/js-async-tutorial</a></p>
+</blockquote>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;文章转自&lt;a href=&quot;https://github.com/wangfupeng1988/js-async-tutorial/blob/master/part1-basic/02-event-loop.md&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;异步和-event-loop&quot;&gt;&lt;a href=&quot;#异步和-event-loop&quot; class=&quot;headerlink&quot; title=&quot;异步和 event-loop&quot;&gt;&lt;/a&gt;异步和 event-loop&lt;/h1&gt;&lt;p&gt;提到异步，就必须提 event-loop 。event-loop 中文翻译叫做“时间轮询”，它是能体现出单线程中异步操作是如何被执行的。&lt;/p&gt;
+      &lt;h2 id=&quot;异步和-event-loop&quot;&gt;&lt;a href=&quot;#异步和-event-loop&quot; class=&quot;headerlink&quot; title=&quot;异步和 event-loop&quot;&gt;&lt;/a&gt;异步和 event-loop&lt;/h2&gt;&lt;p&gt;提到异步，就必须提 event-loop 。event-loop 中文翻译叫做“时间轮询”，它是能体现出单线程中异步操作是如何被执行的。&lt;/p&gt;
 &lt;p&gt;首先，&lt;strong&gt;强烈大家观看一个歪果仁的视频《&lt;a href=&quot;http://www.tudou.com/programs/view/ACDNKZJm6pQ/&quot;&gt;what the hack is event loop&lt;/a&gt;》&lt;/strong&gt;，只有不到半个小时的时间，但是将的非常详细。&lt;em&gt;如果那个链接失效，访问&lt;a href=&quot;http://pan.baidu.com/s/1c1E0rjM&quot;&gt;这里&lt;/a&gt;（密码: xx9f）&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;其次，再结合阮一峰老师的《&lt;a href=&quot;http://www.ruanyifeng.com/blog/2013/10/event_loop.html&quot;&gt;什么是event loop&lt;/a&gt;》一起看一下。将这两个看完就基本了解 event loop 了&lt;/p&gt;
+&lt;p&gt;最后，event-loop 是一块内容比较独立的技术性知识，它是什么样子就是什么样子，讲解起来可变通性非常小。因此，本节说一下我对 event-loop 的理解和体会&lt;/p&gt;
     
     </summary>
     
@@ -272,12 +308,13 @@
     <link href="http://blog.sjtunix.cn/2017/03/02/%E9%98%BF%E9%87%8C%E5%9C%A8%E7%BA%BF%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
     <id>http://blog.sjtunix.cn/2017/03/02/阿里在线编程题/</id>
     <published>2017-03-02T09:51:49.000Z</published>
-    <updated>2017-03-06T10:43:02.774Z</updated>
+    <updated>2017-11-26T07:05:40.481Z</updated>
     
     <content type="html"><![CDATA[<p>记录阿里的在线面试题。</p>
-<h1 id="数组切片题"><a href="#数组切片题" class="headerlink" title="数组切片题"></a>数组切片题</h1><h2 id="题设"><a href="#题设" class="headerlink" title="题设"></a>题设</h2><p>对于一个长度为N的整型数组A，数组里所有的数都是正整数，对于两个满足<code>0&lt;=X&lt;=Y&lt;N</code>的整数，<code>A[X], A[X+1]...A[Y]</code>构成A的一个切片，记作<code>(X, Y)</code>。<br>用三个下标<code>m1, m2, m3</code>下标满足条件<code>0&lt;m1, m2+1&lt;m2, m2+1&lt;m3&lt;N-1</code>。<br>可以把这个整型数组分成<code>(0, m1-1), (m1+1, m2-1), (m2+1, m3-1), (m3+1, N-1)</code>四个切片。如果这四个切片中的整数求和相等，称作“四等分”。<br>编写一个函数，求一个给定的整型数组是否可以四等分看，如果可以，返回一个布尔类型的<code>true</code>，如果不可以返回一个布尔类型的<code>false</code>。</p>
-<p>限制条件：数组A最多有1,000,000项，数组中的整数取值范围介于-1,000,000到1,000,000之间。<br>要求：函数的计算复杂度为<code>O(N)</code>，使用额外存储空间（除了输入的数组之外）最多为<code>O(N)</code>。<br>例子：<br>对于数组A=[1, 5, 1, 1, 1, 1, 4, 1, 7, 3, 7]存在下标2, 7, 9使得数组分成四个分片[2, 5], [1, 1, 1, 4], [7], [7]，这三个分片内整数之和相等，所以对于这个数组，函数应该返回<code>true</code>。<br>对于数组A=[10, 2, 11, 13, 1, 1, 1, 1, 1]，找不到能把数组四等分的下标，所以函数应该返回<code>false</code>。<br><a id="more"></a></p>
-<h2 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h2><p>很遗憾，当时把题目看错了，因为室友前一天做了，所以以为下表元素是算在求和之内的。直到最后五分钟才意识到，已经晚了。</p>
+<h2 id="数组切片题"><a href="#数组切片题" class="headerlink" title="数组切片题"></a>数组切片题</h2><h3 id="题设"><a href="#题设" class="headerlink" title="题设"></a>题设</h3><p>对于一个长度为N的整型数组A，数组里所有的数都是正整数，对于两个满足<code>0&lt;=X&lt;=Y&lt;N</code>的整数，<code>A[X], A[X+1]...A[Y]</code>构成A的一个切片，记作<code>(X, Y)</code>。<br>用三个下标<code>m1, m2, m3</code>下标满足条件<code>0&lt;m1, m2+1&lt;m2, m2+1&lt;m3&lt;N-1</code>。<br>可以把这个整型数组分成<code>(0, m1-1), (m1+1, m2-1), (m2+1, m3-1), (m3+1, N-1)</code>四个切片。如果这四个切片中的整数求和相等，称作“四等分”。<br>编写一个函数，求一个给定的整型数组是否可以四等分看，如果可以，返回一个布尔类型的<code>true</code>，如果不可以返回一个布尔类型的<code>false</code>。</p>
+<a id="more"></a>
+<p>限制条件：数组A最多有1,000,000项，数组中的整数取值范围介于-1,000,000到1,000,000之间。<br>要求：函数的计算复杂度为<code>O(N)</code>，使用额外存储空间（除了输入的数组之外）最多为<code>O(N)</code>。<br>例子：<br>对于数组A=[1, 5, 1, 1, 1, 1, 4, 1, 7, 3, 7]存在下标2, 7, 9使得数组分成四个分片[2, 5], [1, 1, 1, 4], [7], [7]，这三个分片内整数之和相等，所以对于这个数组，函数应该返回<code>true</code>。<br>对于数组A=[10, 2, 11, 13, 1, 1, 1, 1, 1]，找不到能把数组四等分的下标，所以函数应该返回<code>false</code>。</p>
+<h3 id="解题过程"><a href="#解题过程" class="headerlink" title="解题过程"></a>解题过程</h3><p>很遗憾，当时把题目看错了，因为室友前一天做了，所以以为下表元素是算在求和之内的。直到最后五分钟才意识到，已经晚了。</p>
 <p>第一种思路当然是暴力求解，三个<code>for</code>循环，但是这显然是不行的。因为复杂度为<code>O(N^3)</code>。</p>
 <p>我这里采用的方法，受到了很多排序算法的启发，步骤如下：</p>
 <ol>
@@ -296,8 +333,7 @@
     <summary type="html">
     
       &lt;p&gt;记录阿里的在线面试题。&lt;/p&gt;
-&lt;h1 id=&quot;数组切片题&quot;&gt;&lt;a href=&quot;#数组切片题&quot; class=&quot;headerlink&quot; title=&quot;数组切片题&quot;&gt;&lt;/a&gt;数组切片题&lt;/h1&gt;&lt;h2 id=&quot;题设&quot;&gt;&lt;a href=&quot;#题设&quot; class=&quot;headerlink&quot; title=&quot;题设&quot;&gt;&lt;/a&gt;题设&lt;/h2&gt;&lt;p&gt;对于一个长度为N的整型数组A，数组里所有的数都是正整数，对于两个满足&lt;code&gt;0&amp;lt;=X&amp;lt;=Y&amp;lt;N&lt;/code&gt;的整数，&lt;code&gt;A[X], A[X+1]...A[Y]&lt;/code&gt;构成A的一个切片，记作&lt;code&gt;(X, Y)&lt;/code&gt;。&lt;br&gt;用三个下标&lt;code&gt;m1, m2, m3&lt;/code&gt;下标满足条件&lt;code&gt;0&amp;lt;m1, m2+1&amp;lt;m2, m2+1&amp;lt;m3&amp;lt;N-1&lt;/code&gt;。&lt;br&gt;可以把这个整型数组分成&lt;code&gt;(0, m1-1), (m1+1, m2-1), (m2+1, m3-1), (m3+1, N-1)&lt;/code&gt;四个切片。如果这四个切片中的整数求和相等，称作“四等分”。&lt;br&gt;编写一个函数，求一个给定的整型数组是否可以四等分看，如果可以，返回一个布尔类型的&lt;code&gt;true&lt;/code&gt;，如果不可以返回一个布尔类型的&lt;code&gt;false&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;限制条件：数组A最多有1,000,000项，数组中的整数取值范围介于-1,000,000到1,000,000之间。&lt;br&gt;要求：函数的计算复杂度为&lt;code&gt;O(N)&lt;/code&gt;，使用额外存储空间（除了输入的数组之外）最多为&lt;code&gt;O(N)&lt;/code&gt;。&lt;br&gt;例子：&lt;br&gt;对于数组A=[1, 5, 1, 1, 1, 1, 4, 1, 7, 3, 7]存在下标2, 7, 9使得数组分成四个分片[2, 5], [1, 1, 1, 4], [7], [7]，这三个分片内整数之和相等，所以对于这个数组，函数应该返回&lt;code&gt;true&lt;/code&gt;。&lt;br&gt;对于数组A=[10, 2, 11, 13, 1, 1, 1, 1, 1]，找不到能把数组四等分的下标，所以函数应该返回&lt;code&gt;false&lt;/code&gt;。&lt;br&gt;
+&lt;h2 id=&quot;数组切片题&quot;&gt;&lt;a href=&quot;#数组切片题&quot; class=&quot;headerlink&quot; title=&quot;数组切片题&quot;&gt;&lt;/a&gt;数组切片题&lt;/h2&gt;&lt;h3 id=&quot;题设&quot;&gt;&lt;a href=&quot;#题设&quot; class=&quot;headerlink&quot; title=&quot;题设&quot;&gt;&lt;/a&gt;题设&lt;/h3&gt;&lt;p&gt;对于一个长度为N的整型数组A，数组里所有的数都是正整数，对于两个满足&lt;code&gt;0&amp;lt;=X&amp;lt;=Y&amp;lt;N&lt;/code&gt;的整数，&lt;code&gt;A[X], A[X+1]...A[Y]&lt;/code&gt;构成A的一个切片，记作&lt;code&gt;(X, Y)&lt;/code&gt;。&lt;br&gt;用三个下标&lt;code&gt;m1, m2, m3&lt;/code&gt;下标满足条件&lt;code&gt;0&amp;lt;m1, m2+1&amp;lt;m2, m2+1&amp;lt;m3&amp;lt;N-1&lt;/code&gt;。&lt;br&gt;可以把这个整型数组分成&lt;code&gt;(0, m1-1), (m1+1, m2-1), (m2+1, m3-1), (m3+1, N-1)&lt;/code&gt;四个切片。如果这四个切片中的整数求和相等，称作“四等分”。&lt;br&gt;编写一个函数，求一个给定的整型数组是否可以四等分看，如果可以，返回一个布尔类型的&lt;code&gt;true&lt;/code&gt;，如果不可以返回一个布尔类型的&lt;code&gt;false&lt;/code&gt;。&lt;/p&gt;
     
     </summary>
     
@@ -313,20 +349,20 @@
     <link href="http://blog.sjtunix.cn/2017/02/26/%E4%B8%89%E6%A0%8F%E5%BC%8F%E5%B8%83%E5%B1%80/"/>
     <id>http://blog.sjtunix.cn/2017/02/26/三栏式布局/</id>
     <published>2017-02-25T17:17:37.000Z</published>
-    <updated>2017-03-04T13:46:49.719Z</updated>
+    <updated>2017-11-26T07:09:40.870Z</updated>
     
     <content type="html"><![CDATA[<p>position: absolute和fixed脱离了文档流，无法计算高度，作为子元素的话是无法撑开父元素的。</p>
 <p>CSS很弱鸡的说，因此参加百度前端技术学院恶补下，今天三栏式布局，一不小心踩了一堆的坑。现在来总结一样，收获还是不晓得（小的…）</p>
-<p>首先给的题目是这样的：</p>
-<a id="more"></a>
+<h2 id="题设"><a href="#题设" class="headerlink" title="题设"></a>题设</h2><p>首先给的题目是这样的：</p>
 <p><img src="/img/three_column_layout.png" alt="三栏式布局"></p>
-<p>首先拿到题目，思路是，外层包一个大的<code>div</code>，然后，左右栏分别使用<code>float: left</code>和<code>float: right</code>浮动定位，中间栏我第一时间就认定是使用<code>position: absolute</code>绝对定位。事实上，这个思路是没有错的。代码如下：</p>
+<h2 id="绝对定位"><a href="#绝对定位" class="headerlink" title="绝对定位"></a>绝对定位</h2><p>首先拿到题目，思路是，外层包一个大的<code>div</code>，然后，左右栏分别使用<code>float: left</code>和<code>float: right</code>浮动定位，中间栏我第一时间就认定是使用<code>position: absolute</code>绝对定位。事实上，这个思路是没有错的。代码如下：</p>
+<a id="more"></a>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>团队介绍<span class="tag">&lt;/<span class="name">title</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"style.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"leftbox"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"sefie"</span>&gt;</span></div><div class="line">				<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/me.jpg"</span>&gt;</span></div><div class="line">				<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"intro"</span>&gt;</span></div><div class="line">					<span class="tag">&lt;<span class="name">p</span>&gt;</span>**<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">					<span class="tag">&lt;<span class="name">p</span>&gt;</span>_________<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">					<span class="tag">&lt;<span class="name">p</span>&gt;</span>_________<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">					<span class="tag">&lt;<span class="name">p</span>&gt;</span>_________<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">					<span class="tag">&lt;<span class="name">p</span>&gt;</span>_________<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">				<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"middlebox"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">h1</span>&gt;</span>清除浮动（clearfix hack）<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">p</span>&gt;</span>在使用浮动的时候经常会遇到一个古怪的事情：<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/img.png"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div1"</span>&gt;</span></div><div class="line">				<span class="tag">&lt;<span class="name">p</span>&gt;</span>&amp;lt;div&amp;gt;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">				<span class="tag">&lt;<span class="name">p</span>&gt;</span>不......这个图片比包含它的元素还高，而且它是浮动的，于是它就溢出到了容器外面！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">				<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/eg.png"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">p</span>&gt;</span>见证奇迹的时候到了！有一种比较丑陋的方法可以解决这个问题，它叫做<span class="tag">&lt;<span class="name">i</span>&gt;</span>清除浮动（clearfix hack）<span class="tag">&lt;/<span class="name">i</span>&gt;</span>。<span class="tag">&lt;/<span class="name">p</span>&gt;</span>。</div><div class="line">			<span class="tag">&lt;<span class="name">p</span>&gt;</span>让我们加入一些新的CSS样式：<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/clearfix.png"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">p</span>&gt;</span>现在再看看发生了什么：<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"div2"</span>&gt;</span></div><div class="line">				<span class="tag">&lt;<span class="name">p</span>&gt;</span>&amp;lt;div class="clearfix"&amp;gt;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">				<span class="tag">&lt;<span class="name">p</span>&gt;</span>好多了！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">				<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/eg.png"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">p</span>&gt;</span>这个可以在现代浏览器上工作。如果你想要支持IE6，你就需要再加入如下样式：<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"img/clearfix2.png"</span>&gt;</span></div><div class="line">			<span class="tag">&lt;<span class="name">p</span>&gt;</span>有些独特的浏览器需要“额外的关照”。<span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://stackoverflow.com/questions/211383/which-method-of-clearfix-is-best"</span>&gt;</span>清除浮动这潭水很深很深<span class="tag">&lt;/<span class="name">a</span>&gt;</span>，但是这个简单的解决方案已经可以在今天所有主要浏览器上工作。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"rightbox"</span>&gt;</span></div><div class="line">			</div><div class="line">		<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* clear browser default settings */</span></div><div class="line">* &#123;</div><div class="line">	<span class="attribute">margin</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">padding</span>: <span class="number">0</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* main css settings */</span></div><div class="line"><span class="selector-tag">html</span> &#123;</div><div class="line">	<span class="attribute">font-family</span>: Arial, <span class="string">"Microsoft YaHei"</span>;</div><div class="line">	<span class="attribute">font-size</span>: <span class="number">15px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">body</span> &#123;</div><div class="line">	<span class="attribute">padding</span>: <span class="number">20px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-id">#container</span> &#123;</div><div class="line">	<span class="attribute">overflow</span>: auto;</div><div class="line"> 	<span class="attribute">padding</span>: <span class="number">20px</span>;</div><div class="line">	<span class="attribute">background-color</span>: <span class="number">#eee</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#999</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* leftbox start */</span></div><div class="line"><span class="selector-class">.leftbox</span> &#123;</div><div class="line">	<span class="attribute">float</span>: left;</div><div class="line">	<span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">padding</span>: <span class="number">20px</span>;</div><div class="line">	<span class="attribute">background-color</span>: <span class="number">#fff</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#999</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.sefie</span> &#123;</div><div class="line">	<span class="attribute">position</span>: relative;</div><div class="line">	<span class="attribute">padding</span>: <span class="number">2px</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#eee</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.sefie</span> <span class="selector-tag">img</span> &#123;</div><div class="line">	<span class="attribute">width</span>: <span class="number">80px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.sefie</span> <span class="selector-class">.intro</span> &#123;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">top</span>: <span class="number">1em</span>;</div><div class="line">	<span class="attribute">right</span>: <span class="number">0</span>;</div><div class="line">	<span class="attribute">width</span>: <span class="number">120px</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.sefie</span> <span class="selector-class">.intro</span> <span class="selector-tag">p</span> &#123;</div><div class="line">	<span class="attribute">text-align</span>: center;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* leftbox end */</span></div><div class="line"></div><div class="line"><span class="comment">/* middle start */</span></div><div class="line"><span class="selector-class">.middlebox</span> &#123;</div><div class="line">	<span class="attribute">position</span>: absolute;</div><div class="line">	<span class="attribute">left</span>: <span class="number">280px</span>;</div><div class="line">	<span class="attribute">right</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">padding</span>: <span class="number">20px</span>;</div><div class="line">	<span class="attribute">background-color</span>: <span class="number">#fff</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#999</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-class">.middlebox</span> <span class="selector-tag">p</span> &#123;</div><div class="line">	<span class="attribute">text-indent</span>: <span class="number">2em</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">/* middle end */</span></div><div class="line"></div><div class="line"><span class="comment">/* right start */</span></div><div class="line"><span class="selector-class">.rightbox</span> &#123;</div><div class="line">	<span class="attribute">float</span>: right;</div><div class="line">	<span class="attribute">padding</span>: <span class="number">20px</span>;</div><div class="line">	<span class="attribute">width</span>: <span class="number">120px</span>;</div><div class="line">	<span class="attribute">background-color</span>: <span class="number">#fff</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#999</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">/* right end */</span></div></pre></td></tr></table></figure>
 <p>然而。。。</p>
 <p>当我写完了<code>leftbox</code>和<code>rightbox</code>，加上了<code>middlebox</code>之后，却发现父容器无法包含<code>middlebox</code>。效果图如下：</p>
 <p><img src="/img/three_column_layout1.png" alt="三栏式布局"></p>
-<p>父容器无法包含绝对定位的元素，因为绝对定位是脱离文档流的！</p>
+<h2 id="相对定位"><a href="#相对定位" class="headerlink" title="相对定位"></a>相对定位</h2><p>父容器无法包含绝对定位的元素，因为绝对定位是脱离文档流的！</p>
 <p>所以只能使用相对定位。该代码如下：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.middlebox</span> &#123;</div><div class="line">	<span class="attribute">margin-left</span>: <span class="number">280px</span>;</div><div class="line">	<span class="attribute">margin-right</span>: <span class="number">200px</span>;</div><div class="line">	<span class="attribute">padding</span>: <span class="number">20px</span>;</div><div class="line">	<span class="attribute">background-color</span>: <span class="number">#fff</span>;</div><div class="line">	<span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#999</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>除此之外，html定义div的顺序也十分重要，<code>middlebox</code>的定义必须放在最后面，因为浮动定位是根据前面的元素来计算的。所以，如果把<code>middlebox</code>的定义放在前面会出现这种结果：</p>
@@ -341,7 +377,9 @@
     
       &lt;p&gt;position: absolute和fixed脱离了文档流，无法计算高度，作为子元素的话是无法撑开父元素的。&lt;/p&gt;
 &lt;p&gt;CSS很弱鸡的说，因此参加百度前端技术学院恶补下，今天三栏式布局，一不小心踩了一堆的坑。现在来总结一样，收获还是不晓得（小的…）&lt;/p&gt;
-&lt;p&gt;首先给的题目是这样的：&lt;/p&gt;
+&lt;h2 id=&quot;题设&quot;&gt;&lt;a href=&quot;#题设&quot; class=&quot;headerlink&quot; title=&quot;题设&quot;&gt;&lt;/a&gt;题设&lt;/h2&gt;&lt;p&gt;首先给的题目是这样的：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/img/three_column_layout.png&quot; alt=&quot;三栏式布局&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;绝对定位&quot;&gt;&lt;a href=&quot;#绝对定位&quot; class=&quot;headerlink&quot; title=&quot;绝对定位&quot;&gt;&lt;/a&gt;绝对定位&lt;/h2&gt;&lt;p&gt;首先拿到题目，思路是，外层包一个大的&lt;code&gt;div&lt;/code&gt;，然后，左右栏分别使用&lt;code&gt;float: left&lt;/code&gt;和&lt;code&gt;float: right&lt;/code&gt;浮动定位，中间栏我第一时间就认定是使用&lt;code&gt;position: absolute&lt;/code&gt;绝对定位。事实上，这个思路是没有错的。代码如下：&lt;/p&gt;
     
     </summary>
     
@@ -381,29 +419,29 @@
     <link href="http://blog.sjtunix.cn/2016/12/27/Stack-and-Queue/"/>
     <id>http://blog.sjtunix.cn/2016/12/27/Stack-and-Queue/</id>
     <published>2016-12-27T12:39:22.000Z</published>
-    <updated>2016-12-27T13:54:44.161Z</updated>
+    <updated>2017-11-26T07:11:02.891Z</updated>
     
     <content type="html"><![CDATA[<p>堆栈和队列都可以通过链表和数组分别来实现。</p>
 <p>在堆栈和队列的实现过程中，使用到了泛型和接口的技术。</p>
-<h1 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h1><p>堆栈是一种先进后出的存储结构(FILO)。</p>
+<h2 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h2><p>堆栈是一种先进后出的存储结构(FILO)。</p>
 <p>在用数组实现堆栈的时候需要在一定情况下调整数组大小。</p>
 <a id="more"></a>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayStack</span>&lt;<span class="title">Item</span>&gt; </span>&#123;</div><div class="line"></div><div class="line">	<span class="keyword">private</span> Item[] s;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> N = <span class="number">0</span>;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">ArrayStack</span><span class="params">()</span> </span>&#123;</div><div class="line">		s = <span class="keyword">new</span> Item[<span class="number">1</span>];</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(Item item)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (N == s.length) resize(<span class="number">2</span> * s.length);</div><div class="line">		s[N++] = item;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 避免反复调整数组大小，选择1/4</span></div><div class="line">	<span class="function"><span class="keyword">public</span> Item <span class="title">pop</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (N == <span class="number">1</span>/<span class="number">4</span> * s.length) resize(s.length/<span class="number">2</span>);</div><div class="line">		Item item = s[--N];</div><div class="line">		s[N] = <span class="keyword">null</span>;</div><div class="line">		<span class="keyword">return</span> item;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> N == <span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> N;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">resize</span><span class="params">(<span class="keyword">int</span> capacity)</span> </span>&#123;</div><div class="line">		Item[] copy = <span class="keyword">new</span> Item[capacity];</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</div><div class="line">			copy[i] = s[i];</div><div class="line">		s = copy;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>链表的实现方式比较简单。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LinkedStack</span>&lt;<span class="title">Item</span>&gt; </span>&#123;</div><div class="line"></div><div class="line">	<span class="keyword">private</span> Node first = <span class="keyword">null</span>;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> N = <span class="number">0</span>;</div><div class="line"></div><div class="line">	<span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</div><div class="line">		Item item;</div><div class="line">		Node next;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(Item item)</span> </span>&#123;</div><div class="line">		Node oldfirst = first;</div><div class="line">		first = <span class="keyword">new</span> Node();</div><div class="line">		first.item = item;</div><div class="line">		first.next = oldfirst;</div><div class="line">		N++;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> Item <span class="title">pop</span><span class="params">()</span> </span>&#123;</div><div class="line">		Item item = first.item;</div><div class="line">		first = first.next;</div><div class="line">		<span class="keyword">return</span> item;</div><div class="line">		N--;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> first == <span class="keyword">null</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> N;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h1><p>队列是一种先进先出的存储结构(FIFO)。</p>
+<h2 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h2><p>队列是一种先进先出的存储结构(FIFO)。</p>
 <p>数组实现</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayQueue</span>&lt;<span class="title">Item</span>&gt; </span>&#123;</div><div class="line">	</div><div class="line">	<span class="keyword">private</span> Item[] q;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> tail = head = N = <span class="number">0</span>;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">ArrayQueue</span><span class="params">()</span> </span>&#123;</div><div class="line">		q = <span class="keyword">new</span> Item[<span class="number">1</span>];</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">enqueue</span><span class="params">(Item item)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (N == q.length) resize(<span class="number">2</span> * q.length);</div><div class="line">		<span class="keyword">if</span> (tail == q.length) tail = <span class="number">0</span>;</div><div class="line">		q[tail++] = item;</div><div class="line">		N++; </div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> Item <span class="title">dequeue</span><span class="params">()</span> </span>&#123;</div><div class="line">		Item item = q[head];</div><div class="line">		q[head++] = <span class="keyword">null</span>;</div><div class="line">		N--;</div><div class="line">		<span class="keyword">if</span> (head == q.length) head = <span class="number">0</span>;</div><div class="line">		<span class="keyword">if</span> (N == s.length/<span class="number">4</span>) resize(s.lenght/<span class="number">2</span>);</div><div class="line">		<span class="keyword">return</span> item;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">resize</span><span class="params">(<span class="keyword">int</span> capacity)</span> </span>&#123;</div><div class="line">		Item copy = <span class="keyword">new</span> Item[capacity];</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</div><div class="line">			copy[i] = q[(i + head)%s.length];</div><div class="line">		s = copy;</div><div class="line">		head = <span class="number">0</span>;</div><div class="line">		tail = N;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> N;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> N == <span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>链表实现方式比较简单。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LinkedQueue</span>&lt;<span class="title">Item</span>&gt; </span>&#123;</div><div class="line">	<span class="keyword">private</span> Node first, last;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> N;</div><div class="line"></div><div class="line">	<span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</div><div class="line">		Item item;</div><div class="line">		Node next;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">enqueue</span><span class="params">(Item item)</span> </span>&#123;</div><div class="line">		Node oldlast = last;</div><div class="line">		last = <span class="keyword">new</span> Node();</div><div class="line">		last.item = item;</div><div class="line">		last.next = <span class="keyword">null</span>;</div><div class="line">		<span class="keyword">if</span> (isEmpty()) first = last;</div><div class="line">		<span class="keyword">else</span> oldlast.next = last;</div><div class="line">		N++;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> Item <span class="title">dequeue</span><span class="params">()</span> </span>&#123;</div><div class="line">		Item item = first.item;</div><div class="line">		first = first.next;</div><div class="line">		<span class="keyword">if</span> (isEmpty()) last = <span class="keyword">null</span>;</div><div class="line">		N--;</div><div class="line">		<span class="keyword">return</span> item;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> N;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> N == <span class="number">0</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="课程作业——双端队列和随机队列"><a href="#课程作业——双端队列和随机队列" class="headerlink" title="课程作业——双端队列和随机队列"></a>课程作业——双端队列和随机队列</h1><h2 id="shuffle算法-Fisher-Yates-shuffle-and-Knuth-shuffle"><a href="#shuffle算法-Fisher-Yates-shuffle-and-Knuth-shuffle" class="headerlink" title="shuffle算法(Fisher-Yates shuffle and Knuth shuffle)"></a>shuffle算法(Fisher-Yates shuffle and Knuth shuffle)</h2><h2 id="水塘抽样算法-Reservoir-sampling"><a href="#水塘抽样算法-Reservoir-sampling" class="headerlink" title="水塘抽样算法(Reservoir sampling)"></a>水塘抽样算法(Reservoir sampling)</h2><h2 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h2><p><strong>未完待续</strong></p>
+<h2 id="课程作业——双端队列和随机队列"><a href="#课程作业——双端队列和随机队列" class="headerlink" title="课程作业——双端队列和随机队列"></a>课程作业——双端队列和随机队列</h2><h2 id="shuffle算法-Fisher-Yates-shuffle-and-Knuth-shuffle"><a href="#shuffle算法-Fisher-Yates-shuffle-and-Knuth-shuffle" class="headerlink" title="shuffle算法(Fisher-Yates shuffle and Knuth shuffle)"></a>shuffle算法(Fisher-Yates shuffle and Knuth shuffle)</h2><h2 id="水塘抽样算法-Reservoir-sampling"><a href="#水塘抽样算法-Reservoir-sampling" class="headerlink" title="水塘抽样算法(Reservoir sampling)"></a>水塘抽样算法(Reservoir sampling)</h2><h2 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h2><p><strong>未完待续</strong></p>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;堆栈和队列都可以通过链表和数组分别来实现。&lt;/p&gt;
 &lt;p&gt;在堆栈和队列的实现过程中，使用到了泛型和接口的技术。&lt;/p&gt;
-&lt;h1 id=&quot;堆栈&quot;&gt;&lt;a href=&quot;#堆栈&quot; class=&quot;headerlink&quot; title=&quot;堆栈&quot;&gt;&lt;/a&gt;堆栈&lt;/h1&gt;&lt;p&gt;堆栈是一种先进后出的存储结构(FILO)。&lt;/p&gt;
+&lt;h2 id=&quot;堆栈&quot;&gt;&lt;a href=&quot;#堆栈&quot; class=&quot;headerlink&quot; title=&quot;堆栈&quot;&gt;&lt;/a&gt;堆栈&lt;/h2&gt;&lt;p&gt;堆栈是一种先进后出的存储结构(FILO)。&lt;/p&gt;
 &lt;p&gt;在用数组实现堆栈的时候需要在一定情况下调整数组大小。&lt;/p&gt;
     
     </summary>
@@ -420,26 +458,28 @@
     <link href="http://blog.sjtunix.cn/2016/12/21/After-Effectss-DEV/"/>
     <id>http://blog.sjtunix.cn/2016/12/21/After-Effectss-DEV/</id>
     <published>2016-12-21T00:18:16.000Z</published>
-    <updated>2016-12-21T08:17:29.979Z</updated>
+    <updated>2017-11-26T07:12:26.713Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>Effect（效果器）插件可以被用来创作、处理音视频。它是AE中的一种插件类型。</p>
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Effect（效果器）插件可以被用来创作、处理音视频。它是AE中的一种插件类型。</p>
 <p>Effect（效果器）出现在Effect菜单和Effect&amp;Presets面板中，并在PiPL文件中申明。一旦应用了Effect（效果器）,它的参数控制就会出现在效果器控制面板中（Effect Control panel, ECP）。</p>
 <p>插件都必须包含一个Plug-in Property List（PiPL），并且插件必须放在特定的文件夹中以便AE加载。</p>
 <p>对于所有的effect插件，AE通过发送命令选择器（command selector）到插件的入口函数（在PiPL资源文件中指定的）与插件沟通。而这些命令通过用户的一些行为触发，包括应用effect，改变参数，擦除时间轴的帧，显然序列等等。AE创建了effect的多个实例，以便于对于每个序列它的设置和输入都是独立的。但所有的实例都拥有相同的全局变量，并在它们序列的所有帧之间共享数据。一旦用户应用effectAE才会开始处理图片数据。</p>
 <a id="more"></a>
-<h1 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h1><p>第一步，要创建一个自己的effect项目，首先复制整个<code>\Skeleton</code>文件夹，重命名为<code>\YourName</code>，然后使用Ultraedit或其他编辑器批量替换<code>\YourName</code>文件夹下所有的<code>Skeleton</code>和<code>SKELETON</code>为<code>YourName&#39;和</code>YOURNAME`。</p>
-<p>第二步，在VS中配置输出目录为AE的插件目录。可以在环境变量中新建一个变量<code>AE_PLUGIN_BUILD_DIR</code>，值为<code>C:\Program Files\Adobe\Common\Plug-ins\7.0\MediaCore\</code>（可能有所区别，以具体安装版本和情况为准），然后在<code>配置属性&gt;常规&gt;输出目录</code>中设置输出目录。</p>
-<p>第三步，在VS中配置调试文件为AE的可执行文件。在<code>配置属性&gt;调试&gt;命令</code>中设置AE的可执行文件路径。如<code>D:\Program Files\Adobe\Adobe After Effects CC 2014\Support Files\AfterFX.exe</code>。</p>
+<h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><ul>
+<li>第一步，要创建一个自己的effect项目，首先复制整个<code>\Skeleton</code>文件夹，重命名为<code>\YourName</code>，然后使用Ultraedit或其他编辑器批量替换<code>\YourName</code>文件夹下所有的<code>Skeleton</code>和<code>SKELETON</code>为<code>YourName</code>和<code>YOURNAME</code>。</li>
+<li>第二步，在VS中配置输出目录为AE的插件目录。可以在环境变量中新建一个变量<code>AE_PLUGIN_BUILD_DIR</code>，值为<code>C:\Program Files\Adobe\Common\Plug-ins\7.0\MediaCore\</code>（可能有所区别，以具体安装版本和情况为准），然后在<code>配置属性&gt;常规&gt;输出目录</code>中设置输出目录。</li>
+<li>第三步，在VS中配置调试文件为AE的可执行文件。在<code>配置属性&gt;调试&gt;命令</code>中设置AE的可执行文件路径。如<code>D:\Program Files\Adobe\Adobe After Effects CC 2014\Support Files\AfterFX.exe</code>。</li>
+</ul>
 <p>调试时可选择删除配置信息。方法为在每次AE重启的时候按住<code>Ctrl-Alt-Shift</code>即可。</p>
 <p>PiPL资源文件规定了入口函数名称，显示的名称，和插件的匹配名称（match name）。</p>
-<h1 id="Effect基础"><a href="#Effect基础" class="headerlink" title="Effect基础"></a>Effect基础</h1><p>入口函数中的参数。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function">PF_Err <span class="title">main</span> <span class="params">(</span></span></div><div class="line">PF_Cmd cmd,</div><div class="line">PF_InData *in_data,</div><div class="line">PF_OutData *out_data,</div><div class="line">PF_ParamDef *params[],</div><div class="line">PF_LayerDef *output,</div><div class="line"><span class="keyword">void</span> *extra)</div></pre></td></tr></table></figure></p>
+<h2 id="Effect基础"><a href="#Effect基础" class="headerlink" title="Effect基础"></a>Effect基础</h2><p>入口函数中的参数。<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function">PF_Err <span class="title">main</span> <span class="params">(</span></span></div><div class="line">PF_Cmd cmd,</div><div class="line">PF_InData *in_data,</div><div class="line">PF_OutData *out_data,</div><div class="line">PF_ParamDef *params[],</div><div class="line">PF_LayerDef *output,</div><div class="line"><span class="keyword">void</span> *extra)</div></pre></td></tr></table></figure></p>
 <p>每次调用入口函数，AE会更新<code>PF_InData</code>和插件的参数数组<code>PF_ParamDef[]</code>。在插件返回后，AE会检查<code>PF_OutData</code>以便更改，并且在合适的时候，使用effect渲染过的<code>PF_LayerDef</code>。</p>
 <p><code>params</code>和<code>output</code>分别包含当前输入输出帧（params[0]包含输入图像）。</p>
-<h1 id="Effect进阶"><a href="#Effect进阶" class="headerlink" title="Effect进阶"></a>Effect进阶</h1>]]></content>
+<h2 id="Effect进阶"><a href="#Effect进阶" class="headerlink" title="Effect进阶"></a>Effect进阶</h2>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;Effect（效果器）插件可以被用来创作、处理音视频。它是AE中的一种插件类型。&lt;/p&gt;
+      &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;Effect（效果器）插件可以被用来创作、处理音视频。它是AE中的一种插件类型。&lt;/p&gt;
 &lt;p&gt;Effect（效果器）出现在Effect菜单和Effect&amp;amp;Presets面板中，并在PiPL文件中申明。一旦应用了Effect（效果器）,它的参数控制就会出现在效果器控制面板中（Effect Control panel, ECP）。&lt;/p&gt;
 &lt;p&gt;插件都必须包含一个Plug-in Property List（PiPL），并且插件必须放在特定的文件夹中以便AE加载。&lt;/p&gt;
 &lt;p&gt;对于所有的effect插件，AE通过发送命令选择器（command selector）到插件的入口函数（在PiPL资源文件中指定的）与插件沟通。而这些命令通过用户的一些行为触发，包括应用effect，改变参数，擦除时间轴的帧，显然序列等等。AE创建了effect的多个实例，以便于对于每个序列它的设置和输入都是独立的。但所有的实例都拥有相同的全局变量，并在它们序列的所有帧之间共享数据。一旦用户应用effectAE才会开始处理图片数据。&lt;/p&gt;
@@ -458,30 +498,30 @@
     <link href="http://blog.sjtunix.cn/2016/12/16/unionfind/"/>
     <id>http://blog.sjtunix.cn/2016/12/16/unionfind/</id>
     <published>2016-12-16T10:13:18.000Z</published>
-    <updated>2016-12-27T12:38:24.733Z</updated>
+    <updated>2017-11-26T07:13:36.810Z</updated>
     
     <content type="html"><![CDATA[<p>最近开始在跟进coursera的算法课程，为明年的实习面试做准备。Sedgewick的这门算法课程非常出名，配套的有一本书叫做《Algorithms》,和Coursera上的课程配套。</p>
 <p>第一周课程先以一个案例即union-find算法为例，阐述算法分析的基础。</p>
-<p>#动态连通性<br>union-find算法要解决的是一个连通性问题。首先，问题描述：<br>给定一个有N个对象的集合，定义如下操作:</p>
+<p>##动态连通性<br>union-find算法要解决的是一个连通性问题。首先，问题描述：<br>给定一个有N个对象的集合，定义如下操作:</p>
 <ul>
 <li>Union command: 连接两个对象。</li>
 <li>Find/connected query：两个对象之间是否是连通的。</li>
 </ul>
-<p>该问题有许多应用场景，如迷宫寻路，物理化学中的渗流和通信网络中的连通性等等。</p>
 <a id="more"></a>
+<p>该问题有许多应用场景，如迷宫寻路，物理化学中的渗流和通信网络中的连通性等等。</p>
 <p>算法的API定义：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> class UF</span></div><div class="line">	<span class="title">UF</span><span class="params">(<span class="keyword">int</span> N)</span>							inial union-find data stucture with N <span class="title">objects</span><span class="params">(<span class="number">0</span> to N<span class="number">-1</span>)</span></div><div class="line">	<span class="keyword">void</span> <span class="title">union</span><span class="params">(<span class="keyword">int</span> p, <span class="keyword">int</span> q)</span>			add connection between p and q</div><div class="line">	<span class="keyword">boolean</span> <span class="title">connected</span><span class="params">(<span class="keyword">int</span> p, <span class="keyword">int</span> q)</span>		are p and q in the same component?</div><div class="line">	<span class="keyword">int</span> <span class="title">find</span><span class="params">(<span class="keyword">int</span> p)</span>						component identifier <span class="keyword">for</span> <span class="title">p</span><span class="params">(<span class="number">0</span> to N<span class="number">-1</span>)</span></div><div class="line">	<span class="keyword">int</span> <span class="title">count</span><span class="params">()</span> 						number of component</div></pre></td></tr></table></figure></p>
 <p>动态连通性client<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function">publci <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">	<span class="keyword">int</span> N = StdIn.readInt();</div><div class="line">	UF uf = <span class="keyword">new</span> UF(N);</div><div class="line">	<span class="keyword">while</span> (!StdIn.isEmpty()) &#123;</div><div class="line">		<span class="keyword">int</span> p = StdIn.readInt();</div><div class="line">		<span class="keyword">int</span> q = StdIn.readInt();</div><div class="line">		<span class="keyword">if</span> (!uf.connected(p, q)) &#123;</div><div class="line">			uf.union(p, q);</div><div class="line">			StdOut.println(p + <span class="string">" "</span> + q);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>输出实例：</p>
 <p><img src="/img/client.png" alt="动态连通性"></p>
 <p>课程实现了两种UnionFind算法，逐渐优化。</p>
-<h1 id="Quick-find"><a href="#Quick-find" class="headerlink" title="Quick-find"></a>Quick-find</h1><p>第一种使用暴力方法，每次union(p, q)，将所有值为q的索引的值更新为q</p>
+<h2 id="Quick-find"><a href="#Quick-find" class="headerlink" title="Quick-find"></a>Quick-find</h2><p>第一种使用暴力方法，每次union(p, q)，将所有值为q的索引的值更新为q</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">QuickFindUF</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span>[] id;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">QuickFindUF</span><span class="params">(<span class="keyword">int</span> N)</span> </span>&#123;</div><div class="line">		id = <span class="keyword">new</span> <span class="keyword">int</span>[N];</div><div class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</div><div class="line">		id[i] = i;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">connected</span><span class="params">(<span class="keyword">int</span> p, <span class="keyword">int</span> q)</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> id[p] = id[q];</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">union</span><span class="params">(<span class="keyword">int</span> p, <span class="keyword">int</span> q)</span> </span>&#123;</div><div class="line">		<span class="keyword">int</span> pid = id[p];</div><div class="line">		<span class="keyword">int</span> qid = id[q];</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; id.length; i++) </div><div class="line">			<span class="keyword">if</span> (id[i] == pid) id[i] = qid;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="Quick-uinion"><a href="#Quick-uinion" class="headerlink" title="Quick-uinion"></a>Quick-uinion</h1><p>使用数据结构“树”，同一子集有相同的祖先节点（根节点）。</p>
+<h2 id="Quick-uinion"><a href="#Quick-uinion" class="headerlink" title="Quick-uinion"></a>Quick-uinion</h2><p>使用数据结构“树”，同一子集有相同的祖先节点（根节点）。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">QuickUnionUF</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span>[] id;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="title">QuickUnionUF</span><span class="params">(<span class="keyword">int</span> N)</span> </span>&#123;</div><div class="line">		id = <span class="keyword">new</span> <span class="keyword">int</span>[N];</div><div class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++)</div><div class="line">		id[i] = i;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">root</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</div><div class="line">		<span class="keyword">while</span> (i != id[i]) i = id[i];</div><div class="line">		<span class="keyword">return</span> i;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">connected</span><span class="params">(<span class="keyword">int</span> p, <span class="keyword">int</span> q)</span> </span>&#123;</div><div class="line">		<span class="function">retur <span class="title">root</span><span class="params">(p)</span> </span>== root(q);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">union</span><span class="params">(<span class="keyword">int</span> p, <span class="keyword">int</span> q)</span> </span>&#123;</div><div class="line">		<span class="keyword">int</span> i = root(p);</div><div class="line">		<span class="keyword">int</span> j = root(q);</div><div class="line">		id[i] = j;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="改进一：加权"><a href="#改进一：加权" class="headerlink" title="改进一：加权"></a>改进一：加权</h2><p>防止“树枝”过长，根据权重调节树枝长度。</p>
+<h3 id="改进一：加权"><a href="#改进一：加权" class="headerlink" title="改进一：加权"></a>改进一：加权</h3><p>防止“树枝”过长，根据权重调节树枝长度。</p>
 <p>修改<code>union</code>：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> i = root(p);</div><div class="line"><span class="keyword">int</span> j = root(q);</div><div class="line"><span class="keyword">if</span> (i == j) <span class="keyword">return</span>;</div><div class="line"><span class="keyword">if</span> (sz[i] &lt; sz[j]) &#123;</div><div class="line">	id[i] = j;</div><div class="line">	sz[j] += sz[i];</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">	id[j] = i;</div><div class="line">	sz[i] += sz[j];</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<h2 id="改进二：路径压缩"><a href="#改进二：路径压缩" class="headerlink" title="改进二：路径压缩"></a>改进二：路径压缩</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">root</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</div><div class="line">	<span class="keyword">while</span> (i != id[i]) &#123;</div><div class="line">		id[i] = id[id[i]];</div><div class="line">		i = id[i];</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> i;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="课程作业——渗透问题-Pecolation"><a href="#课程作业——渗透问题-Pecolation" class="headerlink" title="课程作业——渗透问题(Pecolation)"></a>课程作业——渗透问题(Pecolation)</h1><p>问题描述的网址在<a href="http://coursera.cs.princeton.edu/algs4/assignments/percolation.html" target="_blank" rel="external">Programming Assignment 1: Pecolation</a></p>
+<h3 id="改进二：路径压缩"><a href="#改进二：路径压缩" class="headerlink" title="改进二：路径压缩"></a>改进二：路径压缩</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">root</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</div><div class="line">	<span class="keyword">while</span> (i != id[i]) &#123;</div><div class="line">		id[i] = id[id[i]];</div><div class="line">		i = id[i];</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> i;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="课程作业——渗透问题-Pecolation"><a href="#课程作业——渗透问题-Pecolation" class="headerlink" title="课程作业——渗透问题(Pecolation)"></a>课程作业——渗透问题(Pecolation)</h2><p>问题描述的网址在<a href="http://coursera.cs.princeton.edu/algs4/assignments/percolation.html" target="_blank" rel="external">Programming Assignment 1: Pecolation</a></p>
 <p><strong>寒假有空整理下，未完待续……</strong></p>
 ]]></content>
     
@@ -489,12 +529,11 @@
     
       &lt;p&gt;最近开始在跟进coursera的算法课程，为明年的实习面试做准备。Sedgewick的这门算法课程非常出名，配套的有一本书叫做《Algorithms》,和Coursera上的课程配套。&lt;/p&gt;
 &lt;p&gt;第一周课程先以一个案例即union-find算法为例，阐述算法分析的基础。&lt;/p&gt;
-&lt;p&gt;#动态连通性&lt;br&gt;union-find算法要解决的是一个连通性问题。首先，问题描述：&lt;br&gt;给定一个有N个对象的集合，定义如下操作:&lt;/p&gt;
+&lt;p&gt;##动态连通性&lt;br&gt;union-find算法要解决的是一个连通性问题。首先，问题描述：&lt;br&gt;给定一个有N个对象的集合，定义如下操作:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Union command: 连接两个对象。&lt;/li&gt;
 &lt;li&gt;Find/connected query：两个对象之间是否是连通的。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;该问题有许多应用场景，如迷宫寻路，物理化学中的渗流和通信网络中的连通性等等。&lt;/p&gt;
     
     </summary>
     
@@ -508,14 +547,16 @@
     <link href="http://blog.sjtunix.cn/2016/12/13/C-%E4%B8%AD%E7%9A%84%E5%AE%8F%E5%AE%9A%E4%B9%89/"/>
     <id>http://blog.sjtunix.cn/2016/12/13/C-中的宏定义/</id>
     <published>2016-12-13T06:57:51.000Z</published>
-    <updated>2016-12-14T05:31:20.546Z</updated>
+    <updated>2017-11-26T07:14:41.914Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="C-中的宏"><a href="#C-中的宏" class="headerlink" title="C++中的宏"></a>C++中的宏</h1><p>由于很长时间没有摸C++这门儿语言了，把宏定义简单理解成了类似于变量声明和函数声明式地东西。然而，爬了一下博客才发现，宏仅仅只会在在预处理过程中展开，做简单的字符串替换，而<code>没有任何的计算过程</code>。</p>
-<p>两篇关于C++宏的相关讲解。<br><a href="http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html" target="_blank" rel="external">http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html</a>,这一篇强烈推荐。</p>
-<p><a href="http://blog.chinaunix.net/uid-21372424-id-119797.html" target="_blank" rel="external">http://blog.chinaunix.net/uid-21372424-id-119797.html</a></p>
-<hr>
+    <content type="html"><![CDATA[<h2 id="C-中的宏"><a href="#C-中的宏" class="headerlink" title="C++中的宏"></a>C++中的宏</h2><p>由于很长时间没有摸C++这门儿语言了，把宏定义简单理解成了类似于变量声明和函数声明式地东西。然而，爬了一下博客才发现，宏仅仅只会在在预处理过程中展开，做简单的字符串替换，而<code>没有任何的计算过程</code>。</p>
+<p>两篇关于C++宏的相关讲解。</p>
+<ul>
+<li><a href="http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html" target="_blank" rel="external">http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html</a>,这一篇强烈推荐。</li>
+<li><a href="http://blog.chinaunix.net/uid-21372424-id-119797.html" target="_blank" rel="external">http://blog.chinaunix.net/uid-21372424-id-119797.html</a></li>
+</ul>
 <a id="more"></a>
-<h1 id="C-中的Lambda函数（匿名函数）"><a href="#C-中的Lambda函数（匿名函数）" class="headerlink" title="C++中的Lambda函数（匿名函数）"></a>C++中的Lambda函数（匿名函数）</h1><p>更新，今天学习了一下C++11标准中的lambda函数（匿名函数）。<br>Lambda函数的总体形式是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[captures] (params) -&gt; ret &#123;Statements;&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="C-中的Lambda函数（匿名函数）"><a href="#C-中的Lambda函数（匿名函数）" class="headerlink" title="C++中的Lambda函数（匿名函数）"></a>C++中的Lambda函数（匿名函数）</h2><p>更新，今天学习了一下C++11标准中的lambda函数（匿名函数）。<br>Lambda函数的总体形式是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[captures] (params) -&gt; ret &#123;Statements;&#125;</div></pre></td></tr></table></figure></p>
 <p><code>captrues</code>表示变量截取，</p>
 <ul>
 <li>[]不截取任何变量</li>
@@ -526,17 +567,23 @@
 <li>[this]截取当前类中的<code>this</code>指针。如果已经使用了<code>&amp;</code>或者<code>=</code>就默认添加此选项</li>
 </ul>
 <p><code>params</code>表示参数列表，<br><code>ret</code>表示返回值类型，<br><code>statements</code>就是函数体了。</p>
+<blockquote>
 <p>参考自<a href="http://www.cnblogs.com/lidabo/p/3908663.html" target="_blank" rel="external">http://www.cnblogs.com/lidabo/p/3908663.html</a></p>
-<h1 id="C-中构造函数之间的调用"><a href="#C-中构造函数之间的调用" class="headerlink" title="C++中构造函数之间的调用"></a>C++中构造函数之间的调用</h1><p>偶然看一份代码的时候，发现C++构造函数之间时可以互相调用的，这样可以减少重载构造函数时所需的代码量。这种构造函数之间的调用称为<code>委托</code>或<code>转接</code>（delegation)，Java以及C#都支持这种功能。例如：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> SomeType &#123;</div><div class="line">  <span class="keyword">int</span> number;</div><div class="line">  <span class="built_in">string</span> name;</div><div class="line">  SomeType( <span class="keyword">int</span> i, <span class="built_in">string</span>&amp; s ) : number(i), name(s)&#123;&#125;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  SomeType( )           : SomeType( <span class="number">0</span>, <span class="string">"invalid"</span> )&#123;&#125;</div><div class="line">  SomeType( <span class="keyword">int</span> i )     : SomeType( i, <span class="string">"guest"</span> )&#123;&#125;</div><div class="line">  SomeType( <span class="built_in">string</span>&amp; s ) : SomeType( <span class="number">1</span>, s )&#123; PostInit(); &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="C-中构造函数之间的调用"><a href="#C-中构造函数之间的调用" class="headerlink" title="C++中构造函数之间的调用"></a>C++中构造函数之间的调用</h2><p>偶然看一份代码的时候，发现C++构造函数之间时可以互相调用的，这样可以减少重载构造函数时所需的代码量。这种构造函数之间的调用称为<code>委托</code>或<code>转接</code>（delegation)，Java以及C#都支持这种功能。例如：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> SomeType &#123;</div><div class="line">  <span class="keyword">int</span> number;</div><div class="line">  <span class="built_in">string</span> name;</div><div class="line">  SomeType( <span class="keyword">int</span> i, <span class="built_in">string</span>&amp; s ) : number(i), name(s)&#123;&#125;</div><div class="line"><span class="keyword">public</span>:</div><div class="line">  SomeType( )           : SomeType( <span class="number">0</span>, <span class="string">"invalid"</span> )&#123;&#125;</div><div class="line">  SomeType( <span class="keyword">int</span> i )     : SomeType( i, <span class="string">"guest"</span> )&#123;&#125;</div><div class="line">  SomeType( <span class="built_in">string</span>&amp; s ) : SomeType( <span class="number">1</span>, s )&#123; PostInit(); &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<blockquote>
 <p>相关内容参考自<a href="http://www.cnblogs.com/ayanmw/archive/2012/08/20/2647808.html" target="_blank" rel="external">http://www.cnblogs.com/ayanmw/archive/2012/08/20/2647808.html</a></p>
+</blockquote>
 ]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;C-中的宏&quot;&gt;&lt;a href=&quot;#C-中的宏&quot; class=&quot;headerlink&quot; title=&quot;C++中的宏&quot;&gt;&lt;/a&gt;C++中的宏&lt;/h1&gt;&lt;p&gt;由于很长时间没有摸C++这门儿语言了，把宏定义简单理解成了类似于变量声明和函数声明式地东西。然而，爬了一下博客才发现，宏仅仅只会在在预处理过程中展开，做简单的字符串替换，而&lt;code&gt;没有任何的计算过程&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;两篇关于C++宏的相关讲解。&lt;br&gt;&lt;a href=&quot;http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html&quot;&gt;http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html&lt;/a&gt;,这一篇强烈推荐。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://blog.chinaunix.net/uid-21372424-id-119797.html&quot;&gt;http://blog.chinaunix.net/uid-21372424-id-119797.html&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
+      &lt;h2 id=&quot;C-中的宏&quot;&gt;&lt;a href=&quot;#C-中的宏&quot; class=&quot;headerlink&quot; title=&quot;C++中的宏&quot;&gt;&lt;/a&gt;C++中的宏&lt;/h2&gt;&lt;p&gt;由于很长时间没有摸C++这门儿语言了，把宏定义简单理解成了类似于变量声明和函数声明式地东西。然而，爬了一下博客才发现，宏仅仅只会在在预处理过程中展开，做简单的字符串替换，而&lt;code&gt;没有任何的计算过程&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;两篇关于C++宏的相关讲解。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html&quot;&gt;http://www.cnblogs.com/sopic/archive/2013/12/27/3493877.html&lt;/a&gt;,这一篇强烈推荐。&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://blog.chinaunix.net/uid-21372424-id-119797.html&quot;&gt;http://blog.chinaunix.net/uid-21372424-id-119797.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -552,22 +599,27 @@
     <link href="http://blog.sjtunix.cn/2016/12/13/C-%E4%B8%AD%E7%9A%84-%E5%92%8C/"/>
     <id>http://blog.sjtunix.cn/2016/12/13/C-中的-和/</id>
     <published>2016-12-13T06:30:15.000Z</published>
-    <updated>2016-12-13T06:46:33.981Z</updated>
+    <updated>2017-11-26T07:15:56.154Z</updated>
     
-    <content type="html"><![CDATA[<p>原文来自<a href="http://www.2cto.com/kf/201503/381187.html" target="_blank" rel="external">http://www.2cto.com/kf/201503/381187.html</a></p>
+    <content type="html"><![CDATA[<blockquote>
+<p>原文来自<a href="http://www.2cto.com/kf/201503/381187.html" target="_blank" rel="external">http://www.2cto.com/kf/201503/381187.html</a></p>
+</blockquote>
 <p>在C/C++的宏中，“#”的功能是将其后面的宏参数进行字符串化操作(Stringfication)，简单说就是在对它所引用的宏变量通过替换后在其左右各加上一个双引号。</p>
 <p>而“##”被称为连接符(concatenator)，用来将两个子串Token连接为一个Token。注意这里连接的对象是Token就行，而不一定是宏的变量。还可以n个##符号连接n+1个Token，这个特性是“#”符号所不具备的。</p>
 <p>凡是宏定义里有用“#”或“##”的地方宏参数是不会再展开。</p>
-<p>若要使“#”和“##”的宏参数被展开，可以加多一层中间转换宏。加这层宏的用意是把所有宏的参数在这层里全部展开，那么在转换宏里的那一个宏就能得到正确的宏参数。<br><a id="more"></a></p>
+<p>若要使“#”和“##”的宏参数被展开，可以加多一层中间转换宏。加这层宏的用意是把所有宏的参数在这层里全部展开，那么在转换宏里的那一个宏就能得到正确的宏参数。</p>
+<a id="more"></a>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"stdafx.h"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"> </div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"> </div><div class="line"><span class="comment">//test1</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> WARN_IF(EXP) </span></div><div class="line">    <span class="keyword">if</span> (EXP) </div><div class="line">    <span class="built_in">fprintf</span>(<span class="built_in">stderr</span>, warning: #EXP);</div><div class="line"> </div><div class="line"><span class="comment">//test2</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> STR(s) #s</span></div><div class="line"> </div><div class="line"><span class="comment">//test3</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _STRI(s) #s</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> STRI(s) _STRI(s) <span class="comment">//转换宏</span></span></div><div class="line"> </div><div class="line"><span class="comment">//test4</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> paster(n) printf(token#n = %d, token##n)</span></div><div class="line"> </div><div class="line"><span class="comment">//test5</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> _CONS(a, b) int(a##+##b)</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> CONS(a, b) _CONS(a, b) <span class="comment">//转换宏</span></span></div><div class="line"> </div><div class="line"><span class="comment">//test6</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span>  _GET_FILE_NAME(f)   #f</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span>  GET_FILE_NAME(f)    _GET_FILE_NAME(f)  <span class="comment">//转换宏</span></span></div><div class="line"> </div><div class="line"><span class="comment">//test7</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span>  _TYPE_BUF_SIZE(type)  sizeof #type</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span>  TYPE_BUF_SIZE(type)   _TYPE_BUF_SIZE(type) </span></div><div class="line"> </div><div class="line"><span class="comment">//test8</span></div><div class="line"><span class="meta">#<span class="meta-keyword">define</span> D(x)  #@x  <span class="comment">//仅对单一标记转换有效</span></span></div><div class="line"> </div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>* argv[])</span></span></div><div class="line">&#123;</div><div class="line">    <span class="comment">//test1</span></div><div class="line">    <span class="keyword">int</span> divider = <span class="number">0</span>;</div><div class="line">    WARN_IF(divider == <span class="number">0</span>);<span class="comment">//warning: divider == 0 </span></div><div class="line"> </div><div class="line">    <span class="comment">//test2</span></div><div class="line">    <span class="built_in">printf</span>(<span class="keyword">int</span> max: %s, STR(INT_MAX));<span class="comment">//int max: INT_MAX</span></div><div class="line"> </div><div class="line">    <span class="comment">//test3</span></div><div class="line">    <span class="built_in">printf</span>(<span class="keyword">int</span> max: %s, STRI(INT_MAX));<span class="comment">//int max: 2147483647</span></div><div class="line"> </div><div class="line">    <span class="comment">//test4</span></div><div class="line">    <span class="keyword">int</span> token9 = <span class="number">9</span>;</div><div class="line">    paster(<span class="number">9</span>);<span class="comment">//token9 = 9 </span></div><div class="line"> </div><div class="line">    <span class="comment">//test5</span></div><div class="line">    <span class="keyword">int</span> A = <span class="number">15</span>, B = <span class="number">2</span>;</div><div class="line">    <span class="built_in">printf</span>(A + B = %d, CONS(A, B));<span class="comment">//A + B = 17</span></div><div class="line"> </div><div class="line">    <span class="comment">//test6</span></div><div class="line">    <span class="keyword">char</span>  FILE_NAME[] = GET_FILE_NAME(__FILE__);</div><div class="line">    <span class="built_in">cout</span>&lt;&lt;file_name&lt;&lt;<span class="built_in">endl</span>;</div></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;原文来自&lt;a href=&quot;http://www.2cto.com/kf/201503/381187.html&quot;&gt;http://www.2cto.com/kf/201503/381187.html&lt;/a&gt;&lt;/p&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;原文来自&lt;a href=&quot;http://www.2cto.com/kf/201503/381187.html&quot;&gt;http://www.2cto.com/kf/201503/381187.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;在C/C++的宏中，“#”的功能是将其后面的宏参数进行字符串化操作(Stringfication)，简单说就是在对它所引用的宏变量通过替换后在其左右各加上一个双引号。&lt;/p&gt;
 &lt;p&gt;而“##”被称为连接符(concatenator)，用来将两个子串Token连接为一个Token。注意这里连接的对象是Token就行，而不一定是宏的变量。还可以n个##符号连接n+1个Token，这个特性是“#”符号所不具备的。&lt;/p&gt;
 &lt;p&gt;凡是宏定义里有用“#”或“##”的地方宏参数是不会再展开。&lt;/p&gt;
-&lt;p&gt;若要使“#”和“##”的宏参数被展开，可以加多一层中间转换宏。加这层宏的用意是把所有宏的参数在这层里全部展开，那么在转换宏里的那一个宏就能得到正确的宏参数。&lt;br&gt;
+&lt;p&gt;若要使“#”和“##”的宏参数被展开，可以加多一层中间转换宏。加这层宏的用意是把所有宏的参数在这层里全部展开，那么在转换宏里的那一个宏就能得到正确的宏参数。&lt;/p&gt;
     
     </summary>
     
@@ -701,10 +753,10 @@
   
   <entry>
     <title>搜索网站汇总</title>
-    <link href="http://blog.sjtunix.cn/2016/11/08/favorites/"/>
-    <id>http://blog.sjtunix.cn/2016/11/08/favorites/</id>
+    <link href="http://blog.sjtunix.cn/2016/11/08/%E6%90%9C%E7%B4%A2%E7%BD%91%E7%AB%99%E6%B1%87%E6%80%BB/"/>
+    <id>http://blog.sjtunix.cn/2016/11/08/搜索网站汇总/</id>
     <published>2016-11-08T13:16:22.899Z</published>
-    <updated>2016-11-08T13:54:14.834Z</updated>
+    <updated>2017-11-26T07:18:13.675Z</updated>
     
     <content type="html"><![CDATA[<p>不定期汇总各种种子搜索网站。</p>
 <h2 id="视频类："><a href="#视频类：" class="headerlink" title="视频类："></a>视频类：</h2><ul>
@@ -714,6 +766,9 @@
 </li>
 <li><p><a href="http://www.celebritymoviearchive.com/" target="_blank" rel="external">Celebrity Movie Archive</a>——收集了大量的名人电影信息，不过好像没有种子，但对于想找自己喜欢的明星（老外）电影的朋友来说，非常有用</p>
 </li>
+</ul>
+<a id="more"></a>
+<ul>
 <li><p><a href="http://www.qindou8.com/" target="_blank" rel="external">亲豆网</a>——偶然搜到的视频种子网站</p>
 </li>
 <li><p><a href="http://www.zhuixinfan.com/" target="_blank" rel="external">追新番</a>——日剧下载网站</p>
@@ -731,7 +786,13 @@
     
       &lt;p&gt;不定期汇总各种种子搜索网站。&lt;/p&gt;
 &lt;h2 id=&quot;视频类：&quot;&gt;&lt;a href=&quot;#视频类：&quot; class=&quot;headerlink&quot; title=&quot;视频类：&quot;&gt;&lt;/a&gt;视频类：&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://btmee.net/&quot; tar
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://btmee.net/&quot;&gt;BTmee.net&lt;/a&gt;——偶然找到的一个非常好的视频种子下载网站，资源很多&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.quansouji.com/&quot;&gt;全搜集&lt;/a&gt;——一个带有社交网络平台的视频分享网站，做的非常棒&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&quot;http://www.celebritymoviearchive.com/&quot;&gt;Celebrity Movie Archive&lt;/a&gt;——收集了大量的名人电影信息，不过好像没有种子，但对于想找自己喜欢的明星（老外）电影的朋友来说，非常有用&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
