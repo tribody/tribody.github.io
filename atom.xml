@@ -734,15 +734,23 @@
     <link href="http://blog.sjtunix.cn/2016/11/08/tools/"/>
     <id>http://blog.sjtunix.cn/2016/11/08/tools/</id>
     <published>2016-11-08T13:55:37.000Z</published>
-    <updated>2016-11-08T13:57:48.616Z</updated>
+    <updated>2017-11-26T09:24:00.528Z</updated>
     
     <content type="html"><![CDATA[<p>不定期更新前端好用的工具和新技术，自我洗脑=，=</p>
+<h2 id="在hexo中使用echarts"><a href="#在hexo中使用echarts" class="headerlink" title="在hexo中使用echarts"></a>在hexo中使用echarts</h2><p>最近发现特别喜欢的echarts3有了hexo的插件，结合百度图说，能够非常轻松的在博客中插入图表。</p>
+<blockquote>
+<p><a href="http://kchen.cc/2016/11/05/echarts-in-hexo/" target="_blank" rel="external">在Hexo中插入ECharts动态图标</a></p>
+</blockquote>
+<h2 id="不蒜子添加uv和pv统计"><a href="#不蒜子添加uv和pv统计" class="headerlink" title="不蒜子添加uv和pv统计"></a>不蒜子添加uv和pv统计</h2><p>不蒜子是一个第三方计数服务，可以将计数结果展现在网页上。</p>
+<blockquote>
+<p><a href="http://busuanzi.ibruce.info/" target="_blank" rel="external">两行代码搞定计数</a></p>
+</blockquote>
 ]]></content>
     
     <summary type="html">
     
       &lt;p&gt;不定期更新前端好用的工具和新技术，自我洗脑=，=&lt;/p&gt;
-
+&lt;h2 id=&quot;在hexo中使用echarts&quot;&gt;&lt;a href=&quot;#在hexo中使用echarts&quot; class=&quot;headerlink&quot; title=&quot;在hexo中使用echarts&quot;&gt;&lt;/a&gt;在hexo中使用e
     
     </summary>
     
