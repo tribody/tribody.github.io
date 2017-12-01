@@ -71,7 +71,7 @@
     <link href="http://blog.sjtunix.cn/2017/11/21/%E4%BD%BF%E7%94%A8sublime-texlivee%E6%90%AD%E5%BB%BA%E4%B8%AD%E6%96%87tex%E9%9B%86%E6%88%90%E7%8E%AF%E5%A2%83/"/>
     <id>http://blog.sjtunix.cn/2017/11/21/使用sublime-texlivee搭建中文tex集成环境/</id>
     <published>2017-11-21T03:45:00.000Z</published>
-    <updated>2017-12-01T10:56:28.679Z</updated>
+    <updated>2017-12-01T11:04:49.890Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Tex简介"><a href="#Tex简介" class="headerlink" title="Tex简介"></a>Tex简介</h2><p>TeX是一种排版程序，最初由D.E.Knuth编写，在1982年之后就没有多大变化了。</p>
 <p>TeX本身也是一门语言，因此基于TeX编写了很多的“TeX宏包”，它实际上是扩展了TeX的功能，这其中比较出名的就是LaTeX。这些宏包被称之为“format”。</p>
@@ -108,7 +108,13 @@
 <p><img src="/img/formulation.png" alt="fomulation"></p>
 <p>以上功能是默认的，当然可以配置具体的反馈机制。另外，使用<code>Ctrl + B</code>编译文档（具体的builid方式也可以自定义）。</p>
 <p>另外，LaTeX官方有较详细的文档可供阅读<a href="https://latextools.readthedocs.io/en/latest/" target="_blank" rel="external">LatexTools</a>。</p>
-<h2 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h2><h3 id="XeLatex在windows上编译太慢怎么办？"><a href="#XeLatex在windows上编译太慢怎么办？" class="headerlink" title="XeLatex在windows上编译太慢怎么办？"></a>XeLatex在windows上编译太慢怎么办？</h3><p>如题，最近发现sublime text + texlive2016编译tex巨慢无比。百度了一下，XeLatex在字体读入的地方会很慢。一般情况下如果找到字体编译完成，字体缓存也会得到刷新，后续编译速度相对就会很快。但是Windows下的texlive 2016实现有问题，自动刷新字体缓存也会有问题，此时需要手动刷新。手动刷新方式为<code>fc-cache</code>，另外，可以加上<code>-f</code>（强制刷新）和<code>-v</code>（显示详细信息）选项，</p>
+<h2 id="相关问题"><a href="#相关问题" class="headerlink" title="相关问题"></a>相关问题</h2><h3 id="XeLatex在windows上编译太慢怎么办？"><a href="#XeLatex在windows上编译太慢怎么办？" class="headerlink" title="XeLatex在windows上编译太慢怎么办？"></a>XeLatex在windows上编译太慢怎么办？</h3><p>如题，最近发现sublime text + texlive2016编译tex巨慢无比。百度了一下，XeLatex在字体读入的地方会很慢。一般情况下如果找到字体编译完成，字体缓存也会得到刷新，后续编译速度相对就会很快。但是Windows下的texlive 2016实现有问题，自动刷新字体缓存也会有问题，此时需要手动刷新。手动刷新方式为<code>fc-cache</code>，另外，可以加上<code>-f</code>（强制刷新）和<code>-v</code>（显示详细信息）选项。</p>
+<h3 id="warning很烦，如何关闭？"><a href="#warning很烦，如何关闭？" class="headerlink" title="warning很烦，如何关闭？"></a>warning很烦，如何关闭？</h3><p>设置警告级别为只报错误，具体在Preference&gt;&gt;Package Settings&gt;&gt;LatexTools&gt;&gt;Settings-User中，找到关键词<code>show_error_phantoms</code>设为<code>errors</code>即可。</p>
+<h3 id="图片预览不了？"><a href="#图片预览不了？" class="headerlink" title="图片预览不了？"></a>图片预览不了？</h3><p>两种可能性，</p>
+<ul>
+<li>ImageMagick未配置到环境变量中；</li>
+<li>引用的图片路径不对，在引用图片路径时，是相对于当前tex文件的路径。</li>
+</ul>
 <h2 id="参考文献："><a href="#参考文献：" class="headerlink" title="参考文献："></a>参考文献：</h2><ul>
 <li><a href="https://latextools.readthedocs.io/en/latest/" target="_blank" rel="external">LaTeXTools官方文档</a></li>
 <li><a href="http://www.ctex.org/documents/shredder/tex_frame.html" target="_blank" rel="external">TeX — Beauty and Fun</a></li>
