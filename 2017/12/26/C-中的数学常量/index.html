@@ -1,0 +1,25 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="author" content="River He"><meta name="description" content="在编译一个C文件的时候，编译器报错找不到常量M_LN10，google了一下，发现和编译器版本有关系。早期的C和C++标准库和编译器会在它们的math.h和cmath头文件中提供许多的数学常量，但是VisualStudio自2015起彻底移除了包含这些常量的头文件，因此会出现找"><meta name="keywords" content="C++"><title>C++中的数学常量 · Sjtunix</title><link rel="icon" href="/favicon.ico"><link rel="canonical" href="http://blog.sjtunix.cn/2017/12/26/C-中的数学常量/"><link rel="alternate" href="/atom.xml" title="Sjtunix"><link rel="stylesheet" href="/fonts/iconfont/iconfont.css"><link rel="stylesheet" href="/css/style.css"><script type="text/javascript">var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6f1d30551b7810d586e587506f76bc63";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">C++中的数学常量</h1><span class="post-time">2017年12月26日</span><div class="post-content"><p>在编译一个C文件的时候，编译器报错找不到常量<code>M_LN10</code>，google了一下，发现和编译器版本有关系。早期的C和C++标准库和编译器会在它们的<code>math.h</code>和<code>cmath</code>头文件中提供许多的数学常量，但是Visual Studio自2015起彻底移除了包含这些常量的头文件，因此会出现找不到标识符的编译错误。Visual Studio2012仍然保留这些头文件，但是需要声明<code>_USE_MATH_DEFINES</code>才能够使用。不太明白微软为什么要这么做？是为了给用户更多自定义的权利吗？这样代码的兼容性不是存在很大的问题？</p>
+<p>因此，遇到此类问题，只能通过手动定义相关常量解决。比较友好的是，GCC仍然保留这些常量，因此使用GCC的Linux和Mac OSX用户不用担心这个问题了。</p>
+<blockquote>
+<p>参考自<a href="https://codeyarns.com/2010/04/13/math-constants-for-cpp/" target="_blank" rel="external">https://codeyarns.com/2010/04/13/math-constants-for-cpp/</a></p>
+</blockquote>
+</div></article><div class="tags"><a href="/tags/C/">C++</a></div><div class="paginator"><a href="/2017/11/26/博客改造计划/" class="next"><span>下一页</span><i class="iconfont icon-right"></i></a></div><section id="comments"><div id="disqus_thread"></div></section><script type="text/javascript">var disqus_config = function () {
+    this.page.url = 'http://blog.sjtunix.cn/2017/12/26/C-中的数学常量/';
+    this.page.identifier = '2017/12/26/C-中的数学常量/';
+    this.page.title = 'C++中的数学常量';
+};
+(function() {
+var d = document, s = d.createElement('script');
+
+s.src = '//tribody.disqus.com/embed.js';
+
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();</script></section><footer><div class="social"><a href="mailto:hctongxue@163.com" title="email" class="iconfont icon-email"></a><a href="https://github.com/tribody" title="github" class="iconfont icon-github"></a><a href="/atom.xml" title="rss" class="iconfont icon-rss"></a></div><div class="copyright"><p class="power">博客由<a href="https://hexo.io/">Hexo</a>支持，主题由<a href="https://github.com/ahonn/hexo-theme-even"> Even</a>提供</p><p class="since">&copy;2015-2017<span class="heart"><i class="iconfont icon-heart"></i></span><span class="author">River He</span></p></div><div id="back2top"><i class="iconfont icon-up"></i></div></footer></div><script src="/js/zepto.min.js"></script><script src="/js/theme.js"></script></body></html>
