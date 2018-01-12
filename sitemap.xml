@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.sjtunix.cn/2016/11/06/VPN/</loc>
+    
+    <lastmod>2018-01-12T03:04:08.350Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://blog.sjtunix.cn/2017/12/26/C-%E4%B8%AD%E7%9A%84%E6%95%B0%E5%AD%A6%E5%B8%B8%E9%87%8F/</loc>
     
     <lastmod>2017-12-26T10:28:58.806Z</lastmod>
@@ -138,13 +145,6 @@
     <loc>http://blog.sjtunix.cn/2016/11/06/hello-world/</loc>
     
     <lastmod>2016-11-08T13:34:13.909Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://blog.sjtunix.cn/2016/11/06/VPN/</loc>
-    
-    <lastmod>2016-11-06T13:17:14.997Z</lastmod>
     
   </url>
   
