@@ -1,0 +1,87 @@
+---
+title: block，inline和inline-block概念和区别
+date: 2017-03-04 21:19:26
+tags: css
+categories: 前端
+---
+
+## 总体概念
+
+- block和inline这两个概念是简略的说法，完整确切的说应该是 block-level elements (块级元素) 和 inline elements (内联元素)。block元素通常被现实为独立的一块，会单独换一行；inline元素则前后不会产生换行，一系列inline元素都在一行内显示，直到该行排满。
+- 大体来说HTML元素各有其自身的布局级别（block元素还是inline元素）：
+常见的块级元素有 DIV, FORM, TABLE, P, PRE, H1~H6, DL, OL, UL 等。
+常见的内联元素有 SPAN, A, STRONG, EM, LABEL, INPUT, SELECT, TEXTAREA, IMG, BR 等。
+- block元素可以包含block元素和inline元素；但inline元素只能包含inline元素。要注意的是这个是个大概的说法，每个特定的元素能包含的元素也是特定的，所以具体到个别元素上，这条规律是不适用的。比如 P 元素，只能包含inline元素，而不能包含block元素。
+- 一般来说，可以通过display:inline和display:block的设置，改变元素的布局级别。
+
+<!-- more -->
+## block，inline和inline-block细节对比
+
++ display:block
+	- block元素会独占一行，多个block元素会各自新起一行。默认情况下，block元素宽度自动填满其父元素宽度。
+	- block元素可以设置width,height属性。块级元素即使设置了宽度,仍然是独占一行。
+	- block元素可以设置margin和padding属性。
++ display:inline
+	- inline元素不会独占一行，多个相邻的行内元素会排列在同一行里，直到一行排列不下，才会新换一行，其宽度随元素的内容而变化。
+	- inline元素设置width,height属性无效。
+	- inline元素的margin和padding属性，水平方向的padding-left, padding-right, margin-left, margin-right都产生边距效果；但竖直方向的padding-top, padding-bottom, margin-top, margin-bottom不会产生边距效果。
++ display:inline-block
+	- 简单来说就是将对象呈现为inline对象，但是对象的内容作为block对象呈现。之后的内联对象会被排列在同一行内。比如我们可以给一个link（a元素）inline-block属性值，使其既具有block的宽度高度特性又具有inline的同行特性。
+
+## 补充说明
+
+- 一般我们会用display:block，display:inline或者display:inline-block来调整元素的布局级别，其实display的参数远远不止这三种，仅仅是比较常用而已。
+- IE（低版本IE）本来是不支持inline-block的，所以在IE中对内联元素使用display:inline-block，理论上IE是不识别的，但使用display:inline-block在IE下会触发layout，从而使内联元素拥有了display:inline-block属性的表象。
+
+## 消除inline-block之间的空格
+
+在完整的展示兼容性的像素级的inline-block元素列表布局前，有必要讲讲使用display:inline-block列表布局经常会遇到的“换行符/空格间隙问题”。
+
+如果inline-block元素间有空格或是换行产生了间隙，那是正常的，应该的。如果没有空格与间隙才是不正常的（IE6/7 block水平元素）。真正的inline-block元素，就像个图片一样。例如，两个不在一行的img标签，形成的两个图片之间就会有间隙。
+
+要让这些空格不出现，最简单的最容易理解的就是让列表的结束标签与下一个列表的开始标签连在一起，就像是：
+
+``` html
+<li>
+	<span>...</span>
+</li><li>
+	<span>...</span>
+</li>
+```
+
+但是，这种做法好傻啊，而且HTML代码的可读性很不好。尤其考虑到现实情况：后台人员可能不清楚标签换行对样式的影响，直接后台repeat的时候，换行了。所以，此方法顶多临时应付些小打小闹的地方，要想广泛使用，显然业余了。
+
+其实，我们只要细细想想，空格符本质上就是个字符，与a,b,c,d这些字符是个同一个属性的东西，只是他是空格，透明的看不见而已（但可以选中）。所以，只要我们使用让文字宽度为0的那些方法，不就可以解决inline-block元素间换行符间隙的问题啦！
+
+于是，很自然而然的，想到了以下样式：
+
+``` css
+{font-size: 0;}
+```
+
+但是chrome浏览器不支持，考虑另一种方式，使用`letter-spacing`属性。可以控制文字间的水平距离，支持负值，可以让文字水平方向上重叠（line
+-height是让文字垂直方向上重叠）。
+
+``` css
+{letter-spaceing:-4px;} /* 依据不同字体，有不同的间距值选择
+```
+
+总结就是：
+
+- block水平的元素inline-block化后，IE6/7没有换行符间隙问题，其他浏览器均有；
+- inline水平的元素inline-block后，所有主流浏览器都有换行符/空格间隙问题；
+- font-size:0，去除换行符间隙，在IE6/7下残留1像素间隙，Chrome浏览器无效，其他浏览器都完美去除；
+- letter-spacing负值可以去除所有浏览器的换行符间隙，但是，Opera浏览器下极限是间隙1像素，0像素会反弹，换行符间隙还原。
+
+考录两种办法结合，兼容竟可能多的浏览器，
+
+``` css
+{letter-spacing:-3px; font-size:0;} /* 针对Arial字体 */
+```
+
+所以，应用display:inline-block属性实现列表布局的几个关键字就是：*block水平的标签，font-size:0和letter-spacing负值*。
+
+## 参考自：
+
+- [block，inline和inline-block概念和区别](http://www.cnblogs.com/KeithWang/p/3139517.html)
+- [拜拜了,浮动布局-基于display:inline-block的列表布局](http://www.zhangxinxu.com/wordpress/2010/11/%E6%8B%9C%E6%8B%9C%E4%BA%86%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80-%E5%9F%BA%E4%BA%8Edisplayinline-block%E7%9A%84%E5%88%97%E8%A1%A8%E5%B8%83%E5%B1%80/)
