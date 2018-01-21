@@ -26,6 +26,7 @@ git add .  //经测试每次只要更新sorcerer中的文件到Github中即可�
 git commit -m "XX"
 git push origin hexo  //更新分支
 hexo d -g   //push更新完分支之后将自己写的博客对接到自己搭的博客网站上，同时同步了Github中的master
+hexo clean //最好清理一下临时文件
 ```
 
 ##不同终端之间的同步操作
@@ -36,6 +37,7 @@ git add source
 git commit -m "XX"
 git push origin hexo
 hexo d -g
+hexo clean //最好清理一下临时文件
 ```
 
 	参考自[http://blog.csdn.net/Monkey_LZL/article/details/60870891](http://blog.csdn.net/Monkey_LZL/article/details/60870891)
