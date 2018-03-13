@@ -8,7 +8,7 @@
 </script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">C++中的数学常量</h1><span class="post-time">2017年12月26日</span><div class="post-content"><p>在编译一个C文件的时候，编译器报错找不到常量<code>M_LN10</code>，google了一下，发现和编译器版本有关系。早期的C和C++标准库和编译器会在它们的<code>math.h</code>和<code>cmath</code>头文件中提供许多的数学常量，但是Visual Studio自2015起彻底移除了包含这些常量的头文件，因此会出现找不到标识符的编译错误。Visual Studio2012仍然保留这些头文件，但是需要声明<code>_USE_MATH_DEFINES</code>才能够使用。不太明白微软为什么要这么做？是为了给用户更多自定义的权利吗？这样代码的兼容性不是存在很大的问题？</p>
 <p>因此，遇到此类问题，只能通过手动定义相关常量解决。比较友好的是，GCC仍然保留这些常量，因此使用GCC的Linux和Mac OSX用户不用担心这个问题了。</p>
 <blockquote>
-<p>参考自<a href="https://codeyarns.com/2010/04/13/math-constants-for-cpp/" target="_blank" rel="external">https://codeyarns.com/2010/04/13/math-constants-for-cpp/</a></p>
+<p>参考自<a href="https://codeyarns.com/2010/04/13/math-constants-for-cpp/" target="_blank" rel="noopener">https://codeyarns.com/2010/04/13/math-constants-for-cpp/</a></p>
 </blockquote>
 </div></article><div class="tags"><a href="/tags/C/">C++</a></div><div class="paginator"><a href="/2017/11/26/博客改造计划/" class="next"><span>Suivant</span><i class="iconfont icon-right"></i></a></div><section id="comments"><div id="disqus_thread"></div></section><script type="text/javascript">var disqus_config = function () {
     this.page.url = 'http://blog.sjtunix.cn/2017/12/26/C-中的数学常量/';

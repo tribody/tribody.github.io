@@ -6,16 +6,16 @@
   s.parentNode.insertBefore(hm, s);
 })();
 </script></head><body><div id="main"><header><a href="/." class="logo">Sjtunix</a><ul class="nav"><li class="nav-link"><a href="/" target="_self">主页</a></li><li class="nav-link"><a href="/archives/" target="_self">归档</a></li><li class="nav-link"><a href="/categories/" target="_self">分类</a></li><li class="nav-link"><a href="/tags/" target="_self">标签</a></li><li class="nav-link"><a href="/about/" target="_self">关于</a></li></ul></header><section id="container"><article class="post"><h1 class="post-title">Hexo入门</h1><span class="post-time">2016年11月6日</span><div id="sidebar" class="post-sidebar"><h3 class="heading">Sommaire</h3><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo安装"><span class="toc-text">Hexo安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hexo相关命令"><span class="toc-text">Hexo相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化项目"><span class="toc-text">初始化项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#生成静态网页"><span class="toc-text">生成静态网页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动本地服务器"><span class="toc-text">启动本地服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建新文章-post"><span class="toc-text">创建新文章(post)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#部署到站点"><span class="toc-text">部署到站点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#域名绑定"><span class="toc-text">域名绑定</span></a></li></ol></div><div class="post-content"><p>楼主有一台国外的vps，之前搭过wordpress，但是访问延迟较大，又因为前段时间服务器系统搞坏了，重装了系统，打算把那台服务器完全用来搭VPN和SS了，不再放网站在上面了。于是，转入了Hexo。本博文完成以下目标，首先，安装hexo博客系统，然后安装主题，最后做一个域名绑定。楼主记性最近不好，虽然文章网上都能搜到，但是做个记载还是好的。</p>
-<h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div><div class="line">$ hexo init [目录名]</div><div class="line">$ <span class="built_in">cd</span> [目录名]</div><div class="line">$ npm install</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<h2 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ hexo init [目录名]</span><br><span class="line">$ <span class="built_in">cd</span> [目录名]</span><br><span class="line">$ npm install</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
-<p>注意这个地方有个坑，楼主当时打完这段命令，然后按照提示用<code>4000</code>端口访问<code>localhost:4000</code>，发现怎么都加载不出来，百度了好久，发现是安装了福昕pdf阅读器的原因，太坑了！<code>4000</code>被占用了！所以，你可以使用如下命令换个端口号:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server -p [你要用的端口号]</div></pre></td></tr></table></figure></p>
-<p>详见：<a href="https://hexo.io/docs/commands.html#server" target="_blank" rel="external">server</a></p>
-<p>更多信息: <a href="https://hexo.io" target="_blank" rel="external">安装</a></p>
-<h2 id="Hexo相关命令"><a href="#Hexo相关命令" class="headerlink" title="Hexo相关命令"></a>Hexo相关命令</h2><h3 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init [folder]</div></pre></td></tr></table></figure>
-<p>更多信息: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">服务器</a></p>
-<h3 id="生成静态网页"><a href="#生成静态网页" class="headerlink" title="生成静态网页"></a>生成静态网页</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>更多信息: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">生成页面</a></p>
-<h3 id="启动本地服务器"><a href="#启动本地服务器" class="headerlink" title="启动本地服务器"></a>启动本地服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>注意这个地方有个坑，楼主当时打完这段命令，然后按照提示用<code>4000</code>端口访问<code>localhost:4000</code>，发现怎么都加载不出来，百度了好久，发现是安装了福昕pdf阅读器的原因，太坑了！<code>4000</code>被占用了！所以，你可以使用如下命令换个端口号:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server -p [你要用的端口号]</span><br></pre></td></tr></table></figure></p>
+<p>详见：<a href="https://hexo.io/docs/commands.html#server" target="_blank" rel="noopener">server</a></p>
+<p>更多信息: <a href="https://hexo.io" target="_blank" rel="noopener">安装</a></p>
+<h2 id="Hexo相关命令"><a href="#Hexo相关命令" class="headerlink" title="Hexo相关命令"></a>Hexo相关命令</h2><h3 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init [folder]</span><br></pre></td></tr></table></figure>
+<p>更多信息: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">服务器</a></p>
+<h3 id="生成静态网页"><a href="#生成静态网页" class="headerlink" title="生成静态网页"></a>生成静态网页</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>更多信息: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">生成页面</a></p>
+<h3 id="启动本地服务器"><a href="#启动本地服务器" class="headerlink" title="启动本地服务器"></a>启动本地服务器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -38,23 +38,23 @@
 </tr>
 </tbody>
 </table>
-<p>更多信息: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">服务器</a></p>
-<h3 id="创建新文章-post"><a href="#创建新文章-post" class="headerlink" title="创建新文章(post)"></a>创建新文章(post)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new [layout] &lt;title&gt;</div></pre></td></tr></table></figure>
+<p>更多信息: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">服务器</a></p>
+<h3 id="创建新文章-post"><a href="#创建新文章-post" class="headerlink" title="创建新文章(post)"></a>创建新文章(post)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
 <p>除了创建post（文章），还可以通过该命令创建自定义页面，</p>
 <ul>
 <li><p>在博客根目录下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new page xxxx</div></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page xxxx</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>设置页面模板</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title:xxxx</div><div class="line">layout:page  # 添加使用page模板</div><div class="line">---</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title:xxxx</span><br><span class="line">layout:page  # 添加使用page模板</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>修改菜单</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  Home: /</div><div class="line">  Archives: /archives</div><div class="line">  About: /about/</div><div class="line">  xxxx: /xxxx/  # 确保与source/xxxx/index.md文件中的title一致</div></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  Home: /</span><br><span class="line">  Archives: /archives</span><br><span class="line">  About: /about/</span><br><span class="line">  xxxx: /xxxx/  # 确保与source/xxxx/index.md文件中的title一致</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h3 id="部署到站点"><a href="#部署到站点" class="headerlink" title="部署到站点"></a>部署到站点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>更多信息: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">部署</a></p>
-<p>Hexo主题虽然没有wordpress多，但也有相当量优秀的主题，楼主使用的这个主题叫<a href="https://github.com/ahonn/hexo-theme-even" target="_blank" rel="external">even</a>的主题,在此作分享。</p>
+<h3 id="部署到站点"><a href="#部署到站点" class="headerlink" title="部署到站点"></a>部署到站点</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>更多信息: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">部署</a></p>
+<p>Hexo主题虽然没有wordpress多，但也有相当量优秀的主题，楼主使用的这个主题叫<a href="https://github.com/ahonn/hexo-theme-even" target="_blank" rel="noopener">even</a>的主题,在此作分享。</p>
 <h2 id="域名绑定"><a href="#域名绑定" class="headerlink" title="域名绑定"></a>域名绑定</h2><p>首先，你得有一个域名。</p>
 <p>然后，在<code>source</code>目录下新建<code>CNAME</code>文件，内容为要绑定的域名，例如<code>blog.riverhe.cn</code>。</p>
 <p>然后，将域名解析到你的github-pages相对应的域名上来。</p>
